@@ -12,4 +12,9 @@
 
 @property (nonatomic, strong) id cellData;
 
++ (NSString *)cellIdentifier;
++ (CGFloat)heightForCell:(id)cellData;
++ (instancetype)dequeueReusableCellForCollectionView:(UICollectionView *)collectionView
+                                        forIndexPath:(NSIndexPath *)indexPath;
+
 @end

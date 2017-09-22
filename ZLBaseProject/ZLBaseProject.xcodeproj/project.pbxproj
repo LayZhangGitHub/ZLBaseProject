@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4806F86E1F74BA8100A5B3CD /* BaseCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F86D1F74BA8100A5B3CD /* BaseCollectionController.m */; };
 		4806F8711F74C03A00A5B3CD /* BaseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8701F74C03A00A5B3CD /* BaseCollectionCell.m */; };
+		4806F8741F74E5B800A5B3CD /* SimpleCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8731F74E5B800A5B3CD /* SimpleCollectionController.m */; };
+		4806F8781F74E94800A5B3CD /* ZLNetworkCaptain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8771F74E94800A5B3CD /* ZLNetworkCaptain.m */; };
+		4806F87B1F74F1B500A5B3CD /* StatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F87A1F74F1B500A5B3CD /* StatusModel.m */; };
+		4806F87E1F74F47700A5B3CD /* ResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F87D1F74F47700A5B3CD /* ResponseModel.m */; };
 		48C152A61F739CE900C577AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152A51F739CE900C577AB /* main.m */; };
 		48C152A91F739CE900C577AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152A81F739CE900C577AB /* AppDelegate.m */; };
 		48C152AC1F739CE900C577AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152AB1F739CE900C577AB /* ViewController.m */; };
@@ -48,6 +52,14 @@
 		4806F86D1F74BA8100A5B3CD /* BaseCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionController.m; sourceTree = "<group>"; };
 		4806F86F1F74C03A00A5B3CD /* BaseCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionCell.h; sourceTree = "<group>"; };
 		4806F8701F74C03A00A5B3CD /* BaseCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionCell.m; sourceTree = "<group>"; };
+		4806F8721F74E5B800A5B3CD /* SimpleCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionController.h; sourceTree = "<group>"; };
+		4806F8731F74E5B800A5B3CD /* SimpleCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionController.m; sourceTree = "<group>"; };
+		4806F8761F74E94800A5B3CD /* ZLNetworkCaptain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLNetworkCaptain.h; sourceTree = "<group>"; };
+		4806F8771F74E94800A5B3CD /* ZLNetworkCaptain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLNetworkCaptain.m; sourceTree = "<group>"; };
+		4806F8791F74F1B500A5B3CD /* StatusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusModel.h; sourceTree = "<group>"; };
+		4806F87A1F74F1B500A5B3CD /* StatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusModel.m; sourceTree = "<group>"; };
+		4806F87C1F74F47700A5B3CD /* ResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseModel.h; sourceTree = "<group>"; };
+		4806F87D1F74F47700A5B3CD /* ResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseModel.m; sourceTree = "<group>"; };
 		48C152A11F739CE900C577AB /* ZLBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C152A51F739CE900C577AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		48C152A71F739CE900C577AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -140,6 +152,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4806F8751F74E84500A5B3CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4806F8761F74E94800A5B3CD /* ZLNetworkCaptain.h */,
+				4806F8771F74E94800A5B3CD /* ZLNetworkCaptain.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		48C152981F739CE900C577AB = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +217,7 @@
 		48C152BC1F739D6200C577AB /* BaseProject */ = {
 			isa = PBXGroup;
 			children = (
+				4806F8751F74E84500A5B3CD /* Network */,
 				48C152BD1F739D6200C577AB /* AppComm */,
 				48C152C41F739D6200C577AB /* Base */,
 				48C152D31F739D6200C577AB /* Common */,
@@ -266,6 +288,8 @@
 				48C152C91F739D6200C577AB /* BaseTableController.m */,
 				4806F86C1F74BA8100A5B3CD /* BaseCollectionController.h */,
 				4806F86D1F74BA8100A5B3CD /* BaseCollectionController.m */,
+				4806F8721F74E5B800A5B3CD /* SimpleCollectionController.h */,
+				4806F8731F74E5B800A5B3CD /* SimpleCollectionController.m */,
 				48C152CA1F739D6200C577AB /* ScrollableController.h */,
 				48C152CB1F739D6200C577AB /* ScrollableController.m */,
 			);
@@ -326,6 +350,10 @@
 		48C152D91F739D6200C577AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4806F8791F74F1B500A5B3CD /* StatusModel.h */,
+				4806F87A1F74F1B500A5B3CD /* StatusModel.m */,
+				4806F87C1F74F47700A5B3CD /* ResponseModel.h */,
+				4806F87D1F74F47700A5B3CD /* ResponseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -735,18 +763,22 @@
 				4806F86E1F74BA8100A5B3CD /* BaseCollectionController.m in Sources */,
 				48C152EF1F739D6200C577AB /* BaseController.m in Sources */,
 				48C1533C1F73C03800C577AB /* UIButton+ZLEX.m in Sources */,
+				4806F87B1F74F1B500A5B3CD /* StatusModel.m in Sources */,
 				48C152FC1F739D6200C577AB /* ZLNavigationBar.m in Sources */,
+				4806F87E1F74F47700A5B3CD /* ResponseModel.m in Sources */,
 				48C153231F73BF7000C577AB /* ZLThemeControl.m in Sources */,
 				4806F8711F74C03A00A5B3CD /* BaseCollectionCell.m in Sources */,
 				48C1533A1F73C03800C577AB /* NSObject+Runtime.m in Sources */,
 				48C153391F73C03800C577AB /* CALayer+ZLEX.m in Sources */,
 				48C1533B1F73C03800C577AB /* NSString+ZLEX.m in Sources */,
 				48C152A91F739CE900C577AB /* AppDelegate.m in Sources */,
+				4806F8741F74E5B800A5B3CD /* SimpleCollectionController.m in Sources */,
 				48C152A61F739CE900C577AB /* main.m in Sources */,
 				48C152EE1F739D6200C577AB /* AppModuleEntity.m in Sources */,
 				48C152FB1F739D6200C577AB /* ShowToast.m in Sources */,
 				48C1533D1F73C03800C577AB /* UIImage+ZLEX.m in Sources */,
 				48C152F21F739D6200C577AB /* BaseApplicationEntity.m in Sources */,
+				4806F8781F74E94800A5B3CD /* ZLNetworkCaptain.m in Sources */,
 				48C152FE1F739D6200C577AB /* ZLTabbarItem.m in Sources */,
 				48C152F01F739D6200C577AB /* BaseTableController.m in Sources */,
 			);

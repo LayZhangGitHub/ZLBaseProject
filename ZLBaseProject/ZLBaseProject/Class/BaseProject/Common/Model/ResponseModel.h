@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "StatusModel.h"
 
 @interface ResponseModel : NSObject
+
+@property (nonatomic, strong) StatusModel *status;
+@property (nonatomic, strong) NSDictionary *result;
 
 @end

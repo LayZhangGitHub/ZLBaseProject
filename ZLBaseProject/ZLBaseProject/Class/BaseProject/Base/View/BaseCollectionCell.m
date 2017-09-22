@@ -10,6 +10,23 @@
 
 @implementation BaseCollectionCell
 
++ (NSString *)cellIdentifier {
+    return NSStringFromClass([self class]);
+}
+
+// 计算工具
++ (CGFloat)heightForCell:(id)cellData {
+    return 0;
+}
+
++ (instancetype)dequeueReusableCellForCollectionView:(UICollectionView *)collectionView
+                                        forIndexPath:(NSIndexPath *)indexPath {
+    BaseCollectionCell *cell =
+    [collectionView dequeueReusableCellWithReuseIdentifier:[BaseCollectionCell cellIdentifier]
+                                              forIndexPath:indexPath];
+    return cell;
+}
+
 - (void)setCellData:(id)cellData {
     _cellData = cellData;
     if (cellData) {
@@ -27,13 +44,6 @@
     }
 }
 
-// 计算工具
-+ (CGFloat)heightForCell:(id)cellData {
-    return 0;
-}
 
-+ (NSString *)cellIdentifier {
-    return NSStringFromClass([self class]);
-}
 
 @end

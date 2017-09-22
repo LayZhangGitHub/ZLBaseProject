@@ -43,7 +43,7 @@
 #pragma mark - abstract methods
 
 - (void)registCell {
-    
+    [self.contentCollectionView registerClass:[BaseCollectionCell class] forCellWithReuseIdentifier:NSStringFromClass([BaseCollectionCell class])];
 }
 
 - (void)addRefreshAction {
@@ -92,7 +92,17 @@
     [self.contentCollectionView.mj_footer endRefreshing];
 }
 
+#pragma mark - collectionView delegate
 
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 0;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    BaseCollectionCell *cell = [BaseCollectionCell dequeueReusableCellForCollectionView:collectionView
+                                                                           forIndexPath:indexPath];
+    return cell;
+}
 
 
 @end

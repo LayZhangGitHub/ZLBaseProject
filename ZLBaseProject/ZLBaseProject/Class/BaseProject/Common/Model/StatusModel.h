@@ -10,4 +10,7 @@
 
 @interface StatusModel : NSObject
 
+@property (nonatomic, assign) NSInteger code;
+@property (nonatomic, strong) NSString *msg;
+
 @end
