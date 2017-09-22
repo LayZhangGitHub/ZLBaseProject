@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4806F86E1F74BA8100A5B3CD /* BaseCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F86D1F74BA8100A5B3CD /* BaseCollectionController.m */; };
+		4806F8711F74C03A00A5B3CD /* BaseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8701F74C03A00A5B3CD /* BaseCollectionCell.m */; };
 		48C152A61F739CE900C577AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152A51F739CE900C577AB /* main.m */; };
 		48C152A91F739CE900C577AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152A81F739CE900C577AB /* AppDelegate.m */; };
 		48C152AC1F739CE900C577AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152AB1F739CE900C577AB /* ViewController.m */; };
@@ -42,6 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4806F86C1F74BA8100A5B3CD /* BaseCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionController.h; sourceTree = "<group>"; };
+		4806F86D1F74BA8100A5B3CD /* BaseCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionController.m; sourceTree = "<group>"; };
+		4806F86F1F74C03A00A5B3CD /* BaseCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionCell.h; sourceTree = "<group>"; };
+		4806F8701F74C03A00A5B3CD /* BaseCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionCell.m; sourceTree = "<group>"; };
 		48C152A11F739CE900C577AB /* ZLBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C152A51F739CE900C577AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		48C152A71F739CE900C577AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -258,6 +264,8 @@
 				48C152C71F739D6200C577AB /* BaseController.m */,
 				48C152C81F739D6200C577AB /* BaseTableController.h */,
 				48C152C91F739D6200C577AB /* BaseTableController.m */,
+				4806F86C1F74BA8100A5B3CD /* BaseCollectionController.h */,
+				4806F86D1F74BA8100A5B3CD /* BaseCollectionController.m */,
 				48C152CA1F739D6200C577AB /* ScrollableController.h */,
 				48C152CB1F739D6200C577AB /* ScrollableController.m */,
 			);
@@ -285,6 +293,8 @@
 			children = (
 				48C152D11F739D6200C577AB /* BaseTableCell.h */,
 				48C152D21F739D6200C577AB /* BaseTableCell.m */,
+				4806F86F1F74C03A00A5B3CD /* BaseCollectionCell.h */,
+				4806F8701F74C03A00A5B3CD /* BaseCollectionCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -722,10 +732,12 @@
 				48C152F71F739D6200C577AB /* UserInfoService.m in Sources */,
 				48C1533F1F73C03800C577AB /* UIView+ZLEX.m in Sources */,
 				48C152FD1F739D6200C577AB /* ZLTabbar.m in Sources */,
+				4806F86E1F74BA8100A5B3CD /* BaseCollectionController.m in Sources */,
 				48C152EF1F739D6200C577AB /* BaseController.m in Sources */,
 				48C1533C1F73C03800C577AB /* UIButton+ZLEX.m in Sources */,
 				48C152FC1F739D6200C577AB /* ZLNavigationBar.m in Sources */,
 				48C153231F73BF7000C577AB /* ZLThemeControl.m in Sources */,
+				4806F8711F74C03A00A5B3CD /* BaseCollectionCell.m in Sources */,
 				48C1533A1F73C03800C577AB /* NSObject+Runtime.m in Sources */,
 				48C153391F73C03800C577AB /* CALayer+ZLEX.m in Sources */,
 				48C1533B1F73C03800C577AB /* NSString+ZLEX.m in Sources */,

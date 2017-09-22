@@ -14,5 +14,14 @@
 
 @implementation ScrollableController
 
+- (void)willRefresh {}
+- (void)doRefresh {}
+- (void)didRefresh {}
+
+- (void)willLoadMore {}
+- (void)doLoadMore {}
+- (void)didLoadMore {}
+
+- (void)loadData {}
 
 @end
