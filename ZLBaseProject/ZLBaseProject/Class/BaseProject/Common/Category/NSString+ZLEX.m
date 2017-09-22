@@ -31,6 +31,13 @@
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
+- (BOOL)isEmptyString {
+    if (!self || [self.trim isEqualToString:@""]) {
+        return YES;
+    }
+    return NO;
+}
+
 - (CGSize)sizeWithUIFont:(UIFont *)font forWidth:(CGFloat)width {
     NSDictionary *attribute = @{NSFontAttributeName:font};
     CGSize size = [self sizeWithUIAttribute:attribute forWidth:width];

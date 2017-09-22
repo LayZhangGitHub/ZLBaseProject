@@ -9,7 +9,11 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "ZLPreMacro.h"
+#import "AppMacro.h"
+#import "ScreenMacro.h"
+#import "SystemMacro.h"
+#import "UtilMacro.h"
+#import "NotificationMacro.h"
 
 #endif /* PrefixHeader_pch */

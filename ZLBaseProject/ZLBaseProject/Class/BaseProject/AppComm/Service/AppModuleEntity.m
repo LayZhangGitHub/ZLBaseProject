@@ -1,15 +1,27 @@
 //
-//  NormalModuleEntity.m
+//  AppModuleEntity.m
 //  LayZhangDemo
 //
 //  Created by LayZhang on 2017/9/21.
 //  Copyright © 2017年 Zhanglei. All rights reserved.
 //
 
-#import "NormalModuleEntity.h"
+#import "AppModuleEntity.h"
 #import "ZLNavigationService.h"
 
-@implementation NormalModuleEntity
+@implementation AppModuleEntity
 
++ (id)shareInstance {
+    static dispatch_once_t onceToken;
+    static AppModuleEntity *appModelEntity = nil;
+    dispatch_once(&onceToken, ^{
+        appModelEntity = [[AppModuleEntity alloc] init];
+    });
+    return appModelEntity;
+}
+
++ (void)load {
+    
+}
 
 @end

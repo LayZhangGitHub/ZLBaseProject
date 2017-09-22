@@ -11,6 +11,8 @@
 // 这是个抽象类 不能 获得实例
 @interface ZLModuleEntity : NSObject
 
++ (instancetype)shareInstance;
+
 - (BOOL)canOpenUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo from:(id)from;
 - (void)handleOpenUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo from:(id)from complete:(void(^)())complete;
 

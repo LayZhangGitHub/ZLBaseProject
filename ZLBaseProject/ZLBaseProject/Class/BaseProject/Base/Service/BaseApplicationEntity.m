@@ -12,12 +12,14 @@
 
 
 + (instancetype)shareInstance {
-    static BaseApplicationEntity *entrance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        entrance = [[BaseApplicationEntity alloc] init];
-    });
-    return entrance;
+//    static BaseApplicationEntity *entrance = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        entrance = [[BaseApplicationEntity alloc] init];
+//    });
+//    return entrance;
+    // 需要父类实例化
+    return nil;
 }
 
 - (ZLNavigationController *)currentNavigationController {

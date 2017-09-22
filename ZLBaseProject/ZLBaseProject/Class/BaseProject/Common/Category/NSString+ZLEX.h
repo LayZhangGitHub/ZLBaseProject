@@ -36,4 +36,6 @@
 
 - (CGSize)sizeWithSize:(CGSize)size font:(NSInteger)font;
 
+- (BOOL)isEmptyString;
+
 @end

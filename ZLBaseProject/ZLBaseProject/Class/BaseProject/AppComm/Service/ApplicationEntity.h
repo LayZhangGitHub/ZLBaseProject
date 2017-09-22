@@ -6,8 +6,13 @@
 //  Copyright © 2017年 Zhanglei. All rights reserved.
 //
 
-#import "ZLModuleEntity.h"
+#import "BaseApplicationEntity.h"
 
-@interface ApplicationEntity : ZLModuleEntity
+
+// appdelegate 分担
+
+@interface ApplicationEntity : BaseApplicationEntity
+
++ (instancetype)shareInstance;
 
 @end

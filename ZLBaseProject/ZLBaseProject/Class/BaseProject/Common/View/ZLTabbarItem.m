@@ -43,7 +43,7 @@
         self.title = title;
         
         _imageWH = 40.f;
-        if (!IsEmptyString(title)) {
+        if (![title isEmptyString]) {
             _imageWH = 30.f;
         }
         

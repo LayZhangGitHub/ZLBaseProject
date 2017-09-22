@@ -9,5 +9,9 @@
 #ifndef NotificationMacro_h
 #define NotificationMacro_h
 
+/** notification **/
+#pragma mark - notification
+#define DefaultNotificationCenter [NSNotificationCenter defaultCenter]
+#define TimerCellDeallocNotification @"TimerCellDeallocNotification"
 
 #endif /* NotificationMacro_h */

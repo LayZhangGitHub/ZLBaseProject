@@ -51,7 +51,7 @@
                 hostDict = [NSMutableDictionary dictionary];
                 [self.registeredModules setObject:hostDict forKey:scheme];
             }
-            if (IsEmptyString(host)) {
+            if ([host isEmptyString]) {
                 [hostDict setObject:moduleEntity forKey:[NSNull null]];
             } else {
                 [hostDict setObject:moduleEntity forKey:host];
@@ -73,14 +73,14 @@
 
 - (void)openUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo from:(id)from complete:(void (^)())complete {
     
-    if (!IsEmptyString(urlString)) {
+    if (![urlString isEmptyString]) {
         
         NSString *resultUrlString = [urlString trim];
         NSString *strUrl = [resultUrlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         NSURL *url = [NSURL URLWithString:strUrl];
         
         // 若没有scheme 默认 http
-        if (IsEmptyString(url.scheme) && !IsEmptyString(resultUrlString)) {
+        if ([url.scheme isEmptyString] && ![resultUrlString isEmptyString]) {
             if (![resultUrlString hasPrefix:@"http://"]) {
                 NSString *preUrl = @"http://";
                 resultUrlString = [NSString stringWithFormat:@"%@%@", preUrl, resultUrlString];
@@ -90,7 +90,7 @@
         
         if (url) {
             id host = [NSNull null];
-            if (!IsEmptyString(url.host)) {
+            if (![url.host isEmptyString]) {
                 host = url.host;
             }
             
@@ -115,7 +115,7 @@
     
     if (url) {
         id host = [NSNull null];
-        if (!IsEmptyString(url.host)) {
+        if (![url.host isEmptyString]) {
             host = url.host;
         }
         
