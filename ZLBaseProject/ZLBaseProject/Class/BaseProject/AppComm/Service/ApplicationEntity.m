@@ -7,6 +7,13 @@
 //
 
 #import "ApplicationEntity.h"
+#import "View01Controller.h"
+#import "View02Controller.h"
+#import "ZLTabbarController.h"
+
+@interface ApplicationEntity() <ZLTabBarControllerDelegate>
+
+@end
 
 @implementation ApplicationEntity
 
@@ -76,7 +83,35 @@
 #pragma mark - init controllers
 - (void)initViewControllers {
     
+    self.tabbarController = [[ZLTabbarController alloc] initWithViewControllers:
+                             @[
+                               [[View01Controller alloc] init],
+                               [[View02Controller alloc] init],
+                               [[View01Controller alloc] init],
+                               [[View02Controller alloc] init]
+                               ]];
+    
+    self.tabbarController.tabBarControllerDelegate = self;
+    
+    ZLNavigationController *navigationController = [[ZLNavigationController alloc] initWithRootViewController:self.tabbarController];
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
+    
+    self.currentNavController = navigationController;
 }
+
+#pragma mark - tabbar delegate 
+- (BOOL)tabBarController:(ZLTabbarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController atIndex:(NSInteger)index {
+    return YES;
+}
+
+// 选中了
+- (void)tabBarController:(ZLTabbarController *)tabBarController didSelectViewController:(UIViewController *)viewController atIndex:(NSInteger)index {}
+
+//未选择 跳转
+- (void)didSelectedInTabBarController {}
+//以选中 再次选中
+- (void)didSelectedInTabBarControllerDidAppeared {}
 
 @end
 

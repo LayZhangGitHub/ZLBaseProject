@@ -31,4 +31,6 @@ typedef NS_ENUM(NSInteger, ZLThemeValue) {
 @property (nonatomic, strong) UIColor *tabBarBackgroundColor;
 @property (nonatomic, strong) UIColor *tabBarTopBorderColor;
 
+@property (nonatomic, strong) UIColor *tabbarSelectColor;
+
 @end

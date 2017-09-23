@@ -39,7 +39,9 @@
     return self.currentNavController;
 }
 
-- (void)applicationEntrance:(UIWindow *)mainWindow launchOptions:(NSDictionary *)launchOptions {}
+- (void)applicationEntrance:(UIWindow *)mainWindow launchOptions:(NSDictionary *)launchOptions {
+    self.window = mainWindow;
+}
 - (void)applicationEnterForeground {}
 - (void)applicationActive {}
 - (void)applicationEnterBackground {}

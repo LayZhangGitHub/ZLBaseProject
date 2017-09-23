@@ -51,21 +51,24 @@
     
     if (!_navigationBar) {
         _navigationBar = [[ZLNavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.width, NAVBARHEIGHT) needBlurEffect:self.needBlurEffect];
-        _navigationBar.backgroundColor = ZLThemeCtrInstance.navigationButtonColor;
+        _navigationBar.backgroundColor = ZLThemeCtrInstance.navigationBackgroundColor;
         _navigationBar.tintColor = ZLThemeCtrInstance.navigationButtonColor;
         _navigationBar.title = self.title;
         
-        if (self.navigationController && self.navigationController.viewControllers.count > 1) {
-            UIButton *backButton = [UIButton buttonWithTarget:self
-                                                       action:@selector(navigationBackAction)
-                                             forControlEvents:UIControlEventTouchUpInside];
-            backButton.size = CGSizeMake(40, 40);
-            [_navigationBar setLeftButton:backButton];
-        }
-        [_navigationBar setBottomBorderColor:ZLThemeCtrInstance.navigationBottomBorderColor];
+        
         
         [self.view addSubview:_navigationBar];
     }
+    
+    if (self.navigationController && self.navigationController.viewControllers.count > 1) {
+        UIButton *backButton = [UIButton buttonWithTarget:self
+                                                   action:@selector(navigationBackAction)
+                                         forControlEvents:UIControlEventTouchUpInside];
+        backButton.size = CGSizeMake(40, 40);
+        [_navigationBar setLeftButton:backButton];
+    }
+    [_navigationBar setBottomBorderColor:ZLThemeCtrInstance.navigationBottomBorderColor];
+    
     _navigationBar.hidden = NO;
 }
 

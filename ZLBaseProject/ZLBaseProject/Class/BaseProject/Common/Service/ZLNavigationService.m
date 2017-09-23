@@ -44,7 +44,7 @@
     
     if ([moduleClass isSubclassOfClass:[ZLModuleEntity class]]) {
         // 生成 实例 对象
-        ZLModuleEntity *moduleEntity = [moduleClass performSelector:@selector(sharedEntity)];
+        ZLModuleEntity *moduleEntity = [moduleClass performSelector:@selector(shareEntity)];
         if (moduleEntity) {
             NSMutableDictionary *hostDict = self.registeredModules[scheme];
             if (!hostDict) {

@@ -18,6 +18,8 @@
 - (id)initWithFrame:(CGRect)frame items:(NSArray *)items delegate:(id<ZLTabbarDelegate>)delegate;
 - (void)setBackgroundImage:(UIImage *)backgroundImage;
 
+- (void)selectItemAtIndex:(NSInteger)index;
+
 @end
 
 @protocol ZLTabbarDelegate <NSObject>

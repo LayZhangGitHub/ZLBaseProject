@@ -49,6 +49,7 @@ static ZLThemeValue themeType = ThemeType;
     _navigationBottomBorderColor = ZLBlackColor;
     _tabBarBackgroundColor = ZLBlackColor;
     _tabBarTopBorderColor = ZLBlackColor;
+    _tabbarSelectColor = ZLGray(100);
 }
 
 - (void)initThemeType02 {
@@ -59,6 +60,7 @@ static ZLThemeValue themeType = ThemeType;
     _navigationBottomBorderColor = ZLBlackColor;
     _tabBarBackgroundColor = ZLBlackColor;
     _tabBarTopBorderColor = ZLBlackColor;
+    _tabbarSelectColor = ZLGray(100);
 }
 
 - (void)initThemeType03 {
@@ -69,6 +71,7 @@ static ZLThemeValue themeType = ThemeType;
     _navigationBottomBorderColor = ZLBlackColor;
     _tabBarBackgroundColor = ZLBlackColor;
     _tabBarTopBorderColor = ZLBlackColor;
+    _tabbarSelectColor = ZLGray(100);
 }
 
 @end

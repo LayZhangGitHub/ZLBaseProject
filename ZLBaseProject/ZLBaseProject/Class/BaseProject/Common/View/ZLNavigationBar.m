@@ -68,7 +68,7 @@
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.backgroundColor = ZLClearColor;
         _titleLabel.textColor = ZLThemeCtrInstance.titleColor;
-        _titleLabel.font = ZLNormalFont(22 * SCALE);
+        _titleLabel.font = ZLNormalFont(30 * SCALE);
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.adjustsFontSizeToFitWidth = YES;
         _titleLabel.minimumScaleFactor = 14 / 18.f;
@@ -79,8 +79,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     _containerView.frame = CGRectMake(0, STATUSBARHEIGHT, SCREENWIDTH, NAVBARCONTAINERHEIGHT);
-    _effectView.frame = CGRectMake(0, NAVBARHEIGHT, SCREENWIDTH, NAVBARHEIGHT);
-    _bottomBorder.frame = CGRectMake(0, STATUSBARHEIGHT - LINEWIDTH, SCREENWIDTH, LINEWIDTH);
+    _effectView.frame = CGRectMake(0, 0, SCREENWIDTH, NAVBARHEIGHT);
+    _bottomBorder.frame = CGRectMake(0, NAVBARCONTAINERHEIGHT - LINEWIDTH, SCREENWIDTH, LINEWIDTH);
     _titleLabel.frame = CGRectMake(0, 0, SCREENWIDTH, NAVBARCONTAINERHEIGHT);
 }
 

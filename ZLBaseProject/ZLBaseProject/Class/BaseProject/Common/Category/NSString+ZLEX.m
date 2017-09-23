@@ -55,4 +55,15 @@
     return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]} context:nil].size;
 }
 
+- (NSString *)urldecode {
+    return [[self stringByReplacingOccurrencesOfString:@"+" withString:@" "] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)urlencode {
+    static NSString * const kCharactersToLeaveUnescapedInQueryStringPairKey = @"[].";
+    static NSString * const kCharactersToBeEscapedInQueryString = @":/?&=;+!@#$()',*";
+    
+    return (__bridge_transfer  NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)self, (__bridge CFStringRef)kCharactersToLeaveUnescapedInQueryStringPairKey, (__bridge CFStringRef)kCharactersToBeEscapedInQueryString, kCFStringEncodingUTF8);
+}
+
 @end

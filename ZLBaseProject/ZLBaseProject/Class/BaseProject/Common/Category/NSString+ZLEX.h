@@ -38,4 +38,7 @@
 
 - (BOOL)isEmptyString;
 
+- (NSString *)urldecode;
+- (NSString *)urlencode;
+
 @end

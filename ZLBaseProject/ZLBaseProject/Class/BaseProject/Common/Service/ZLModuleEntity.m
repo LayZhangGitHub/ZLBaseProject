@@ -10,7 +10,7 @@
 
 @implementation ZLModuleEntity
 
-+ (instancetype)shareInstance {
++ (instancetype)shareEntity {
     // 这是 个 抽象类， 不能实例化, 子类来实现
     return nil;
 }

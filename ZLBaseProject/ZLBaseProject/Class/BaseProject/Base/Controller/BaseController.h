@@ -23,7 +23,7 @@
 /**
  tabbar
  */
-@property (nonatomic, weak) ZLTabbarItem *tabbarItem;
+@property (nonatomic, strong) ZLTabbarItem *tabbarItem;
 @property (nonatomic, weak) ZLTabbarController *tabBarController;
 
 /**
