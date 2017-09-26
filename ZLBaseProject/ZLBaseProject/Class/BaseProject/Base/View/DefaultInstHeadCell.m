@@ -1,0 +1,47 @@
+//
+//  DefaultInstHeadCell.m
+//  ZLBaseProject
+//
+//  Created by LayZhang on 2017/9/26.
+//  Copyright © 2017年 Zhanglei. All rights reserved.
+//
+
+#import "DefaultInstHeadCell.h"
+
+
+@interface DefaultInstHeadCell()
+
+@property (nonatomic, strong) UILabel *defaultLabel;
+
+@end
+
+@implementation DefaultInstHeadCell
+
+#pragma mark - override
+- (void)reloadData {
+    self.backgroundColor = ZLGray(200);
+    
+    [self addSubview:self.defaultLabel];
+    
+    self.defaultLabel.text = @"head cell";
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.defaultLabel.frame = CGRectMake(0, 0, SCREENWIDTH, 100);
+}
+
++ (CGFloat)heightForCell:(id)cellData {
+    return 100;
+}
+
+#pragma mark - property
+- (UILabel *)defaultLabel {
+    if (!_defaultLabel) {
+        _defaultLabel = [[UILabel alloc] init];
+        _defaultLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _defaultLabel;
+}
+
+@end

@@ -16,6 +16,10 @@
 		4806F8811F750A9900A5B3CD /* View01Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8801F750A9900A5B3CD /* View01Controller.m */; };
 		4806F8841F750AAB00A5B3CD /* View02Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8831F750AAB00A5B3CD /* View02Controller.m */; };
 		4806F8871F7553B600A5B3CD /* NSURL+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8861F7553B600A5B3CD /* NSURL+ZLEX.m */; };
+		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
+		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
+		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
+		485D211D1F78D5370033DD20 /* InstViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 485D211C1F78D5370033DD20 /* InstViewLayout.m */; };
 		48C152A61F739CE900C577AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152A51F739CE900C577AB /* main.m */; };
 		48C152A91F739CE900C577AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152A81F739CE900C577AB /* AppDelegate.m */; };
 		48C152AC1F739CE900C577AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152AB1F739CE900C577AB /* ViewController.m */; };
@@ -69,6 +73,14 @@
 		4806F8831F750AAB00A5B3CD /* View02Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View02Controller.m; sourceTree = "<group>"; };
 		4806F8851F7553B600A5B3CD /* NSURL+ZLEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+ZLEX.h"; sourceTree = "<group>"; };
 		4806F8861F7553B600A5B3CD /* NSURL+ZLEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ZLEX.m"; sourceTree = "<group>"; };
+		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
+		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
+		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
+		4845D3011F7A4C68004D884B /* DefaultInstCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultInstCell.m; sourceTree = "<group>"; };
+		4845D3031F7A4F5C004D884B /* DefaultInstHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstHeadCell.h; sourceTree = "<group>"; };
+		4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultInstHeadCell.m; sourceTree = "<group>"; };
+		485D211B1F78D5370033DD20 /* InstViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstViewLayout.h; sourceTree = "<group>"; };
+		485D211C1F78D5370033DD20 /* InstViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstViewLayout.m; sourceTree = "<group>"; };
 		48C152A11F739CE900C577AB /* ZLBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C152A51F739CE900C577AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		48C152A71F739CE900C577AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -168,6 +180,15 @@
 				4806F8771F74E94800A5B3CD /* ZLNetworkCaptain.m */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		485D211A1F78D4B20033DD20 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				485D211B1F78D5370033DD20 /* InstViewLayout.h */,
+				485D211C1F78D5370033DD20 /* InstViewLayout.m */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		48C152981F739CE900C577AB = {
@@ -280,6 +301,7 @@
 		48C152C41F739D6200C577AB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				485D211A1F78D4B20033DD20 /* Layout */,
 				48C152C51F739D6200C577AB /* Controller */,
 				48C152CC1F739D6200C577AB /* Model */,
 				48C152CD1F739D6200C577AB /* Service */,
@@ -301,6 +323,8 @@
 				4806F8731F74E5B800A5B3CD /* SimpleCollectionController.m */,
 				48C152CA1F739D6200C577AB /* ScrollableController.h */,
 				48C152CB1F739D6200C577AB /* ScrollableController.m */,
+				4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */,
+				4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -328,6 +352,10 @@
 				48C152D21F739D6200C577AB /* BaseTableCell.m */,
 				4806F86F1F74C03A00A5B3CD /* BaseCollectionCell.h */,
 				4806F8701F74C03A00A5B3CD /* BaseCollectionCell.m */,
+				4845D3001F7A4C68004D884B /* DefaultInstCell.h */,
+				4845D3011F7A4C68004D884B /* DefaultInstCell.m */,
+				4845D3031F7A4F5C004D884B /* DefaultInstHeadCell.h */,
+				4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -775,10 +803,12 @@
 				48C152F71F739D6200C577AB /* UserInfoService.m in Sources */,
 				48C1533F1F73C03800C577AB /* UIView+ZLEX.m in Sources */,
 				48C152FD1F739D6200C577AB /* ZLTabbar.m in Sources */,
+				4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */,
 				4806F86E1F74BA8100A5B3CD /* BaseCollectionController.m in Sources */,
 				48C152EF1F739D6200C577AB /* BaseController.m in Sources */,
 				48C1533C1F73C03800C577AB /* UIButton+ZLEX.m in Sources */,
 				4806F87B1F74F1B500A5B3CD /* StatusModel.m in Sources */,
+				4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */,
 				48C152FC1F739D6200C577AB /* ZLNavigationBar.m in Sources */,
 				4806F8841F750AAB00A5B3CD /* View02Controller.m in Sources */,
 				4806F87E1F74F47700A5B3CD /* ResponseModel.m in Sources */,
@@ -795,10 +825,12 @@
 				48C152FB1F739D6200C577AB /* ShowToast.m in Sources */,
 				48C1533D1F73C03800C577AB /* UIImage+ZLEX.m in Sources */,
 				4806F8811F750A9900A5B3CD /* View01Controller.m in Sources */,
+				485D211D1F78D5370033DD20 /* InstViewLayout.m in Sources */,
 				48C152F21F739D6200C577AB /* BaseApplicationEntity.m in Sources */,
 				4806F8781F74E94800A5B3CD /* ZLNetworkCaptain.m in Sources */,
 				48C152FE1F739D6200C577AB /* ZLTabbarItem.m in Sources */,
 				48C152F01F739D6200C577AB /* BaseTableController.m in Sources */,
+				4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

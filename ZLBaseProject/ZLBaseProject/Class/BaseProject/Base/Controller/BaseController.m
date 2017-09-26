@@ -55,8 +55,6 @@
         _navigationBar.tintColor = ZLThemeCtrInstance.navigationButtonColor;
         _navigationBar.title = self.title;
         
-        
-        
         [self.view addSubview:_navigationBar];
     }
     
