@@ -11,7 +11,7 @@
 
 @interface ZLNetworkCaptain : AFHTTPSessionManager
 
-+ (instancetype)shareInstance;
++ (instancetype)sharedInstance;
 
 - (void)getWithUrl:(NSString *)URLString
         parameters:(NSDictionary *)parameters
