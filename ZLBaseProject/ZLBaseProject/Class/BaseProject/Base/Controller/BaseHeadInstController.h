@@ -7,7 +7,10 @@
 //
 
 #import "BaseCollectionController.h"
+#import "InstViewLayout.h"
 
-@interface BaseHeadInstController : BaseCollectionController
+@interface BaseHeadInstController : BaseCollectionController <InstFlowLayoutDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (nonatomic, assign) BOOL hasHeader;
 
 @end

@@ -16,5 +16,6 @@
 + (CGFloat)heightForCell:(id)cellData;
 + (instancetype)dequeueReusableCellForCollectionView:(UICollectionView *)collectionView
                                         forIndexPath:(NSIndexPath *)indexPath;
+- (void)reloadData;
 
 @end
