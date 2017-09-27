@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, ResponseCode) {
 
 @implementation ZLNetworkCaptain
 
-+ (instancetype)shareInstance {
++ (instancetype)sharedInstance {
     static ZLNetworkCaptain *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
