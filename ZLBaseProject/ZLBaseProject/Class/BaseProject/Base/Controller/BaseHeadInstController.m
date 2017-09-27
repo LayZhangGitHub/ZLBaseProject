@@ -54,15 +54,17 @@
 
 #pragma mark - property
 - (UICollectionViewCell *)cellForHeaderAtIndexPath:(NSIndexPath *)indexPath {
-    DefaultInstHeadCell *headerCell = [self.contentCollectionView dequeueReusableCellWithReuseIdentifier:[DefaultInstHeadCell cellIdentifier]
-                                                                                            forIndexPath:indexPath];
+    DefaultInstHeadCell *headerCell = [DefaultInstHeadCell dequeueReusableCellForCollectionView:self.contentCollectionView
+                                                                                   forIndexPath:indexPath];
+    headerCell.cellData = @"DefaultInstHeadCell";
     return headerCell;
 }
 
 - (UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    DefaultInstCell *cell = [self.contentCollectionView dequeueReusableCellWithReuseIdentifier:[DefaultInstCell cellIdentifier]
-                                                                                  forIndexPath:indexPath];
+    DefaultInstCell *cell = [DefaultInstCell dequeueReusableCellForCollectionView:self.contentCollectionView
+                                                                     forIndexPath:indexPath];
 //    cell.cellData = [NSString stringWithFormat:@"%ld", (long)indexPath.item];
+    cell.cellData = @"DefaultInstCell";
     return cell;
 }
 

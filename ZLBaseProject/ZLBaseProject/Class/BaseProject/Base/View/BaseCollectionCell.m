@@ -22,7 +22,7 @@
 + (instancetype)dequeueReusableCellForCollectionView:(UICollectionView *)collectionView
                                         forIndexPath:(NSIndexPath *)indexPath {
     BaseCollectionCell *cell =
-    [collectionView dequeueReusableCellWithReuseIdentifier:[BaseCollectionCell cellIdentifier]
+    [collectionView dequeueReusableCellWithReuseIdentifier:[self cellIdentifier]
                                               forIndexPath:indexPath];
     return cell;
 }

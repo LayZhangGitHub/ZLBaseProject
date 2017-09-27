@@ -18,7 +18,8 @@
 
 #pragma mark - override
 - (void)reloadData {
-    self.backgroundColor = ZLGray(200);
+//    self.backgroundColor = ZLGray(200);
+    self.backgroundColor = [UIColor greenColor];
     
     [self addSubview:self.defaultLabel];
     
@@ -27,7 +28,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.defaultLabel.frame = CGRectMake(0, 0, SCREENWIDTH, 100);
+    _defaultLabel.frame = CGRectMake(0, 0, SCREENWIDTH, 100);
 }
 
 + (CGFloat)heightForCell:(id)cellData {
@@ -39,6 +40,7 @@
     if (!_defaultLabel) {
         _defaultLabel = [[UILabel alloc] init];
         _defaultLabel.textAlignment = NSTextAlignmentCenter;
+        _defaultLabel.backgroundColor = [UIColor redColor];
     }
     return _defaultLabel;
 }

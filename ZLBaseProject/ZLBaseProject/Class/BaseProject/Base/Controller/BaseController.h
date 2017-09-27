@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ZLNavigationBar.h"
 #import "ZLTabbarItem.h"
-
+#import "ZLAlertView.h"
+#import "ZLFailedAndReloadView.h"
 
 @class ZLTabbarController;
 
-@interface BaseController : UIViewController
+@interface BaseController : UIViewController<ZLReloadDelegate>
 
 @property (nonatomic, strong) ZLNavigationBar *navigationBar;
 
@@ -33,5 +34,24 @@
 
 - (void)showNavigationBar;
 - (void)hideNavigationBar;
+
+#pragma mark - alert
+- (void)showAlert:(NSString *)message;
+- (void)showAlert:(NSString *)message didClickButton:(ClickbuttonAtIndex)didClickBlock;
+- (void)showAlert:(NSString *)message
+   didClickButton:(ClickbuttonAtIndex)didClickBlock
+     willDissmiss:(WillDismissionAtIndex)willDismissBlock
+      didDissmiss:(DidDismissionAtIndex)didDismissBlock;
+
+#pragma mark - tips
+- (void)showTips:(NSString *)tips;
+- (void)showTips:(NSString *)tips onView:(UIView *)onView;
+- (void)showTips:(NSString *)tips onView:(UIView *)onView offsetTop:(CGFloat)top;
+- (void)hideTips;
+
+#pragma mark - failed view
+- (void)showFailedOnView:(UIView *)onView;
+- (void)showFaildView;
+- (void)hideFailedView;
 
 @end

@@ -10,4 +10,7 @@
 
 @interface ShowToast : UIView
 
++ (void)showNotice:(NSString *)notice;
++ (void)showNotice:(NSString *)notice duraton:(NSTimeInterval)duration;
+
 @end

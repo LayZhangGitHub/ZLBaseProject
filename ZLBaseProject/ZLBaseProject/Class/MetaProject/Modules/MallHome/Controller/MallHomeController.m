@@ -80,6 +80,8 @@
     [self initData];
     //    [[VersionCheckService sharedService] check];
     //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(launchViewWillRemove:) name:LaunchViewWillRemoveNotification object:nil];
+//    [self showTips:@"te/st"];
+    [self showFaildView];
 }
 
 #pragma mark - private method
@@ -156,6 +158,11 @@
     }];
      
      **/
+}
+
+#pragma mark - failed and reload deleaget
+- (void)failedViewBeginReload:(ZLFailedAndReloadView *)reloadView {
+    NSLog(@"reoload data here!!!");
 }
 
 

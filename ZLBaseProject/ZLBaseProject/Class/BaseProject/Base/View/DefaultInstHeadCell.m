@@ -19,7 +19,8 @@
 
 #pragma mark - override
 - (void)reloadData {
-    self.backgroundColor = ZLGray(200);
+//    self.backgroundColor = ZLGray(200);
+    self.backgroundColor = [UIColor greenColor];
     
     [self addSubview:self.defaultLabel];
     
@@ -40,6 +41,7 @@
     if (!_defaultLabel) {
         _defaultLabel = [[UILabel alloc] init];
         _defaultLabel.textAlignment = NSTextAlignmentCenter;
+        _defaultLabel.backgroundColor = [UIColor redColor];
     }
     return _defaultLabel;
 }

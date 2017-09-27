@@ -36,6 +36,13 @@
 		4845D33D1F7A6542004D884B /* MHHeaderTitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D33C1F7A6542004D884B /* MHHeaderTitleModel.m */; };
 		4845D3401F7A6580004D884B /* MHItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D33F1F7A6580004D884B /* MHItemModel.m */; };
 		4845D3431F7A6732004D884B /* ShareInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3421F7A6732004D884B /* ShareInfoModel.m */; };
+		4845D3461F7B3B60004D884B /* ZLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3451F7B3B60004D884B /* ZLAlertView.m */; };
+		4845D3491F7B3D75004D884B /* UIColor+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3481F7B3D75004D884B /* UIColor+ZLEX.m */; };
+		4845D34C1F7B48B2004D884B /* ZLTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D34B1F7B48B2004D884B /* ZLTipsView.m */; };
+		4845D34F1F7B5525004D884B /* ZLFailedAndReloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D34E1F7B5525004D884B /* ZLFailedAndReloadView.m */; };
+		4845D3521F7B81FA004D884B /* ZLToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3511F7B81FA004D884B /* ZLToastView.m */; };
+		4845D3551F7B90B2004D884B /* ZLSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3541F7B90B2004D884B /* ZLSliderView.m */; };
+		4845D3581F7BAC0D004D884B /* ZLPageCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3571F7BAC0D004D884B /* ZLPageCountView.m */; };
 		485D211D1F78D5370033DD20 /* InstViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 485D211C1F78D5370033DD20 /* InstViewLayout.m */; };
 		48C152A61F739CE900C577AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152A51F739CE900C577AB /* main.m */; };
 		48C152A91F739CE900C577AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152A81F739CE900C577AB /* AppDelegate.m */; };
@@ -130,6 +137,20 @@
 		4845D33F1F7A6580004D884B /* MHItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHItemModel.m; sourceTree = "<group>"; };
 		4845D3411F7A6732004D884B /* ShareInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareInfoModel.h; sourceTree = "<group>"; };
 		4845D3421F7A6732004D884B /* ShareInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareInfoModel.m; sourceTree = "<group>"; };
+		4845D3441F7B3B60004D884B /* ZLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLAlertView.h; sourceTree = "<group>"; };
+		4845D3451F7B3B60004D884B /* ZLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLAlertView.m; sourceTree = "<group>"; };
+		4845D3471F7B3D75004D884B /* UIColor+ZLEX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZLEX.h"; sourceTree = "<group>"; };
+		4845D3481F7B3D75004D884B /* UIColor+ZLEX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZLEX.m"; sourceTree = "<group>"; };
+		4845D34A1F7B48B2004D884B /* ZLTipsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLTipsView.h; sourceTree = "<group>"; };
+		4845D34B1F7B48B2004D884B /* ZLTipsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLTipsView.m; sourceTree = "<group>"; };
+		4845D34D1F7B5525004D884B /* ZLFailedAndReloadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLFailedAndReloadView.h; sourceTree = "<group>"; };
+		4845D34E1F7B5525004D884B /* ZLFailedAndReloadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLFailedAndReloadView.m; sourceTree = "<group>"; };
+		4845D3501F7B81FA004D884B /* ZLToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLToastView.h; sourceTree = "<group>"; };
+		4845D3511F7B81FA004D884B /* ZLToastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLToastView.m; sourceTree = "<group>"; };
+		4845D3531F7B90B2004D884B /* ZLSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLSliderView.h; sourceTree = "<group>"; };
+		4845D3541F7B90B2004D884B /* ZLSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLSliderView.m; sourceTree = "<group>"; };
+		4845D3561F7BAC0D004D884B /* ZLPageCountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLPageCountView.h; sourceTree = "<group>"; };
+		4845D3571F7BAC0D004D884B /* ZLPageCountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLPageCountView.m; sourceTree = "<group>"; };
 		485D211B1F78D5370033DD20 /* InstViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstViewLayout.h; sourceTree = "<group>"; };
 		485D211C1F78D5370033DD20 /* InstViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstViewLayout.m; sourceTree = "<group>"; };
 		48C152A11F739CE900C577AB /* ZLBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -418,6 +439,18 @@
 		48C152C31F739D6200C577AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4845D3441F7B3B60004D884B /* ZLAlertView.h */,
+				4845D3451F7B3B60004D884B /* ZLAlertView.m */,
+				4845D34A1F7B48B2004D884B /* ZLTipsView.h */,
+				4845D34B1F7B48B2004D884B /* ZLTipsView.m */,
+				4845D34D1F7B5525004D884B /* ZLFailedAndReloadView.h */,
+				4845D34E1F7B5525004D884B /* ZLFailedAndReloadView.m */,
+				4845D3501F7B81FA004D884B /* ZLToastView.h */,
+				4845D3511F7B81FA004D884B /* ZLToastView.m */,
+				4845D3531F7B90B2004D884B /* ZLSliderView.h */,
+				4845D3541F7B90B2004D884B /* ZLSliderView.m */,
+				4845D3561F7BAC0D004D884B /* ZLPageCountView.h */,
+				4845D3571F7BAC0D004D884B /* ZLPageCountView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -578,6 +611,8 @@
 				48C153381F73C03800C577AB /* UIView+ZLEX.m */,
 				4806F8851F7553B600A5B3CD /* NSURL+ZLEX.h */,
 				4806F8861F7553B600A5B3CD /* NSURL+ZLEX.m */,
+				4845D3471F7B3D75004D884B /* UIColor+ZLEX.h */,
+				4845D3481F7B3D75004D884B /* UIColor+ZLEX.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -821,7 +856,7 @@
 		48C152991F739CE900C577AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Zhanglei;
 				TargetAttributes = {
 					48C152A01F739CE900C577AB = {
@@ -916,6 +951,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48C152F31F739D6200C577AB /* BaseTableCell.m in Sources */,
+				4845D34F1F7B5525004D884B /* ZLFailedAndReloadView.m in Sources */,
 				48C152F41F739D6200C577AB /* ZLNavigationController.m in Sources */,
 				4845D3401F7A6580004D884B /* MHItemModel.m in Sources */,
 				4845D3251F7A59E5004D884B /* MallHomeController.m in Sources */,
@@ -927,6 +963,7 @@
 				48C152F11F739D6200C577AB /* ScrollableController.m in Sources */,
 				48C152F61F739D6200C577AB /* UserInfo.m in Sources */,
 				4845D32B1F7A5C4D004D884B /* MHResultModel.m in Sources */,
+				4845D3551F7B90B2004D884B /* ZLSliderView.m in Sources */,
 				48C152AC1F739CE900C577AB /* ViewController.m in Sources */,
 				48C152FA1F739D6200C577AB /* ZLNavigationService.m in Sources */,
 				48C152F71F739D6200C577AB /* UserInfoService.m in Sources */,
@@ -939,6 +976,7 @@
 				48C1533C1F73C03800C577AB /* UIButton+ZLEX.m in Sources */,
 				4806F87B1F74F1B500A5B3CD /* StatusModel.m in Sources */,
 				4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */,
+				4845D3491F7B3D75004D884B /* UIColor+ZLEX.m in Sources */,
 				4845D31F1F7A57FB004D884B /* MHModule05Cell.m in Sources */,
 				48C152FC1F739D6200C577AB /* ZLNavigationBar.m in Sources */,
 				4806F8841F750AAB00A5B3CD /* View02Controller.m in Sources */,
@@ -948,13 +986,16 @@
 				4806F87E1F74F47700A5B3CD /* ResponseModel.m in Sources */,
 				4806F8871F7553B600A5B3CD /* NSURL+ZLEX.m in Sources */,
 				48C153231F73BF7000C577AB /* ZLThemeControl.m in Sources */,
+				4845D34C1F7B48B2004D884B /* ZLTipsView.m in Sources */,
 				4806F8711F74C03A00A5B3CD /* BaseCollectionCell.m in Sources */,
 				48C1533A1F73C03800C577AB /* NSObject+Runtime.m in Sources */,
 				48C153391F73C03800C577AB /* CALayer+ZLEX.m in Sources */,
 				4845D3131F7A57CA004D884B /* MHModule01Cell.m in Sources */,
+				4845D3521F7B81FA004D884B /* ZLToastView.m in Sources */,
 				48C1533B1F73C03800C577AB /* NSString+ZLEX.m in Sources */,
 				4845D32E1F7A63D5004D884B /* MHModuleModel.m in Sources */,
 				48C152A91F739CE900C577AB /* AppDelegate.m in Sources */,
+				4845D3461F7B3B60004D884B /* ZLAlertView.m in Sources */,
 				4845D3371F7A64E3004D884B /* MHHeaderModel.m in Sources */,
 				4845D3341F7A6497004D884B /* MHHeaderBarModel.m in Sources */,
 				4845D33D1F7A6542004D884B /* MHHeaderTitleModel.m in Sources */,
@@ -962,6 +1003,7 @@
 				48C152A61F739CE900C577AB /* main.m in Sources */,
 				48C152EE1F739D6200C577AB /* AppModuleEntity.m in Sources */,
 				4845D3191F7A57EB004D884B /* MHModule03Cell.m in Sources */,
+				4845D3581F7BAC0D004D884B /* ZLPageCountView.m in Sources */,
 				48C152FB1F739D6200C577AB /* ShowToast.m in Sources */,
 				48C1533D1F73C03800C577AB /* UIImage+ZLEX.m in Sources */,
 				4806F8811F750A9900A5B3CD /* View01Controller.m in Sources */,
@@ -1008,7 +1050,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1016,7 +1060,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1056,7 +1104,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1064,7 +1114,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
