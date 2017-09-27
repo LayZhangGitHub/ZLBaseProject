@@ -16,6 +16,7 @@
 		4806F8811F750A9900A5B3CD /* View01Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8801F750A9900A5B3CD /* View01Controller.m */; };
 		4806F8841F750AAB00A5B3CD /* View02Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8831F750AAB00A5B3CD /* View02Controller.m */; };
 		4806F8871F7553B600A5B3CD /* NSURL+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8861F7553B600A5B3CD /* NSURL+ZLEX.m */; };
+		48089B2B1F7BB06B00DAF1B6 /* ShowToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B2A1F7BB06A00DAF1B6 /* ShowToast.m */; };
 		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
 		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
 		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
@@ -62,7 +63,6 @@
 		48C152F71F739D6200C577AB /* UserInfoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152DE1F739D6200C577AB /* UserInfoService.m */; };
 		48C152F91F739D6200C577AB /* ZLModuleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152E21F739D6200C577AB /* ZLModuleEntity.m */; };
 		48C152FA1F739D6200C577AB /* ZLNavigationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152E41F739D6200C577AB /* ZLNavigationService.m */; };
-		48C152FB1F739D6200C577AB /* ShowToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152E71F739D6200C577AB /* ShowToast.m */; };
 		48C152FC1F739D6200C577AB /* ZLNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152E91F739D6200C577AB /* ZLNavigationBar.m */; };
 		48C152FD1F739D6200C577AB /* ZLTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152EB1F739D6200C577AB /* ZLTabbar.m */; };
 		48C152FE1F739D6200C577AB /* ZLTabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C152ED1F739D6200C577AB /* ZLTabbarItem.m */; };
@@ -97,6 +97,8 @@
 		4806F8831F750AAB00A5B3CD /* View02Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View02Controller.m; sourceTree = "<group>"; };
 		4806F8851F7553B600A5B3CD /* NSURL+ZLEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+ZLEX.h"; sourceTree = "<group>"; };
 		4806F8861F7553B600A5B3CD /* NSURL+ZLEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ZLEX.m"; sourceTree = "<group>"; };
+		48089B291F7BB06A00DAF1B6 /* ShowToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowToast.h; sourceTree = "<group>"; };
+		48089B2A1F7BB06A00DAF1B6 /* ShowToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowToast.m; sourceTree = "<group>"; };
 		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
 		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
 		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
@@ -187,8 +189,6 @@
 		48C152E21F739D6200C577AB /* ZLModuleEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLModuleEntity.m; sourceTree = "<group>"; };
 		48C152E31F739D6200C577AB /* ZLNavigationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLNavigationService.h; sourceTree = "<group>"; };
 		48C152E41F739D6200C577AB /* ZLNavigationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLNavigationService.m; sourceTree = "<group>"; };
-		48C152E61F739D6200C577AB /* ShowToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowToast.h; sourceTree = "<group>"; };
-		48C152E71F739D6200C577AB /* ShowToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowToast.m; sourceTree = "<group>"; };
 		48C152E81F739D6200C577AB /* ZLNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLNavigationBar.h; sourceTree = "<group>"; };
 		48C152E91F739D6200C577AB /* ZLNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLNavigationBar.m; sourceTree = "<group>"; };
 		48C152EA1F739D6200C577AB /* ZLTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLTabbar.h; sourceTree = "<group>"; };
@@ -439,6 +439,8 @@
 		48C152C31F739D6200C577AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				48089B291F7BB06A00DAF1B6 /* ShowToast.h */,
+				48089B2A1F7BB06A00DAF1B6 /* ShowToast.m */,
 				4845D3441F7B3B60004D884B /* ZLAlertView.h */,
 				4845D3451F7B3B60004D884B /* ZLAlertView.m */,
 				4845D34A1F7B48B2004D884B /* ZLTipsView.h */,
@@ -570,8 +572,6 @@
 		48C152E51F739D6200C577AB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				48C152E61F739D6200C577AB /* ShowToast.h */,
-				48C152E71F739D6200C577AB /* ShowToast.m */,
 				48C152E81F739D6200C577AB /* ZLNavigationBar.h */,
 				48C152E91F739D6200C577AB /* ZLNavigationBar.m */,
 				48C152EA1F739D6200C577AB /* ZLTabbar.h */,
@@ -976,6 +976,7 @@
 				48C1533C1F73C03800C577AB /* UIButton+ZLEX.m in Sources */,
 				4806F87B1F74F1B500A5B3CD /* StatusModel.m in Sources */,
 				4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */,
+				48089B2B1F7BB06B00DAF1B6 /* ShowToast.m in Sources */,
 				4845D3491F7B3D75004D884B /* UIColor+ZLEX.m in Sources */,
 				4845D31F1F7A57FB004D884B /* MHModule05Cell.m in Sources */,
 				48C152FC1F739D6200C577AB /* ZLNavigationBar.m in Sources */,
@@ -1004,7 +1005,6 @@
 				48C152EE1F739D6200C577AB /* AppModuleEntity.m in Sources */,
 				4845D3191F7A57EB004D884B /* MHModule03Cell.m in Sources */,
 				4845D3581F7BAC0D004D884B /* ZLPageCountView.m in Sources */,
-				48C152FB1F739D6200C577AB /* ShowToast.m in Sources */,
 				48C1533D1F73C03800C577AB /* UIImage+ZLEX.m in Sources */,
 				4806F8811F750A9900A5B3CD /* View01Controller.m in Sources */,
 				4845D3281F7A5B98004D884B /* MallHomeRequest.m in Sources */,
