@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ShareInfoModel.h"
+#import "MHModuleModel.h"
 
 @interface MHResultModel : NSObject
 
-@property (nonatomic, strong) NSArray *list;
+@property (nonatomic, strong) NSArray<MHModuleModel *> *list;
 @property (nonatomic,strong) ShareInfoModel *share;
 
 @end

@@ -12,12 +12,12 @@
 
 #ifdef DEBUG
 
-#define BaseURLString @""
+#define BaseURLString @"https://app.taomengzhe.cn"
 #define TimeOutInterval 0
 
 #else
 
-#define BaseURLString @""
+#define BaseURLString @"https://app.taomengzhe.cn"
 #define TimeOutInterval 0
 
 #endif

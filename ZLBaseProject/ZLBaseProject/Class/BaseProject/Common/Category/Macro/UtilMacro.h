@@ -9,6 +9,20 @@
 #ifndef UtilMacro_h
 #define UtilMacro_h
 
+#import "SafeObjectMacro.h"
+#import "BlocksKit.h"
+#import "UIActionSheet+BlocksKit.h"
+#import "UIAlertView+BlocksKit.h"
+#import "UIBarButtonItem+BlocksKit.h"
+#import "UIControl+BlocksKit.h"
+#import "UIGestureRecognizer+BlocksKit.h"
+#import "UIPopoverController+BlocksKit.h"
+#import "UITextField+BlocksKit.h"
+#import "UIView+BlocksKit.h"
+#import "UIWebView+BlocksKit.h"
+#import "UITextField+BlocksKit.h"
+#import "UIImagePickerController+BlocksKit.h"
+
 // button delay
 #define DelayEnableButton(s, t) UIButton *enableButton = (UIButton *)s;\
 enableButton.enabled = NO;\

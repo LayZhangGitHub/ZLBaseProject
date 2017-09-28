@@ -14,5 +14,6 @@
 @property (nonatomic, assign) NSInteger numberOfPages;
 
 - (instancetype)initWithPageNumber:(NSInteger)number;
+- (CGSize)sizeForNumberOfPages:(NSInteger)pages;
 
 @end

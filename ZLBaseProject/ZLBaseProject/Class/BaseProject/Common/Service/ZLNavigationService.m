@@ -71,7 +71,7 @@
     [self openUrl:urlString userInfo:userInfo from:nil complete:nil];
 }
 
-- (void)openUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo from:(id)from complete:(void (^)())complete {
+- (void)openUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo from:(id)from complete:(void (^)(void))complete {
     
     if (![urlString isEmptyString]) {
         

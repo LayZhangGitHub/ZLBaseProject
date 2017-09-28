@@ -17,6 +17,16 @@
 		4806F8841F750AAB00A5B3CD /* View02Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8831F750AAB00A5B3CD /* View02Controller.m */; };
 		4806F8871F7553B600A5B3CD /* NSURL+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 4806F8861F7553B600A5B3CD /* NSURL+ZLEX.m */; };
 		48089B2B1F7BB06B00DAF1B6 /* ShowToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B2A1F7BB06A00DAF1B6 /* ShowToast.m */; };
+		48089B321F7CD9CB00DAF1B6 /* UIImageView+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B311F7CD9CB00DAF1B6 /* UIImageView+ZLEX.m */; };
+		48089B411F7CDD9B00DAF1B6 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B351F7CDD9B00DAF1B6 /* NSArray+Safe.m */; };
+		48089B421F7CDD9B00DAF1B6 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B371F7CDD9B00DAF1B6 /* NSDictionary+Safe.m */; };
+		48089B431F7CDD9B00DAF1B6 /* NSMutableArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B391F7CDD9B00DAF1B6 /* NSMutableArray+Safe.m */; };
+		48089B441F7CDD9B00DAF1B6 /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B3B1F7CDD9B00DAF1B6 /* NSMutableDictionary+Safe.m */; };
+		48089B451F7CDD9B00DAF1B6 /* NSMutableSet+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B3D1F7CDD9B00DAF1B6 /* NSMutableSet+Safe.m */; };
+		48089B461F7CDD9B00DAF1B6 /* NSObject+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B3F1F7CDD9B00DAF1B6 /* NSObject+Safe.m */; };
+		48089B491F7CF5E400DAF1B6 /* Instrument01View.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B481F7CF5E400DAF1B6 /* Instrument01View.m */; };
+		48089B4F1F7CF65400DAF1B6 /* ZLMyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B4E1F7CF65400DAF1B6 /* ZLMyBaseView.m */; };
+		48089B521F7D08EC00DAF1B6 /* Instrument02View.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B511F7D08EC00DAF1B6 /* Instrument02View.m */; };
 		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
 		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
 		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
@@ -99,6 +109,27 @@
 		4806F8861F7553B600A5B3CD /* NSURL+ZLEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ZLEX.m"; sourceTree = "<group>"; };
 		48089B291F7BB06A00DAF1B6 /* ShowToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowToast.h; sourceTree = "<group>"; };
 		48089B2A1F7BB06A00DAF1B6 /* ShowToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowToast.m; sourceTree = "<group>"; };
+		48089B301F7CD9CB00DAF1B6 /* UIImageView+ZLEX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZLEX.h"; sourceTree = "<group>"; };
+		48089B311F7CD9CB00DAF1B6 /* UIImageView+ZLEX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZLEX.m"; sourceTree = "<group>"; };
+		48089B341F7CDD9B00DAF1B6 /* NSArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
+		48089B351F7CDD9B00DAF1B6 /* NSArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
+		48089B361F7CDD9B00DAF1B6 /* NSDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
+		48089B371F7CDD9B00DAF1B6 /* NSDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
+		48089B381F7CDD9B00DAF1B6 /* NSMutableArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Safe.h"; sourceTree = "<group>"; };
+		48089B391F7CDD9B00DAF1B6 /* NSMutableArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Safe.m"; sourceTree = "<group>"; };
+		48089B3A1F7CDD9B00DAF1B6 /* NSMutableDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Safe.h"; sourceTree = "<group>"; };
+		48089B3B1F7CDD9B00DAF1B6 /* NSMutableDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Safe.m"; sourceTree = "<group>"; };
+		48089B3C1F7CDD9B00DAF1B6 /* NSMutableSet+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+Safe.h"; sourceTree = "<group>"; };
+		48089B3D1F7CDD9B00DAF1B6 /* NSMutableSet+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+Safe.m"; sourceTree = "<group>"; };
+		48089B3E1F7CDD9B00DAF1B6 /* NSObject+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Safe.h"; sourceTree = "<group>"; };
+		48089B3F1F7CDD9B00DAF1B6 /* NSObject+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Safe.m"; sourceTree = "<group>"; };
+		48089B401F7CDD9B00DAF1B6 /* SafeObjectMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeObjectMacro.h; sourceTree = "<group>"; };
+		48089B471F7CF5E400DAF1B6 /* Instrument01View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Instrument01View.h; sourceTree = "<group>"; };
+		48089B481F7CF5E400DAF1B6 /* Instrument01View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instrument01View.m; sourceTree = "<group>"; };
+		48089B4D1F7CF65400DAF1B6 /* ZLMyBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLMyBaseView.h; sourceTree = "<group>"; };
+		48089B4E1F7CF65400DAF1B6 /* ZLMyBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLMyBaseView.m; sourceTree = "<group>"; };
+		48089B501F7D08EC00DAF1B6 /* Instrument02View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Instrument02View.h; sourceTree = "<group>"; };
+		48089B511F7D08EC00DAF1B6 /* Instrument02View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instrument02View.m; sourceTree = "<group>"; };
 		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
 		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
 		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
@@ -254,6 +285,26 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		48089B331F7CDD9B00DAF1B6 /* Safe */ = {
+			isa = PBXGroup;
+			children = (
+				48089B341F7CDD9B00DAF1B6 /* NSArray+Safe.h */,
+				48089B351F7CDD9B00DAF1B6 /* NSArray+Safe.m */,
+				48089B361F7CDD9B00DAF1B6 /* NSDictionary+Safe.h */,
+				48089B371F7CDD9B00DAF1B6 /* NSDictionary+Safe.m */,
+				48089B381F7CDD9B00DAF1B6 /* NSMutableArray+Safe.h */,
+				48089B391F7CDD9B00DAF1B6 /* NSMutableArray+Safe.m */,
+				48089B3A1F7CDD9B00DAF1B6 /* NSMutableDictionary+Safe.h */,
+				48089B3B1F7CDD9B00DAF1B6 /* NSMutableDictionary+Safe.m */,
+				48089B3C1F7CDD9B00DAF1B6 /* NSMutableSet+Safe.h */,
+				48089B3D1F7CDD9B00DAF1B6 /* NSMutableSet+Safe.m */,
+				48089B3E1F7CDD9B00DAF1B6 /* NSObject+Safe.h */,
+				48089B3F1F7CDD9B00DAF1B6 /* NSObject+Safe.m */,
+				48089B401F7CDD9B00DAF1B6 /* SafeObjectMacro.h */,
+			);
+			path = Safe;
+			sourceTree = "<group>";
+		};
 		4845D30C1F7A56FA004D884B /* MallHome */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +374,10 @@
 				4845D31E1F7A57FB004D884B /* MHModule05Cell.m */,
 				4845D3201F7A5804004D884B /* MHModule06Cell.h */,
 				4845D3211F7A5804004D884B /* MHModule06Cell.m */,
+				48089B471F7CF5E400DAF1B6 /* Instrument01View.h */,
+				48089B481F7CF5E400DAF1B6 /* Instrument01View.m */,
+				48089B501F7D08EC00DAF1B6 /* Instrument02View.h */,
+				48089B511F7D08EC00DAF1B6 /* Instrument02View.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -453,6 +508,8 @@
 				4845D3541F7B90B2004D884B /* ZLSliderView.m */,
 				4845D3561F7BAC0D004D884B /* ZLPageCountView.h */,
 				4845D3571F7BAC0D004D884B /* ZLPageCountView.m */,
+				48089B4D1F7CF65400DAF1B6 /* ZLMyBaseView.h */,
+				48089B4E1F7CF65400DAF1B6 /* ZLMyBaseView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -594,6 +651,7 @@
 		48C153241F73C03800C577AB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				48089B331F7CDD9B00DAF1B6 /* Safe */,
 				48C153271F73C03800C577AB /* Macro */,
 				48C153251F73C03800C577AB /* CALayer+ZLEX.h */,
 				48C153261F73C03800C577AB /* CALayer+ZLEX.m */,
@@ -613,6 +671,8 @@
 				4806F8861F7553B600A5B3CD /* NSURL+ZLEX.m */,
 				4845D3471F7B3D75004D884B /* UIColor+ZLEX.h */,
 				4845D3481F7B3D75004D884B /* UIColor+ZLEX.m */,
+				48089B301F7CD9CB00DAF1B6 /* UIImageView+ZLEX.h */,
+				48089B311F7CD9CB00DAF1B6 /* UIImageView+ZLEX.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -956,13 +1016,19 @@
 				4845D3401F7A6580004D884B /* MHItemModel.m in Sources */,
 				4845D3251F7A59E5004D884B /* MallHomeController.m in Sources */,
 				48C153021F73A10000C577AB /* ApplicationEntity.m in Sources */,
+				48089B521F7D08EC00DAF1B6 /* Instrument02View.m in Sources */,
+				48089B451F7CDD9B00DAF1B6 /* NSMutableSet+Safe.m in Sources */,
 				4845D3431F7A6732004D884B /* ShareInfoModel.m in Sources */,
 				48C152F91F739D6200C577AB /* ZLModuleEntity.m in Sources */,
 				48C152F51F739D6200C577AB /* ZLTabbarController.m in Sources */,
 				48C1533E1F73C03800C577AB /* UIView+QuickNew.m in Sources */,
 				48C152F11F739D6200C577AB /* ScrollableController.m in Sources */,
+				48089B421F7CDD9B00DAF1B6 /* NSDictionary+Safe.m in Sources */,
+				48089B411F7CDD9B00DAF1B6 /* NSArray+Safe.m in Sources */,
 				48C152F61F739D6200C577AB /* UserInfo.m in Sources */,
+				48089B431F7CDD9B00DAF1B6 /* NSMutableArray+Safe.m in Sources */,
 				4845D32B1F7A5C4D004D884B /* MHResultModel.m in Sources */,
+				48089B4F1F7CF65400DAF1B6 /* ZLMyBaseView.m in Sources */,
 				4845D3551F7B90B2004D884B /* ZLSliderView.m in Sources */,
 				48C152AC1F739CE900C577AB /* ViewController.m in Sources */,
 				48C152FA1F739D6200C577AB /* ZLNavigationService.m in Sources */,
@@ -971,6 +1037,8 @@
 				48C152FD1F739D6200C577AB /* ZLTabbar.m in Sources */,
 				4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */,
 				4806F86E1F74BA8100A5B3CD /* BaseCollectionController.m in Sources */,
+				48089B491F7CF5E400DAF1B6 /* Instrument01View.m in Sources */,
+				48089B441F7CDD9B00DAF1B6 /* NSMutableDictionary+Safe.m in Sources */,
 				48C152EF1F739D6200C577AB /* BaseController.m in Sources */,
 				4845D3221F7A5804004D884B /* MHModule06Cell.m in Sources */,
 				48C1533C1F73C03800C577AB /* UIButton+ZLEX.m in Sources */,
@@ -989,6 +1057,7 @@
 				48C153231F73BF7000C577AB /* ZLThemeControl.m in Sources */,
 				4845D34C1F7B48B2004D884B /* ZLTipsView.m in Sources */,
 				4806F8711F74C03A00A5B3CD /* BaseCollectionCell.m in Sources */,
+				48089B321F7CD9CB00DAF1B6 /* UIImageView+ZLEX.m in Sources */,
 				48C1533A1F73C03800C577AB /* NSObject+Runtime.m in Sources */,
 				48C153391F73C03800C577AB /* CALayer+ZLEX.m in Sources */,
 				4845D3131F7A57CA004D884B /* MHModule01Cell.m in Sources */,
@@ -996,6 +1065,7 @@
 				48C1533B1F73C03800C577AB /* NSString+ZLEX.m in Sources */,
 				4845D32E1F7A63D5004D884B /* MHModuleModel.m in Sources */,
 				48C152A91F739CE900C577AB /* AppDelegate.m in Sources */,
+				48089B461F7CDD9B00DAF1B6 /* NSObject+Safe.m in Sources */,
 				4845D3461F7B3B60004D884B /* ZLAlertView.m in Sources */,
 				4845D3371F7A64E3004D884B /* MHHeaderModel.m in Sources */,
 				4845D3341F7A6497004D884B /* MHHeaderBarModel.m in Sources */,

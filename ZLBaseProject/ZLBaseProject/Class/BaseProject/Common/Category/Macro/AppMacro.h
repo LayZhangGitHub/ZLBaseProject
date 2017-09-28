@@ -10,6 +10,8 @@
 #define AppMacro_h
 
 #import "ZLThemeControl.h"
+#import "ZLNavigationService.h"
+
 
 #define AppScheme           @"xiaoma"
 #define AppSchemeCompeled   @"xiaoma://"
@@ -18,5 +20,7 @@
 
 #define _SConnect(x, y) [NSString stringWithFormat:@"%@,%@", x,y]
 #define SConnect(x, y) _SConnect(x, y)
+
+
 
 #endif /* AppMacro_h */

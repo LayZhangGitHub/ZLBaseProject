@@ -33,8 +33,8 @@ target 'ZLBaseProject' do
 #    pod 'JSONModel', '~> 1.7.0'
     pod 'YYModel'
 #    
-#    pod 'SDWebImage', '~> 4.0.0'
-#    
+    pod 'SDWebImage', '~> 4.0.0'
+#
 #    pod 'TTTAttributedLabel', '~>2.0.0'
 #    
 #    pod 'SCLAlertView-Objective-C'
@@ -51,6 +51,11 @@ target 'ZLBaseProject' do
     pod 'CocoaLumberjack'
     
     pod 'MJRefresh', '~> 3.1.12'
+    pod 'SwipeView', '~> 1.3.2'
+    
+    
+    # util kit
+    pod 'BlocksKit'
     
 
     

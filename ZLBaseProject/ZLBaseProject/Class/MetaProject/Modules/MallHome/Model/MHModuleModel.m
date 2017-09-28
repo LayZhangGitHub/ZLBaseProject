@@ -10,4 +10,8 @@
 
 @implementation MHModuleModel
 
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"items":[MHItemModel class]};
+}
+
 @end

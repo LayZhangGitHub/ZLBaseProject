@@ -10,4 +10,8 @@
 
 @implementation MHResultModel
 
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"list" : [MHModuleModel class]};
+}
+
 @end

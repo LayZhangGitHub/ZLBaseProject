@@ -15,7 +15,7 @@
 - (void)registerModule:(Class)moduleClass withScheme:(NSString *)scheme host:(NSString *)host;
 - (void)openUrl:(NSString *)urlString;
 - (void)openUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo;
-- (void)openUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo from:(id)from complete:(void(^)())complete;
+- (void)openUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo from:(id)from complete:(void(^)(void))complete;
 - (BOOL)canOpenUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo from:(id)from;
 
 @end

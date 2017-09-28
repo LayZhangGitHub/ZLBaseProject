@@ -15,6 +15,7 @@
 #import "UIView+ZLEX.h"
 #import "UIView+QuickNew.h"
 #import "UIImage+ZLEX.h"
+#import "UIImageView+ZLEX.h"
 #import "CALayer+ZLEX.h"
 #import "UIButton+ZLEX.h"
 #import "NSString+ZLEX.h"

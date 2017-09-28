@@ -18,4 +18,6 @@
                                         forIndexPath:(NSIndexPath *)indexPath;
 - (void)reloadData;
 
+- (void)cellAddSubview:(UIView *)view;
+
 @end

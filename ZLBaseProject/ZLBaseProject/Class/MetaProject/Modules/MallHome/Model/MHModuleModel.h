@@ -16,6 +16,6 @@
 @property (nonatomic, assign) int type;
 @property (nonatomic, strong) MHHeaderModel *header;
 @property (nonatomic, strong) MHBannerModel *banner;
-@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) NSArray<MHItemModel *> *items;
 
 @end

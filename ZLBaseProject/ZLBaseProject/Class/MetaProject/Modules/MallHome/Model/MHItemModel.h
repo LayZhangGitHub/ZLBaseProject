@@ -10,7 +10,7 @@
 
 @interface MHItemModel : NSObject
 
-@property (nonatomic, assign) float ar;
+@property (nonatomic, assign) float ar; // 宽:高 比
 @property (nonatomic, strong) NSString *image;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *desc;

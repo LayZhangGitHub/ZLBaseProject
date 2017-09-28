@@ -20,6 +20,7 @@
 
 @protocol ZLReloadDelegate <NSObject>
 
+@optional
 - (void)failedViewBeginReload:(ZLFailedAndReloadView *)reloadView;
 
 @end

@@ -33,7 +33,7 @@
     return YES;
 }
 
-- (void)handleOpenUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo from:(id)from complete:(void(^)())complete {
+- (void)handleOpenUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo from:(id)from complete:(void(^)(void))complete {
     ZLNavigationController *navigationController = [[ApplicationEntity shareInstance] currentNavigationController];
     
     NSString *strUrl = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
