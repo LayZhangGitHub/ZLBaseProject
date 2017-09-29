@@ -41,7 +41,7 @@
 #pragma mark - override
 - (void)reloadData {
     if (self.cellData) {
-        _height = [MHModule01Cell heightForCell:self.cellData];
+        _height = [[MHModule01Cell heightForCell:self.cellData] floatValue];
     }
     
     if (self.cellData) {
@@ -53,12 +53,12 @@
     }
 }
 
-+ (CGFloat)heightForCell:(id)cellData {
++ (NSNumber *)heightForCell:(id)cellData {
     if (cellData) {
         MHModuleModel *ad = (MHModuleModel *)cellData;
         MHItemModel *item = [ad.items objectAtIndex:0];
         if (item) {
-            return SCREENWIDTH / item.ar;
+            return @(SCREENWIDTH / item.ar);
         }
     }
     return 0;

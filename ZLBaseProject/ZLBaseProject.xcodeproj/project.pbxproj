@@ -27,6 +27,26 @@
 		48089B491F7CF5E400DAF1B6 /* Instrument01View.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B481F7CF5E400DAF1B6 /* Instrument01View.m */; };
 		48089B4F1F7CF65400DAF1B6 /* ZLMyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B4E1F7CF65400DAF1B6 /* ZLMyBaseView.m */; };
 		48089B521F7D08EC00DAF1B6 /* Instrument02View.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089B511F7D08EC00DAF1B6 /* Instrument02View.m */; };
+		48089C671F7DF92000DAF1B6 /* MHModule07Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C661F7DF92000DAF1B6 /* MHModule07Cell.m */; };
+		48089C6A1F7DF92F00DAF1B6 /* MHModule08Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C691F7DF92F00DAF1B6 /* MHModule08Cell.m */; };
+		48089C6D1F7DF93900DAF1B6 /* MHModule09Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C6C1F7DF93900DAF1B6 /* MHModule09Cell.m */; };
+		48089C701F7DF94100DAF1B6 /* MHModule10Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C6F1F7DF94100DAF1B6 /* MHModule10Cell.m */; };
+		48089C731F7DF94B00DAF1B6 /* MHModule11Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C721F7DF94B00DAF1B6 /* MHModule11Cell.m */; };
+		48089C761F7DF95500DAF1B6 /* MHModule12Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C751F7DF95500DAF1B6 /* MHModule12Cell.m */; };
+		48089C791F7DF96000DAF1B6 /* MHModule13Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C781F7DF96000DAF1B6 /* MHModule13Cell.m */; };
+		48089C7C1F7DF96A00DAF1B6 /* MHModule14Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C7B1F7DF96A00DAF1B6 /* MHModule14Cell.m */; };
+		48089C7F1F7DF97400DAF1B6 /* MHModule15Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C7E1F7DF97400DAF1B6 /* MHModule15Cell.m */; };
+		48089C821F7DF97E00DAF1B6 /* MHModule16Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C811F7DF97E00DAF1B6 /* MHModule16Cell.m */; };
+		48089C851F7DF98700DAF1B6 /* MHModule17Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C841F7DF98700DAF1B6 /* MHModule17Cell.m */; };
+		48089C881F7DF99100DAF1B6 /* MHModule18Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C871F7DF99100DAF1B6 /* MHModule18Cell.m */; };
+		48089C8B1F7DF99B00DAF1B6 /* MHModule19Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C8A1F7DF99B00DAF1B6 /* MHModule19Cell.m */; };
+		48089C8E1F7DF9A500DAF1B6 /* MHModule20Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C8D1F7DF9A500DAF1B6 /* MHModule20Cell.m */; };
+		48089C911F7DF9B100DAF1B6 /* MHModule21Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C901F7DF9B100DAF1B6 /* MHModule21Cell.m */; };
+		48089C941F7DF9B900DAF1B6 /* MHModule22Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C931F7DF9B900DAF1B6 /* MHModule22Cell.m */; };
+		48089C971F7DF9C400DAF1B6 /* MHModule23Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C961F7DF9C400DAF1B6 /* MHModule23Cell.m */; };
+		48089C9A1F7DF9CE00DAF1B6 /* MHModule24Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C991F7DF9CE00DAF1B6 /* MHModule24Cell.m */; };
+		48089C9D1F7DF9D700DAF1B6 /* MHModule25Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C9C1F7DF9D700DAF1B6 /* MHModule25Cell.m */; };
+		48089CA01F7E31F000DAF1B6 /* Instrument03View.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C9F1F7E31F000DAF1B6 /* Instrument03View.m */; };
 		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
 		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
 		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
@@ -130,6 +150,46 @@
 		48089B4E1F7CF65400DAF1B6 /* ZLMyBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLMyBaseView.m; sourceTree = "<group>"; };
 		48089B501F7D08EC00DAF1B6 /* Instrument02View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Instrument02View.h; sourceTree = "<group>"; };
 		48089B511F7D08EC00DAF1B6 /* Instrument02View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instrument02View.m; sourceTree = "<group>"; };
+		48089C651F7DF92000DAF1B6 /* MHModule07Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule07Cell.h; sourceTree = "<group>"; };
+		48089C661F7DF92000DAF1B6 /* MHModule07Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule07Cell.m; sourceTree = "<group>"; };
+		48089C681F7DF92F00DAF1B6 /* MHModule08Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule08Cell.h; sourceTree = "<group>"; };
+		48089C691F7DF92F00DAF1B6 /* MHModule08Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule08Cell.m; sourceTree = "<group>"; };
+		48089C6B1F7DF93900DAF1B6 /* MHModule09Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule09Cell.h; sourceTree = "<group>"; };
+		48089C6C1F7DF93900DAF1B6 /* MHModule09Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule09Cell.m; sourceTree = "<group>"; };
+		48089C6E1F7DF94100DAF1B6 /* MHModule10Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule10Cell.h; sourceTree = "<group>"; };
+		48089C6F1F7DF94100DAF1B6 /* MHModule10Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule10Cell.m; sourceTree = "<group>"; };
+		48089C711F7DF94B00DAF1B6 /* MHModule11Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule11Cell.h; sourceTree = "<group>"; };
+		48089C721F7DF94B00DAF1B6 /* MHModule11Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule11Cell.m; sourceTree = "<group>"; };
+		48089C741F7DF95500DAF1B6 /* MHModule12Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule12Cell.h; sourceTree = "<group>"; };
+		48089C751F7DF95500DAF1B6 /* MHModule12Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule12Cell.m; sourceTree = "<group>"; };
+		48089C771F7DF96000DAF1B6 /* MHModule13Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule13Cell.h; sourceTree = "<group>"; };
+		48089C781F7DF96000DAF1B6 /* MHModule13Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule13Cell.m; sourceTree = "<group>"; };
+		48089C7A1F7DF96900DAF1B6 /* MHModule14Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule14Cell.h; sourceTree = "<group>"; };
+		48089C7B1F7DF96A00DAF1B6 /* MHModule14Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule14Cell.m; sourceTree = "<group>"; };
+		48089C7D1F7DF97400DAF1B6 /* MHModule15Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule15Cell.h; sourceTree = "<group>"; };
+		48089C7E1F7DF97400DAF1B6 /* MHModule15Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule15Cell.m; sourceTree = "<group>"; };
+		48089C801F7DF97E00DAF1B6 /* MHModule16Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule16Cell.h; sourceTree = "<group>"; };
+		48089C811F7DF97E00DAF1B6 /* MHModule16Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule16Cell.m; sourceTree = "<group>"; };
+		48089C831F7DF98700DAF1B6 /* MHModule17Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule17Cell.h; sourceTree = "<group>"; };
+		48089C841F7DF98700DAF1B6 /* MHModule17Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule17Cell.m; sourceTree = "<group>"; };
+		48089C861F7DF99100DAF1B6 /* MHModule18Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule18Cell.h; sourceTree = "<group>"; };
+		48089C871F7DF99100DAF1B6 /* MHModule18Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule18Cell.m; sourceTree = "<group>"; };
+		48089C891F7DF99B00DAF1B6 /* MHModule19Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule19Cell.h; sourceTree = "<group>"; };
+		48089C8A1F7DF99B00DAF1B6 /* MHModule19Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule19Cell.m; sourceTree = "<group>"; };
+		48089C8C1F7DF9A500DAF1B6 /* MHModule20Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule20Cell.h; sourceTree = "<group>"; };
+		48089C8D1F7DF9A500DAF1B6 /* MHModule20Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule20Cell.m; sourceTree = "<group>"; };
+		48089C8F1F7DF9B100DAF1B6 /* MHModule21Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule21Cell.h; sourceTree = "<group>"; };
+		48089C901F7DF9B100DAF1B6 /* MHModule21Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule21Cell.m; sourceTree = "<group>"; };
+		48089C921F7DF9B900DAF1B6 /* MHModule22Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule22Cell.h; sourceTree = "<group>"; };
+		48089C931F7DF9B900DAF1B6 /* MHModule22Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule22Cell.m; sourceTree = "<group>"; };
+		48089C951F7DF9C400DAF1B6 /* MHModule23Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule23Cell.h; sourceTree = "<group>"; };
+		48089C961F7DF9C400DAF1B6 /* MHModule23Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule23Cell.m; sourceTree = "<group>"; };
+		48089C981F7DF9CE00DAF1B6 /* MHModule24Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule24Cell.h; sourceTree = "<group>"; };
+		48089C991F7DF9CE00DAF1B6 /* MHModule24Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule24Cell.m; sourceTree = "<group>"; };
+		48089C9B1F7DF9D700DAF1B6 /* MHModule25Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHModule25Cell.h; sourceTree = "<group>"; };
+		48089C9C1F7DF9D700DAF1B6 /* MHModule25Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule25Cell.m; sourceTree = "<group>"; };
+		48089C9E1F7E31F000DAF1B6 /* Instrument03View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Instrument03View.h; sourceTree = "<group>"; };
+		48089C9F1F7E31F000DAF1B6 /* Instrument03View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instrument03View.m; sourceTree = "<group>"; };
 		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
 		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
 		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
@@ -374,10 +434,50 @@
 				4845D31E1F7A57FB004D884B /* MHModule05Cell.m */,
 				4845D3201F7A5804004D884B /* MHModule06Cell.h */,
 				4845D3211F7A5804004D884B /* MHModule06Cell.m */,
+				48089C651F7DF92000DAF1B6 /* MHModule07Cell.h */,
+				48089C661F7DF92000DAF1B6 /* MHModule07Cell.m */,
+				48089C681F7DF92F00DAF1B6 /* MHModule08Cell.h */,
+				48089C691F7DF92F00DAF1B6 /* MHModule08Cell.m */,
+				48089C6B1F7DF93900DAF1B6 /* MHModule09Cell.h */,
+				48089C6C1F7DF93900DAF1B6 /* MHModule09Cell.m */,
+				48089C6E1F7DF94100DAF1B6 /* MHModule10Cell.h */,
+				48089C6F1F7DF94100DAF1B6 /* MHModule10Cell.m */,
+				48089C711F7DF94B00DAF1B6 /* MHModule11Cell.h */,
+				48089C721F7DF94B00DAF1B6 /* MHModule11Cell.m */,
+				48089C741F7DF95500DAF1B6 /* MHModule12Cell.h */,
+				48089C751F7DF95500DAF1B6 /* MHModule12Cell.m */,
+				48089C771F7DF96000DAF1B6 /* MHModule13Cell.h */,
+				48089C781F7DF96000DAF1B6 /* MHModule13Cell.m */,
+				48089C7A1F7DF96900DAF1B6 /* MHModule14Cell.h */,
+				48089C7B1F7DF96A00DAF1B6 /* MHModule14Cell.m */,
+				48089C7D1F7DF97400DAF1B6 /* MHModule15Cell.h */,
+				48089C7E1F7DF97400DAF1B6 /* MHModule15Cell.m */,
+				48089C801F7DF97E00DAF1B6 /* MHModule16Cell.h */,
+				48089C811F7DF97E00DAF1B6 /* MHModule16Cell.m */,
+				48089C831F7DF98700DAF1B6 /* MHModule17Cell.h */,
+				48089C841F7DF98700DAF1B6 /* MHModule17Cell.m */,
+				48089C861F7DF99100DAF1B6 /* MHModule18Cell.h */,
+				48089C871F7DF99100DAF1B6 /* MHModule18Cell.m */,
+				48089C891F7DF99B00DAF1B6 /* MHModule19Cell.h */,
+				48089C8A1F7DF99B00DAF1B6 /* MHModule19Cell.m */,
+				48089C8C1F7DF9A500DAF1B6 /* MHModule20Cell.h */,
+				48089C8D1F7DF9A500DAF1B6 /* MHModule20Cell.m */,
+				48089C8F1F7DF9B100DAF1B6 /* MHModule21Cell.h */,
+				48089C901F7DF9B100DAF1B6 /* MHModule21Cell.m */,
+				48089C921F7DF9B900DAF1B6 /* MHModule22Cell.h */,
+				48089C931F7DF9B900DAF1B6 /* MHModule22Cell.m */,
+				48089C951F7DF9C400DAF1B6 /* MHModule23Cell.h */,
+				48089C961F7DF9C400DAF1B6 /* MHModule23Cell.m */,
+				48089C981F7DF9CE00DAF1B6 /* MHModule24Cell.h */,
+				48089C991F7DF9CE00DAF1B6 /* MHModule24Cell.m */,
+				48089C9B1F7DF9D700DAF1B6 /* MHModule25Cell.h */,
+				48089C9C1F7DF9D700DAF1B6 /* MHModule25Cell.m */,
 				48089B471F7CF5E400DAF1B6 /* Instrument01View.h */,
 				48089B481F7CF5E400DAF1B6 /* Instrument01View.m */,
 				48089B501F7D08EC00DAF1B6 /* Instrument02View.h */,
 				48089B511F7D08EC00DAF1B6 /* Instrument02View.m */,
+				48089C9E1F7E31F000DAF1B6 /* Instrument03View.h */,
+				48089C9F1F7E31F000DAF1B6 /* Instrument03View.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1012,30 +1112,42 @@
 			files = (
 				48C152F31F739D6200C577AB /* BaseTableCell.m in Sources */,
 				4845D34F1F7B5525004D884B /* ZLFailedAndReloadView.m in Sources */,
+				48089C851F7DF98700DAF1B6 /* MHModule17Cell.m in Sources */,
 				48C152F41F739D6200C577AB /* ZLNavigationController.m in Sources */,
 				4845D3401F7A6580004D884B /* MHItemModel.m in Sources */,
 				4845D3251F7A59E5004D884B /* MallHomeController.m in Sources */,
 				48C153021F73A10000C577AB /* ApplicationEntity.m in Sources */,
 				48089B521F7D08EC00DAF1B6 /* Instrument02View.m in Sources */,
+				48089C8B1F7DF99B00DAF1B6 /* MHModule19Cell.m in Sources */,
 				48089B451F7CDD9B00DAF1B6 /* NSMutableSet+Safe.m in Sources */,
 				4845D3431F7A6732004D884B /* ShareInfoModel.m in Sources */,
 				48C152F91F739D6200C577AB /* ZLModuleEntity.m in Sources */,
+				48089C701F7DF94100DAF1B6 /* MHModule10Cell.m in Sources */,
+				48089C8E1F7DF9A500DAF1B6 /* MHModule20Cell.m in Sources */,
 				48C152F51F739D6200C577AB /* ZLTabbarController.m in Sources */,
 				48C1533E1F73C03800C577AB /* UIView+QuickNew.m in Sources */,
 				48C152F11F739D6200C577AB /* ScrollableController.m in Sources */,
 				48089B421F7CDD9B00DAF1B6 /* NSDictionary+Safe.m in Sources */,
 				48089B411F7CDD9B00DAF1B6 /* NSArray+Safe.m in Sources */,
+				48089C9A1F7DF9CE00DAF1B6 /* MHModule24Cell.m in Sources */,
+				48089C881F7DF99100DAF1B6 /* MHModule18Cell.m in Sources */,
+				48089C6D1F7DF93900DAF1B6 /* MHModule09Cell.m in Sources */,
 				48C152F61F739D6200C577AB /* UserInfo.m in Sources */,
 				48089B431F7CDD9B00DAF1B6 /* NSMutableArray+Safe.m in Sources */,
 				4845D32B1F7A5C4D004D884B /* MHResultModel.m in Sources */,
+				48089C7F1F7DF97400DAF1B6 /* MHModule15Cell.m in Sources */,
 				48089B4F1F7CF65400DAF1B6 /* ZLMyBaseView.m in Sources */,
+				48089C821F7DF97E00DAF1B6 /* MHModule16Cell.m in Sources */,
 				4845D3551F7B90B2004D884B /* ZLSliderView.m in Sources */,
 				48C152AC1F739CE900C577AB /* ViewController.m in Sources */,
+				48089C671F7DF92000DAF1B6 /* MHModule07Cell.m in Sources */,
 				48C152FA1F739D6200C577AB /* ZLNavigationService.m in Sources */,
 				48C152F71F739D6200C577AB /* UserInfoService.m in Sources */,
 				48C1533F1F73C03800C577AB /* UIView+ZLEX.m in Sources */,
 				48C152FD1F739D6200C577AB /* ZLTabbar.m in Sources */,
 				4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */,
+				48089C761F7DF95500DAF1B6 /* MHModule12Cell.m in Sources */,
+				48089C9D1F7DF9D700DAF1B6 /* MHModule25Cell.m in Sources */,
 				4806F86E1F74BA8100A5B3CD /* BaseCollectionController.m in Sources */,
 				48089B491F7CF5E400DAF1B6 /* Instrument01View.m in Sources */,
 				48089B441F7CDD9B00DAF1B6 /* NSMutableDictionary+Safe.m in Sources */,
@@ -1059,18 +1171,24 @@
 				4806F8711F74C03A00A5B3CD /* BaseCollectionCell.m in Sources */,
 				48089B321F7CD9CB00DAF1B6 /* UIImageView+ZLEX.m in Sources */,
 				48C1533A1F73C03800C577AB /* NSObject+Runtime.m in Sources */,
+				48089CA01F7E31F000DAF1B6 /* Instrument03View.m in Sources */,
 				48C153391F73C03800C577AB /* CALayer+ZLEX.m in Sources */,
 				4845D3131F7A57CA004D884B /* MHModule01Cell.m in Sources */,
 				4845D3521F7B81FA004D884B /* ZLToastView.m in Sources */,
+				48089C7C1F7DF96A00DAF1B6 /* MHModule14Cell.m in Sources */,
+				48089C791F7DF96000DAF1B6 /* MHModule13Cell.m in Sources */,
 				48C1533B1F73C03800C577AB /* NSString+ZLEX.m in Sources */,
 				4845D32E1F7A63D5004D884B /* MHModuleModel.m in Sources */,
 				48C152A91F739CE900C577AB /* AppDelegate.m in Sources */,
 				48089B461F7CDD9B00DAF1B6 /* NSObject+Safe.m in Sources */,
 				4845D3461F7B3B60004D884B /* ZLAlertView.m in Sources */,
+				48089C941F7DF9B900DAF1B6 /* MHModule22Cell.m in Sources */,
 				4845D3371F7A64E3004D884B /* MHHeaderModel.m in Sources */,
+				48089C971F7DF9C400DAF1B6 /* MHModule23Cell.m in Sources */,
 				4845D3341F7A6497004D884B /* MHHeaderBarModel.m in Sources */,
 				4845D33D1F7A6542004D884B /* MHHeaderTitleModel.m in Sources */,
 				4806F8741F74E5B800A5B3CD /* SimpleCollectionController.m in Sources */,
+				48089C911F7DF9B100DAF1B6 /* MHModule21Cell.m in Sources */,
 				48C152A61F739CE900C577AB /* main.m in Sources */,
 				48C152EE1F739D6200C577AB /* AppModuleEntity.m in Sources */,
 				4845D3191F7A57EB004D884B /* MHModule03Cell.m in Sources */,
@@ -1078,6 +1196,8 @@
 				48C1533D1F73C03800C577AB /* UIImage+ZLEX.m in Sources */,
 				4806F8811F750A9900A5B3CD /* View01Controller.m in Sources */,
 				4845D3281F7A5B98004D884B /* MallHomeRequest.m in Sources */,
+				48089C6A1F7DF92F00DAF1B6 /* MHModule08Cell.m in Sources */,
+				48089C731F7DF94B00DAF1B6 /* MHModule11Cell.m in Sources */,
 				4845D3161F7A57DC004D884B /* MHModule02Cell.m in Sources */,
 				485D211D1F78D5370033DD20 /* InstViewLayout.m in Sources */,
 				48C152F21F739D6200C577AB /* BaseApplicationEntity.m in Sources */,

@@ -14,7 +14,31 @@
 #import "MHModuleModel.h"
 
 #import "MHModule01Cell.h"
+#import "MHModule02Cell.h"
+#import "MHModule03Cell.h"
+#import "MHModule04Cell.h"
 #import "MHModule05Cell.h"
+#import "MHModule06Cell.h"
+#import "MHModule07Cell.h"
+#import "MHModule08Cell.h"
+#import "MHModule09Cell.h"
+#import "MHModule10Cell.h"
+#import "MHModule11Cell.h"
+#import "MHModule12Cell.h"
+#import "MHModule13Cell.h"
+#import "MHModule14Cell.h"
+#import "MHModule15Cell.h"
+#import "MHModule16Cell.h"
+#import "MHModule17Cell.h"
+#import "MHModule18Cell.h"
+#import "MHModule19Cell.h"
+#import "MHModule20Cell.h"
+#import "MHModule21Cell.h"
+#import "MHModule22Cell.h"
+#import "MHModule23Cell.h"
+#import "MHModule24Cell.h"
+#import "MHModule25Cell.h"
+
 
 @interface MallHomeController ()
 
@@ -85,15 +109,17 @@
     [self initData];
     //    [[VersionCheckService sharedService] check];
     //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(launchViewWillRemove:) name:LaunchViewWillRemoveNotification object:nil];
-//    [self showTips:@"te/st"];
-//    [self showFaildView];
+    //    [self showTips:@"te/st"];
+    //    [self showFaildView];
 }
 
 - (void)registCell {
-    [self.contentCollectionView registerClass:[MHModule01Cell class]
-                   forCellWithReuseIdentifier:[MHModule01Cell cellIdentifier]];
-    [self.contentCollectionView registerClass:[MHModule05Cell class]
-                   forCellWithReuseIdentifier:[MHModule05Cell cellIdentifier]];
+    for (int i = 1; i <= 25; i++) {
+        NSString *classStr = [NSString stringWithFormat:@"MHModule%02dCell", i];
+        Class class = NSClassFromString(classStr);
+        [self.contentCollectionView registerClass:[class class]
+                       forCellWithReuseIdentifier:[class performSelector:@selector(cellIdentifier)]];
+    }
     
     [self.contentCollectionView registerClass:[BaseCollectionCell class]
                    forCellWithReuseIdentifier:[BaseCollectionCell cellIdentifier]];
@@ -133,7 +159,7 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     
     [MallHomeRequest getHomeDataWithParams:params success:^(MHResultModel *resultModel) {
-//        [self hideErrorTips];
+        //        [self hideErrorTips];
         
         [self.items removeAllObjects];
         self.resultModel = resultModel;
@@ -145,7 +171,7 @@
         [self.items addObjectsFromArray:resultModel.list];
         //        self.shareInfo = resultModel.share;
         //        self.collectionView.showsInfiniteScrolling = NO;
-        //        [self finishRefresh];
+        [self didRefresh];
         [self reloadData];
         //        self.lastRefresh = YES;
         //        [[NSNotificationCenter defaultCenter] postNotificationName:kNOTIFY_APP_LAUNCH_REMOVE object:nil];
@@ -165,25 +191,22 @@
         
         
     } failure:^(StatusModel *status) {
-//        [self hideErrorTips];
-//        [self showNotice:status.msg];
-//        [self finishRefresh];
+        //        [self hideErrorTips];
+        //        [self showNotice:status.msg];
+        [self didRefresh];
         [self reloadData];
-//        [self showErrorTips];
-//        self.lastRefresh = NO;
-//        [[NSNotificationCenter defaultCenter] postNotificationName:kNOTIFY_APP_LAUNCH_REMOVE object:nil];
+        //        [self showErrorTips];
+        //        self.lastRefresh = NO;
+        //        [[NSNotificationCenter defaultCenter] postNotificationName:kNOTIFY_APP_LAUNCH_REMOVE object:nil];
     }];
 }
 
 
-- (NSInteger)itemCount
-{
+- (NSInteger)itemCount {
     return 0;
 }
 
-- (NSInteger)headerCount
-{
-    
+- (NSInteger)headerCount {
     return self.items.count;
 }
 
@@ -192,34 +215,24 @@
     MHModuleModel *model = [self.items objectAtIndex:indexPath.section];
     
     if (model.type != 20) {
-        if (indexPath.item == 0 && (model.type == 1 || model.type == 5)) {
+        if (indexPath.item == 0 && (model.type == 15 || model.type == 1 || model.type == 5 || model.type == 4 || model.type == 9 || model.type == 12)) {
             NSString *classStr = [NSString stringWithFormat:@"MHModule%02dCell",model.type];
             Class class = NSClassFromString(classStr);
             BaseCollectionCell *cell = [class performSelector:@selector(dequeueReusableCellForCollectionView:forIndexPath:) withObject:self.contentCollectionView withObject:indexPath];
             cell.cellData = model;
-            [cell reloadData];
             return cell;
         }
-        
-//        if (indexPath.item == 0) {
-//            NSString *classStr = [NSString stringWithFormat:@"MHModule%02dCell",model.type];
-//            Class class = NSClassFromString(classStr);
-//            BaseCollectionCell *cell = [self.contentCollectionView dequeueReusableCellWithReuseIdentifier:[class cellIdentifier] forIndexPath:indexPath];
-//            cell.cellData = model;
-//            [cell reloadData];
-//            return cell;
-//        }
     }
-//    else if(model.type == 20) {
-//        MHModule20Cell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:[MHModule20Cell cellIdentifier] forIndexPath:indexPath];
-//
-//        NSMutableDictionary *items = [NSMutableDictionary dictionary];
-//        [items setSafeObject:[model.items safeObjectAtIndex:indexPath.row*2] forKey:@"leftItem"];
-//        [items setSafeObject:[model.items safeObjectAtIndex:indexPath.row*2 + 1] forKey:@"rightItem"];
-//        cell.cellData = items;
-//        [cell reloadData];
-//        return cell;
-//    }
+    //    else if(model.type == 20) {
+    //        MHModule20Cell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:[MHModule20Cell cellIdentifier] forIndexPath:indexPath];
+    //
+    //        NSMutableDictionary *items = [NSMutableDictionary dictionary];
+    //        [items setSafeObject:[model.items safeObjectAtIndex:indexPath.row*2] forKey:@"leftItem"];
+    //        [items setSafeObject:[model.items safeObjectAtIndex:indexPath.row*2 + 1] forKey:@"rightItem"];
+    //        cell.cellData = items;
+    //        [cell reloadData];
+    //        return cell;
+    //    }
     
     BaseCollectionCell * cell = [self.contentCollectionView dequeueReusableCellWithReuseIdentifier:[BaseCollectionCell cellIdentifier] forIndexPath:indexPath];
     [cell reloadData];
@@ -227,90 +240,37 @@
 }
 
 
-- (UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    //    NSRunLoop *currentThreadRunLoop = [NSRunLoop currentRunLoop];
-    //    NSRunLoopMode mode = currentThreadRunLoop.currentMode;
-    //    NSLog(@"-----------current mode:%@-----------",mode);
-    
-    BaseCollectionCell *cell;
-    
-//    id wallItem = [self.items safeObjectAtIndex:indexPath.item];
-    
-    cell = [self.contentCollectionView dequeueReusableCellWithReuseIdentifier:[BaseCollectionCell cellIdentifier] forIndexPath:indexPath];
+- (UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    BaseCollectionCell * cell = [self.contentCollectionView dequeueReusableCellWithReuseIdentifier:[BaseCollectionCell cellIdentifier] forIndexPath:indexPath];
     [cell reloadData];
     return cell;
-    
 }
 
 
-- (CGSize)sizeForHeaderAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGSize)sizeForHeaderAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = 14;
     MHModuleModel *model = [self.items objectAtIndex:indexPath.section];
     if(model.type!=20 && indexPath.item == 0){
         
-        if (model.type == 1) {
-            height = [MHModule01Cell heightForCell:model];
-//        }
-//        else if (model.type == 2){
-//            height = [MHModule02Cell heightForCell:model];
-//        }else if (model.type == 3){
-//            height = [MHModule03Cell heightForCell:model];
-//        }else if (model.type == 4){
-//            height = [MHModule04Cell heightForCell:model];
-        }else if (model.type == 5){
-            height = [MHModule05Cell heightForCell:model]; }
-//        }else if (model.type == 6){
-//            height = [MHModule06Cell heightForCell:model];
-//        }else if (model.type == 7){
-//            height = [MHModule07Cell heightForCell:model];
-//        }else if (model.type == 8){
-//            height = [MHModule08Cell heightForCell:model];
-//        }else if (model.type == 9){
-//            height = [MHModule09Cell heightForCell:model];
-//        }else if (model.type == 10){
-//            height = [MHModule10Cell heightForCell:model];
-//        }else if (model.type == 11){
-//            height = [MHModule11Cell heightForCell:model];
-//        }else if (model.type == 12){
-//            height = [MHModule12Cell heightForCell:model];
-//        }else if (model.type == 13){
-//            height = [MHModule13Cell heightForCell:model];
-//        }else if (model.type == 14){
-//            height = [MHModule14Cell heightForCell:model];
-//        }else if (model.type == 15){
-//            height = [MHModule15Cell heightForCell:model];
-//        }else if (model.type == 16){
-//            height = [MHModule16Cell heightForCell:model];
-//        }else if (model.type == 17){
-//            height = [MHModule17Cell heightForCell:model];
-//        }else if (model.type == 18){
-//            height = [MHModule18Cell heightForCell:model];
-//        }else if (model.type == 19){
-//            height = [MHModule19Cell heightForCell:model];
-//        }
-        
+        NSString *classStr = [NSString stringWithFormat:@"MHModule%02dCell",model.type];
+        Class class = NSClassFromString(classStr);
+        height = [[class performSelector:@selector(heightForCell:) withObject:model] floatValue];
     }
-//    else if (model.type == 20) {
-//        NSMutableDictionary *items = [NSMutableDictionary dictionary];
-//        [items setObject:[model.items objectAtIndex:indexPath.row*2] forKey:@"leftItem"];
-//        [items setObject:[model.items objectAtIndex:indexPath.row*2 + 1] forKey:@"rightItem"];
-////        height = [MHModule20Cell heightForCell:items];
-//    }
+    //    else if (model.type == 20) {
+    //        NSMutableDictionary *items = [NSMutableDictionary dictionary];
+    //        [items setObject:[model.items objectAtIndex:indexPath.row*2] forKey:@"leftItem"];
+    //        [items setObject:[model.items objectAtIndex:indexPath.row*2 + 1] forKey:@"rightItem"];
+    ////        height = [MHModule20Cell heightForCell:items];
+    //    }
     return CGSizeMake(SCREENWIDTH, height);
 }
 
 
-- (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = 0;
-    
-    id wallItem = [self.items objectAtIndex:indexPath.item ];
-    
-    height = [BaseCollectionCell heightForCell:wallItem];
+    id instItem = [self.items objectAtIndex:indexPath.item];
+    height = [[BaseCollectionCell heightForCell:instItem] floatValue];
     return CGSizeMake((SCREENWIDTH - 15) / 2, height);
-    
 }
 
 
@@ -319,11 +279,10 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
     MHModuleModel *model = [self.items objectAtIndex:section];
-    if ( self.hasHeader && [self headerCount] > section ) {
+    if ( [self headerCount] > section ) {
         if (section == 0 ) {
             return 1;
-        }
-        else {
+        } else {
             if (model.type == 20) {
                 return ceil(model.items.count/2.0f);
             }
@@ -331,7 +290,6 @@
         }
         return 0;
     }
-    
     return [self itemCount];
 }
 
@@ -341,5 +299,15 @@
     [self initData];
 }
 
+#pragma mark - header and footer refresh
+- (void)willRefresh {
+    [super willRefresh];
+    [self initData];
+}
+
+- (void)willLoadMore {
+    [super willLoadMore];
+    [self didLoadMore];
+}
 
 @end

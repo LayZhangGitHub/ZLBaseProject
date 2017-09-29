@@ -15,7 +15,7 @@
 }
 
 // 计算工具
-+ (CGFloat)heightForCell:(id)cellData {
++ (NSNumber *)heightForCell:(id)cellData {
     return 0;
 }
 

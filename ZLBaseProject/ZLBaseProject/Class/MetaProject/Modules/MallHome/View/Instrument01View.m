@@ -26,8 +26,8 @@
     }];
 }
 
-- (void)reloadData:(NSDictionary*)viewData {
-    _model = viewData;
+- (void)setModel:(NSDictionary*)model {
+    _model = model;
     if (_model) {
         self.iconImageView.hidden = NO;
         self.titleLabel.hidden = NO;

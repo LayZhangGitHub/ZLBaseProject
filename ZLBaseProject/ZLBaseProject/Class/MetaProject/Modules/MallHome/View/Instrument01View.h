@@ -10,9 +10,6 @@
 
 @interface Instrument01View : ZLMyBaseView
 
-//@property (nonatomic, strong,readonly) UIImageView *iconImageView;
 @property (nonatomic, strong) NSDictionary *model;
-
-- (void)reloadData:(NSDictionary *)viewData;
 
 @end

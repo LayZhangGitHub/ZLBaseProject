@@ -31,8 +31,8 @@
     _defaultLabel.frame = CGRectMake(0, 0, SCREENWIDTH, 100);
 }
 
-+ (CGFloat)heightForCell:(id)cellData {
-    return 100;
++ (NSNumber *)heightForCell:(id)cellData {
+    return @(100);
 }
 
 #pragma mark - property

@@ -19,7 +19,7 @@
 
 #pragma mark - 父类抽象方法 可由子类实现
 - (void)reloadData;
-+ (CGFloat)heightForCell:(id)cellData;
++ (NSNumber *)heightForCell:(id)cellData;
 - (void)initCellComponent;
 
 

@@ -55,7 +55,7 @@
     
 }
 
-+ (CGFloat)heightForCell:(id)cellData {
++ (NSNumber *)heightForCell:(id)cellData {
     return 0;
 }
 

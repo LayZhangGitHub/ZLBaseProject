@@ -13,11 +13,11 @@
 #define InstrumentViewWidth 70
 #define InstrumentCount 4
 #define Top 12
-#define Eadge (SCREENWIDTH - InstrumentCount * InstrumentViewWidth) / (InstrumentCount + 1)
+#define Edge ((SCREENWIDTH - InstrumentCount * InstrumentViewWidth) / (InstrumentCount + 1))
 
 @interface MHModule05Cell()
 
-@property (nonatomic, strong) NSMutableArray *moduleViews;
+@property (nonatomic, strong) NSArray *moduleViews;
 
 @end
 
@@ -29,6 +29,14 @@
         self.backgroundColor = ZLWhiteColor;
         
         MHModuleModel *model = self.cellData;
+        
+        if (self.moduleViews.count != model.items.count) {
+            for (UIView *view in _moduleViews) {
+                [view removeFromSuperview];
+            }
+            _moduleViews = nil;
+        }
+        
         for (int i = 0; i<model.items.count ; i++) {
             MHItemModel *item = [model.items objectAtIndex:i];
             NSString *link = item.link?item.link:@"";
@@ -36,32 +44,33 @@
             NSString *image = item.image?item.image:@"";
             
             Instrument01View *module = [self.moduleViews objectAtIndex:i];
-            [module reloadData:@{@"title":title,@"icon":image,@"link":link}];
+            [module setModel:@{@"title":title,@"icon":image,@"link":link}];
         }
     }
 }
 
-+ (CGFloat)heightForCell:(id)cellData {
++ (NSNumber *)heightForCell:(id)cellData {
     CGFloat height = 0;
     MHModuleModel *model = cellData;
     if (model.items.count) {
         int row = ceil(model.items.count / (CGFloat)InstrumentCount);
         height = Top + (Top + InstrumentViewWidth) * row;
     }
-    return height;
+    return @(height);
 }
 
 #pragma mark - properties
-- (NSMutableArray*)moduleViews {
+- (NSArray *)moduleViews {
     if (!_moduleViews) {
         
         MHModuleModel *model = self.cellData;
-        _moduleViews = [NSMutableArray arrayWithCapacity:model.items.count];
+        NSMutableArray *models = [NSMutableArray arrayWithCapacity:model.items.count];
         for (int i = 0; i < model.items.count ; i++) {
             Instrument01View *moduleView = [[Instrument01View alloc] init];
-            [_moduleViews addObject:moduleView];
+            [models addObject:moduleView];
             [self cellAddSubview:moduleView];
         }
+        _moduleViews = [NSArray arrayWithArray:models];
     }
     return _moduleViews;
 }
@@ -73,7 +82,7 @@
         column = i % InstrumentCount;
         UIView *view = self.moduleViews[i];
         view.size = CGSizeMake(70, 70);
-        view.left = Eadge + (InstrumentViewWidth + Eadge) * column;
+        view.left = Edge + (InstrumentViewWidth + Edge) * column;
         view.top = Top + (Top + InstrumentViewWidth) * row;
     }
 }

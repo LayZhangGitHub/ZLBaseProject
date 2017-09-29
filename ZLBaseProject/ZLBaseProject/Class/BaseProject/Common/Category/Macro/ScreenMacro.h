@@ -37,7 +37,7 @@
 #define ZLGray(g)       ZLRGB(g,g,g)
 
 #define ZLHEXA(hex,a)       [UIColor colorWithHexString:hex alpha:a]
-#define ZLHEX(hex)          CHEXA(hex,1)
+#define ZLHEX(hex)          ZLHEXA(hex,1)
 
 #define ZLHEXCOLOR_a(hex,a) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0 green:((float)((hex & 0xFF00) >> 8)) / 255.0 blue:((float)(hex & 0xFF)) / 255.0 alpha:(a)]
 #define ZLHEXCOLOR(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0 green:((float)((hex & 0xFF00) >> 8)) / 255.0 blue:((float)(hex & 0xFF)) / 255.0 alpha:1]

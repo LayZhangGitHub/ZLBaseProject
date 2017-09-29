@@ -54,26 +54,28 @@
 
 #pragma mark - property
 - (UICollectionViewCell *)cellForHeaderAtIndexPath:(NSIndexPath *)indexPath {
-    DefaultInstHeadCell *headerCell = [DefaultInstHeadCell dequeueReusableCellForCollectionView:self.contentCollectionView
-                                                                                   forIndexPath:indexPath];
+    DefaultInstHeadCell *headerCell =
+    [DefaultInstHeadCell dequeueReusableCellForCollectionView:self.contentCollectionView
+                                                 forIndexPath:indexPath];
     headerCell.cellData = @"DefaultInstHeadCell";
     return headerCell;
 }
 
 - (UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    DefaultInstCell *cell = [DefaultInstCell dequeueReusableCellForCollectionView:self.contentCollectionView
-                                                                     forIndexPath:indexPath];
+    DefaultInstCell *cell =
+    [DefaultInstCell dequeueReusableCellForCollectionView:self.contentCollectionView
+                                             forIndexPath:indexPath];
 //    cell.cellData = [NSString stringWithFormat:@"%ld", (long)indexPath.item];
     cell.cellData = @"DefaultInstCell";
     return cell;
 }
 
 - (CGSize)sizeForHeaderAtIndexPath:(NSIndexPath*)indexPath {
-    return CGSizeMake(SCREENWIDTH, [DefaultInstHeadCell heightForCell:nil]);
+    return CGSizeMake(SCREENWIDTH, [[DefaultInstHeadCell heightForCell:nil] floatValue]);
 }
 
 - (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(SCREENWIDTH, [DefaultInstCell heightForCell:[NSString stringWithFormat:@"%ld", (long)indexPath.item]]);
+    return CGSizeMake(SCREENWIDTH, [[DefaultInstCell heightForCell:[NSString stringWithFormat:@"%ld", (long)indexPath.item]] floatValue]);
 }
 
 - (NSInteger)itemCount {
