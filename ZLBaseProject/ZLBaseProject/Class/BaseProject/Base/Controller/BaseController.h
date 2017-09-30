@@ -54,4 +54,7 @@
 - (void)showFaildView;
 - (void)hideFailedView;
 
+#pragma mark - notice
+- (void)showNotice:(NSString *)notice;
+- (void)showNotice:(NSString *)notice duration:(NSTimeInterval)duration;
 @end

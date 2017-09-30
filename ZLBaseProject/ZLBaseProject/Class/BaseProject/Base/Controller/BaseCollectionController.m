@@ -47,16 +47,44 @@
 }
 
 - (void)addRefreshAction {
-    weakSelf(self);
-    self.contentCollectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        strongSelf(self);
-        [self willRefresh];
-    }];
     
-    self.contentCollectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        strongSelf(self);
-        [self willLoadMore];
-    }];
+    BOOL isAddHeader = (_scrollViewRefreshType & ScrollViewRefreshTypeHeader) == ScrollViewRefreshTypeHeader;
+    BOOL isAddFooter = (_scrollViewRefreshType & ScrollViewRefreshTypeFooter) == ScrollViewRefreshTypeFooter;
+    
+    weakSelf(self);
+    if (isAddHeader) {
+        self.contentCollectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            strongSelf(self);
+            [self willRefresh];
+        }];
+    }
+    
+    if (isAddFooter) {
+        self.contentCollectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            strongSelf(self);
+            [self willLoadMore];
+        }];
+    }
+}
+
+- (void)couldScrollToFooter:(BOOL)couldScrollToFooter {
+    BOOL isAddFooter = (_scrollViewRefreshType & ScrollViewRefreshTypeFooter) == ScrollViewRefreshTypeFooter;
+    if (!isAddFooter) {
+        return;
+    }
+    if (couldScrollToFooter) {
+        if (!self.contentCollectionView.mj_footer) {
+            weakSelf(self);
+            self.contentCollectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+                strongSelf(self);
+                [self willLoadMore];
+            }];
+        }
+    } else {
+        if (self.contentCollectionView.mj_footer) {
+            self.contentCollectionView.mj_footer = nil;
+        }
+    }
 }
 
 - (void)reloadData {
@@ -99,7 +127,7 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    BaseCollectionCell *cell = [BaseCollectionCell dequeueReusableCellForCollectionView:collectionView
+    BaseCollectionCell *cell = [BaseCollectionCell dequeueCellForCollection:collectionView
                                                                            forIndexPath:indexPath];
     return cell;
 }

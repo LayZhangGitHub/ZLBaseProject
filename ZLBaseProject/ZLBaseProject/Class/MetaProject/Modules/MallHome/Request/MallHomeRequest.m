@@ -8,13 +8,13 @@
 
 #import "MallHomeRequest.h"
 
-#define GET_HOME_DATA_REQUEST_URL                              @"/mall_index"
-#define GET_CATEGORY_DATA_REQUEST_URL                              @"/mall_category"
+static NSString* const homeDataRequestUrl       = @"/mall_index";
+static NSString* const categoryDataRequestUrl   = @"/mall_category";
 
 @implementation MallHomeRequest
 
 + (void)getHomeDataWithParams:(NSDictionary *)params success:(void(^)(MHResultModel *resultModel))success failure:(void(^)(StatusModel *status))failure{
-    [[ZLNetworkCaptain sharedInstance] getWithUrl:GET_HOME_DATA_REQUEST_URL parameters:params success:^(NSDictionary *result) {
+    [[ZLNetworkCaptain sharedInstance] getWithUrl:homeDataRequestUrl parameters:params success:^(NSDictionary *result) {
         
         MHResultModel *mineResult = [MHResultModel yy_modelWithDictionary:result];
         
@@ -30,7 +30,7 @@
 }
 
 + (void)getCategoryDataWithParams:(NSDictionary *)params success:(void(^)(MHResultModel *resultModel))success failure:(void(^)(StatusModel *status))failure{
-    [[ZLNetworkCaptain sharedInstance] getWithUrl:GET_CATEGORY_DATA_REQUEST_URL parameters:params success:^(NSDictionary *result) {
+    [[ZLNetworkCaptain sharedInstance] getWithUrl:categoryDataRequestUrl parameters:params success:^(NSDictionary *result) {
         
         MHResultModel *mineResult = [MHResultModel yy_modelWithDictionary:result];
         

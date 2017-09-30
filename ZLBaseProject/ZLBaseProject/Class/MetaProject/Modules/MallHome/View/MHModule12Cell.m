@@ -11,8 +11,8 @@
 
 #import "Instrument02View.h"
 
-#define Edge 10
-#define LeftIconViewWidth ((SCREENWIDTH - 3 * Edge) * 0.4275)
+#define EDGE 10
+#define LEFTICONVIEW_WIDTH ((SCREENWIDTH - 3 * EDGE) * 0.4275)
 
 @interface MHModule12Cell()
 @property (nonatomic, strong) NSArray *moduleViews;
@@ -31,9 +31,9 @@
         MHItemModel *item = [model.items objectAtIndex:0];
         
         if (item) {
-            _iconHeight = LeftIconViewWidth / item.ar;
+            _iconHeight = LEFTICONVIEW_WIDTH / item.ar;
         } else {
-            _iconHeight = LeftIconViewWidth / 0.77;
+            _iconHeight = LEFTICONVIEW_WIDTH / 0.77;
         }
         
         for (int i = 0; i < 4; i++) {
@@ -53,9 +53,9 @@
         MHModuleModel *model = cellData;
         MHItemModel *item = [model.items objectAtIndex:0];
         if (item) {
-            height = LeftIconViewWidth / item.ar + 2 * Edge;
+            height = LEFTICONVIEW_WIDTH / item.ar + 2 * EDGE;
         }else{
-            height = LeftIconViewWidth / 0.77 +2 * Edge;
+            height = LEFTICONVIEW_WIDTH / 0.77 +2 * EDGE;
         }
     }
     return @(height);
@@ -80,17 +80,17 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     Instrument02View *moduleViewIndex0 = [self.moduleViews objectAtIndex:0];
-    moduleViewIndex0.frame = CGRectMake(Edge, Edge, LeftIconViewWidth, _iconHeight);
+    moduleViewIndex0.frame = CGRectMake(EDGE, EDGE, LEFTICONVIEW_WIDTH, _iconHeight);
     
-    CGFloat width01 = (_iconHeight - Edge) / 2;
+    CGFloat width01 = (_iconHeight - EDGE) / 2;
     Instrument02View *moduleViewIndex1 = [self.moduleViews objectAtIndex:1];
-    moduleViewIndex1.frame = CGRectMake(moduleViewIndex0.right + Edge, Edge, width01, width01);
+    moduleViewIndex1.frame = CGRectMake(moduleViewIndex0.right + EDGE, EDGE, width01, width01);
     
     Instrument02View *moduleViewIndex2 = [self.moduleViews objectAtIndex:2];
-    moduleViewIndex2.frame = CGRectMake(moduleViewIndex1.right + Edge, Edge, width01, width01);
+    moduleViewIndex2.frame = CGRectMake(moduleViewIndex1.right + EDGE, EDGE, width01, width01);
     
     Instrument02View *moduleViewIndex3 = [self.moduleViews objectAtIndex:3];
-    moduleViewIndex3.frame = CGRectMake(moduleViewIndex0.right + Edge, moduleViewIndex1.bottom + Edge, width01 * 2 + Edge, width01);
+    moduleViewIndex3.frame = CGRectMake(moduleViewIndex0.right + EDGE, moduleViewIndex1.bottom + EDGE, width01 * 2 + EDGE, width01);
 }
 
 

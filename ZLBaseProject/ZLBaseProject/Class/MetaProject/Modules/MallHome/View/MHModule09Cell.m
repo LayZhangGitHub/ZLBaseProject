@@ -10,8 +10,8 @@
 #import "MHModuleModel.h"
 #import "Instrument02View.h"
 
-#define Edge 10
-#define RightIconViewWidth ((SCREENWIDTH - 3 * Edge) * 0.4275)
+#define EDGE 10
+#define RIGHTICONVIEW_WIDTH ((SCREENWIDTH - 3 * EDGE) * 0.4275)
 
 @interface MHModule09Cell()
 @property (nonatomic, strong) NSArray *moduleViews;
@@ -31,9 +31,9 @@
         MHItemModel *item = [model.items objectAtIndex:2];
         
         if (item) {
-        _iconHeight = RightIconViewWidth / item.ar;
+        _iconHeight = RIGHTICONVIEW_WIDTH / item.ar;
         } else {
-            _iconHeight = RightIconViewWidth / 0.77;
+            _iconHeight = RIGHTICONVIEW_WIDTH / 0.77;
         }
         
         
@@ -57,9 +57,9 @@
         
         MHItemModel *item = [model.items objectAtIndex:2];
         if (item) {
-            height = RightIconViewWidth / item.ar + 2 * Edge;
+            height = RIGHTICONVIEW_WIDTH / item.ar + 2 * EDGE;
         }else{
-            height = RightIconViewWidth / 0.77 + 2 * Edge;
+            height = RIGHTICONVIEW_WIDTH / 0.77 + 2 * EDGE;
         }
         
     }
@@ -83,16 +83,16 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat leftWidth = SCREENWIDTH - RightIconViewWidth - 3 * Edge;
-    CGFloat leftHeight = (_iconHeight - Edge) / 2;
+    CGFloat leftWidth = SCREENWIDTH - RIGHTICONVIEW_WIDTH - 3 * EDGE;
+    CGFloat leftHeight = (_iconHeight - EDGE) / 2;
     Instrument02View *moduleViewIndex0 = [self.moduleViews objectAtIndex:0];
-    moduleViewIndex0.frame = CGRectMake(Edge, Edge, leftWidth, leftHeight);
+    moduleViewIndex0.frame = CGRectMake(EDGE, EDGE, leftWidth, leftHeight);
     
     Instrument02View *moduleViewIndex1 = [self.moduleViews objectAtIndex:1];
-    moduleViewIndex1.frame = CGRectMake(Edge, moduleViewIndex0.bottom + Edge, leftWidth, leftHeight);
+    moduleViewIndex1.frame = CGRectMake(EDGE, moduleViewIndex0.bottom + EDGE, leftWidth, leftHeight);
     
     Instrument02View *moduleViewIndex2 = [self.moduleViews objectAtIndex:2];
-    moduleViewIndex2.frame = CGRectMake(moduleViewIndex0.right + Edge, Edge, RightIconViewWidth, _iconHeight);
+    moduleViewIndex2.frame = CGRectMake(moduleViewIndex0.right + EDGE, EDGE, RIGHTICONVIEW_WIDTH, _iconHeight);
 }
 
 @end

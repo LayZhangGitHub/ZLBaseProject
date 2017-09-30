@@ -10,8 +10,8 @@
 #import "Instrument03View.h"
 #import "MHModuleModel.h"
 
-#define Edge 12
-#define ICONWIDTH 115
+#define EDGE 12
+#define ICONVIEW_WIDTH 115
 
 @interface MHModule15Cell()
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -54,17 +54,11 @@
         
         MHItemModel *item = [model.items objectAtIndex:0];
         if (item) {
-            _iconHeight = ICONWIDTH / item.ar + 30;
+            _iconHeight = ICONVIEW_WIDTH / item.ar + 30;
             self.scrollView.hidden = NO;
         } else {
             self.scrollView.hidden = YES;
         }
-        
-        if (_moduleViews.count != model.items.count) {
-            [self.scrollView removeAllSubviews];
-            _moduleViews = nil;
-        }
-        
         
         for (int i = 0; i < model.items.count; i++) {
             MHItemModel *item = model.items[i];
@@ -72,7 +66,7 @@
             Instrument03View *moduleView = self.moduleViews[i];
             [moduleView setModel:itemDic];
         }
-        self.scrollView.contentSize = CGSizeMake((ICONWIDTH + Edge) * model.items.count + Edge, self.scrollView.height);
+        self.scrollView.contentSize = CGSizeMake((ICONVIEW_WIDTH + EDGE) * model.items.count + EDGE, self.scrollView.height);
     }
 }
 
@@ -85,9 +79,9 @@
         }
         MHItemModel *item = model.items[0];
         if (item) {
-            height += ICONWIDTH / item.ar + 30 + Edge;
+            height += ICONVIEW_WIDTH / item.ar + 30 + EDGE;
         }
-        height += Edge;
+        height += EDGE;
     }
     return @(height);
 }
@@ -98,16 +92,23 @@
              @"title":item.title,
              @"icon":item.image,
              @"link":item.link ? item.link : @"",
-             @"iconWidth":@(ICONWIDTH),
-             @"iconHeight":@(ICONWIDTH / item.ar),
+             @"iconWidth":@(ICONVIEW_WIDTH),
+             @"iconHeight":@(ICONVIEW_WIDTH / item.ar),
              @"placeholder":@"placeholder_h"};
 }
 
 - (NSArray *)moduleViews {
+    
+    MHModuleModel *model = self.cellData;
+    if (_moduleViews && _moduleViews.count != model.items.count) {
+        for (UIView *view in _moduleViews) {
+            [view removeFromSuperview];
+        }
+        _moduleViews = nil;
+    }
+    
     if (!_moduleViews) {
         NSMutableArray *modules = [NSMutableArray new];
-        
-        MHModuleModel *model = self.cellData;
         for (int i = 0; i < model.items.count; i++) {
             Instrument03View *modulesView = [[Instrument03View alloc] init];
             modulesView.font = ZLNormalFont(16);
@@ -205,7 +206,7 @@
     // images layout
     for (int i = 0; i < _moduleViews.count; i++) {
         UIView *view = _moduleViews[i];
-        [view setFrame:CGRectMake((ICONWIDTH + Edge) * i + Edge, 0, ICONWIDTH, _iconHeight)];
+        [view setFrame:CGRectMake((ICONVIEW_WIDTH + EDGE) * i + EDGE, 0, ICONVIEW_WIDTH, _iconHeight)];
     }
 }
 

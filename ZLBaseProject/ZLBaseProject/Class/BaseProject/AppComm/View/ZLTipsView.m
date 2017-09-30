@@ -12,12 +12,12 @@
 
 - (id)initWithFrame:(CGRect)frame tips:(NSString *)tips {
     if (self = [super initWithFrame:frame]) {
-        self.width = SCREENWIDTH;
+        self.backgroundColor = ZLWhiteColor;
         if (!tips || tips.length == 0) {
             tips = @"还没有内容";
         }
         
-        self.userInteractionEnabled = NO;
+        self.userInteractionEnabled = YES;
         
         UILabel *_tipsLabel = [UILabel labelWithText:tips
                                            textColor:ZLGray(153)

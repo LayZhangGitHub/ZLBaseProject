@@ -10,10 +10,10 @@
 #import "Instrument01View.h"
 #import "MHModuleModel.h"
 
-#define InstrumentViewWidth 70
-#define InstrumentCount 4
-#define Top 12
-#define Edge ((SCREENWIDTH - InstrumentCount * InstrumentViewWidth) / (InstrumentCount + 1))
+#define INSTRUMENTVIEW_WIDTH 70
+#define INSTRUMENT_COUNT 4
+#define TOP 12
+#define EDGE ((SCREENWIDTH - INSTRUMENT_COUNT * INSTRUMENTVIEW_WIDTH) / (INSTRUMENT_COUNT + 1))
 
 @interface MHModule05Cell()
 
@@ -29,13 +29,6 @@
         self.backgroundColor = ZLWhiteColor;
         
         MHModuleModel *model = self.cellData;
-        
-        if (self.moduleViews.count != model.items.count) {
-            for (UIView *view in _moduleViews) {
-                [view removeFromSuperview];
-            }
-            _moduleViews = nil;
-        }
         
         for (int i = 0; i<model.items.count ; i++) {
             MHItemModel *item = [model.items objectAtIndex:i];
@@ -53,17 +46,24 @@
     CGFloat height = 0;
     MHModuleModel *model = cellData;
     if (model.items.count) {
-        int row = ceil(model.items.count / (CGFloat)InstrumentCount);
-        height = Top + (Top + InstrumentViewWidth) * row;
+        int row = ceil(model.items.count / (CGFloat)INSTRUMENT_COUNT);
+        height = TOP + (TOP + INSTRUMENTVIEW_WIDTH) * row;
     }
     return @(height);
 }
 
 #pragma mark - properties
 - (NSArray *)moduleViews {
+    
+    MHModuleModel *model = self.cellData;
+    if (_moduleViews && _moduleViews.count != model.items.count) {
+        for (UIView *view in _moduleViews) {
+            [view removeFromSuperview];
+        }
+        _moduleViews = nil;
+    }
+    
     if (!_moduleViews) {
-        
-        MHModuleModel *model = self.cellData;
         NSMutableArray *models = [NSMutableArray arrayWithCapacity:model.items.count];
         for (int i = 0; i < model.items.count ; i++) {
             Instrument01View *moduleView = [[Instrument01View alloc] init];
@@ -78,12 +78,12 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     for (int row = 0, column = 0, i = 0; i < self.moduleViews.count; i++) {
-        row = i / InstrumentCount;
-        column = i % InstrumentCount;
+        row = i / INSTRUMENT_COUNT;
+        column = i % INSTRUMENT_COUNT;
         UIView *view = self.moduleViews[i];
         view.size = CGSizeMake(70, 70);
-        view.left = Edge + (InstrumentViewWidth + Edge) * column;
-        view.top = Top + (Top + InstrumentViewWidth) * row;
+        view.left = EDGE + (INSTRUMENTVIEW_WIDTH + EDGE) * column;
+        view.top = TOP + (TOP + INSTRUMENTVIEW_WIDTH) * row;
     }
 }
 

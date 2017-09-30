@@ -19,8 +19,8 @@
     return 0;
 }
 
-+ (instancetype)dequeueReusableCellForCollectionView:(UICollectionView *)collectionView
-                                        forIndexPath:(NSIndexPath *)indexPath {
++ (instancetype)dequeueCellForCollection:(UICollectionView *)collectionView
+                            forIndexPath:(NSIndexPath *)indexPath {
     BaseCollectionCell *cell =
     [collectionView dequeueReusableCellWithReuseIdentifier:[self cellIdentifier]
                                               forIndexPath:indexPath];

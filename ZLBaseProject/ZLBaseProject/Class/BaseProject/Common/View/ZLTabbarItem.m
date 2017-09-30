@@ -84,6 +84,7 @@
     _imageView.centerX = self.width / 2;
     
     _titleLabel.frame = CGRectMake(0, _imageView.bottom, self.width, 20);
+    _titleLabel.bottom = self.bottom;
 }
 
 #pragma mark - action

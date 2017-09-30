@@ -46,7 +46,7 @@
 @property (nonatomic, strong) UIButton *cartButton;
 
 // request model
-@property (nonatomic, strong) MHResultModel *resultModel;
+//@property (nonatomic, strong) MHResultModel *resultModel;
 @property (nonatomic, strong) NSMutableArray *items;
 
 @end
@@ -66,6 +66,7 @@
 }
 
 - (void)viewDidLoad {
+    self.scrollViewRefreshType = ScrollViewRefreshTypeHeader;
     [super viewDidLoad];
     self.view.backgroundColor = ZLGray(245);
     [self showNavigationBar];
@@ -103,7 +104,7 @@
     //    self.contentCollectionView.showsInfiniteScrolling = NO;
     self.contentCollectionView.alwaysBounceVertical = YES;
     
-    self.hasHeader = YES;
+//    self.hasHeader = YES;
     
     self.title = @"淘梦商城";
     [self initData];
@@ -154,71 +155,21 @@
     [self loadData];
 }
 
-
-- (void)loadData {
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    
-    [MallHomeRequest getHomeDataWithParams:params success:^(MHResultModel *resultModel) {
-        //        [self hideErrorTips];
-        
-        [self.items removeAllObjects];
-        self.resultModel = resultModel;
-        
-        for (MHModuleModel *model in resultModel.list) {
-            NSLog(@"type is %d", model.type);
-        }
-        
-        [self.items addObjectsFromArray:resultModel.list];
-        //        self.shareInfo = resultModel.share;
-        //        self.collectionView.showsInfiniteScrolling = NO;
-        [self didRefresh];
-        [self reloadData];
-        //        self.lastRefresh = YES;
-        //        [[NSNotificationCenter defaultCenter] postNotificationName:kNOTIFY_APP_LAUNCH_REMOVE object:nil];
-        if (self.resultModel.share) {
-            self.shareButton.hidden = NO;
-            self.shareButton.right = SCREENWIDTH - 12;
-            self.shareButton.centerY = (STATUSBARHEIGHT + self.navigationBar.height)/2;
-            
-            self.cartButton.right = self.shareButton.left ;
-            self.cartButton.centerY = self.shareButton.centerY;
-        }else{
-            self.shareButton.hidden = YES;
-            
-            self.cartButton.right = SCREENWIDTH - 12;
-            self.cartButton.centerY = (STATUSBARHEIGHT + self.navigationBar.height)/2;
-        }
-        
-        
-    } failure:^(StatusModel *status) {
-        //        [self hideErrorTips];
-        //        [self showNotice:status.msg];
-        [self didRefresh];
-        [self reloadData];
-        //        [self showErrorTips];
-        //        self.lastRefresh = NO;
-        //        [[NSNotificationCenter defaultCenter] postNotificationName:kNOTIFY_APP_LAUNCH_REMOVE object:nil];
-    }];
-}
-
-
-- (NSInteger)itemCount {
-    return 0;
-}
-
-- (NSInteger)headerCount {
+- (NSInteger)headerSectionCount {
     return self.items.count;
 }
 
-- (UICollectionViewCell *)cellForHeaderAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewCell *)cellForHeaderAtIndexPath:(NSIndexPath *)indexPath {
     MHModuleModel *model = [self.items objectAtIndex:indexPath.section];
     
     if (model.type != 20) {
         if (indexPath.item == 0 && (model.type == 15 || model.type == 1 || model.type == 5 || model.type == 4 || model.type == 9 || model.type == 12)) {
             NSString *classStr = [NSString stringWithFormat:@"MHModule%02dCell",model.type];
             Class class = NSClassFromString(classStr);
-            BaseCollectionCell *cell = [class performSelector:@selector(dequeueReusableCellForCollectionView:forIndexPath:) withObject:self.contentCollectionView withObject:indexPath];
+            BaseCollectionCell *cell =
+            [class performSelector:@selector(dequeueCellForCollection:forIndexPath:)
+                        withObject:self.contentCollectionView
+                        withObject:indexPath];
             cell.cellData = model;
             return cell;
         }
@@ -234,22 +185,22 @@
     //        return cell;
     //    }
     
-    BaseCollectionCell * cell = [self.contentCollectionView dequeueReusableCellWithReuseIdentifier:[BaseCollectionCell cellIdentifier] forIndexPath:indexPath];
-    [cell reloadData];
+    BaseCollectionCell * cell = [BaseCollectionCell dequeueCellForCollection:self.contentCollectionView
+                                                                            forIndexPath:indexPath];
     return cell;
 }
 
 
 - (UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    BaseCollectionCell * cell = [self.contentCollectionView dequeueReusableCellWithReuseIdentifier:[BaseCollectionCell cellIdentifier] forIndexPath:indexPath];
-    [cell reloadData];
+    BaseCollectionCell * cell = [BaseCollectionCell dequeueCellForCollection:self.contentCollectionView
+                                                                            forIndexPath:indexPath];
     return cell;
 }
 
 
 - (CGSize)sizeForHeaderAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = 14;
-    MHModuleModel *model = [self.items objectAtIndex:indexPath.section];
+    MHModuleModel *model = self.items[indexPath.section];
     if(model.type!=20 && indexPath.item == 0){
         
         NSString *classStr = [NSString stringWithFormat:@"MHModule%02dCell",model.type];
@@ -260,7 +211,7 @@
     //        NSMutableDictionary *items = [NSMutableDictionary dictionary];
     //        [items setObject:[model.items objectAtIndex:indexPath.row*2] forKey:@"leftItem"];
     //        [items setObject:[model.items objectAtIndex:indexPath.row*2 + 1] forKey:@"rightItem"];
-    ////        height = [MHModule20Cell heightForCell:items];
+    //        height = [MHModule20Cell heightForCell:items];
     //    }
     return CGSizeMake(SCREENWIDTH, height);
 }
@@ -277,10 +228,9 @@
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    
     MHModuleModel *model = [self.items objectAtIndex:section];
-    if ( [self headerCount] > section ) {
-        if (section == 0 ) {
+    if (self.hasHeader && [self headerSectionCount] > section) {
+        if (section == 0) {
             return 1;
         } else {
             if (model.type == 20) {
@@ -288,26 +238,67 @@
             }
             return 2;
         }
-        return 0;
     }
-    return [self itemCount];
+    return 0;
 }
 
 #pragma mark - failed and reload deleaget
 - (void)failedViewBeginReload:(ZLFailedAndReloadView *)reloadView {
     NSLog(@"reoload data here!!!");
-    [self initData];
+    [self loadData];
 }
 
 #pragma mark - header and footer refresh
 - (void)willRefresh {
     [super willRefresh];
-    [self initData];
+    [self loadData];
 }
 
 - (void)willLoadMore {
     [super willLoadMore];
     [self didLoadMore];
+}
+
+- (void)loadData {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    [MallHomeRequest getHomeDataWithParams:params success:^(MHResultModel *resultModel) {
+        [self hideFailedView];
+        
+        [self.items removeAllObjects];
+        
+        for (MHModuleModel *model in resultModel.list) {
+            NSLog(@"type is %d", model.type);
+        }
+        
+        [self.items addObjectsFromArray:resultModel.list];
+        //        self.shareInfo = resultModel.share;
+        //        self.collectionView.showsInfiniteScrolling = NO;
+        [self didRefresh];
+        [self reloadData];
+        //        [[NSNotificationCenter defaultCenter] postNotificationName:kNOTIFY_APP_LAUNCH_REMOVE object:nil];
+        if (resultModel.share) {
+            self.shareButton.hidden = NO;
+            self.shareButton.right = SCREENWIDTH - 12;
+            self.shareButton.centerY = (STATUSBARHEIGHT + self.navigationBar.height)/2;
+            
+            self.cartButton.right = self.shareButton.left ;
+            self.cartButton.centerY = self.shareButton.centerY;
+        }else{
+            self.shareButton.hidden = YES;
+            
+            self.cartButton.right = SCREENWIDTH - 12;
+            self.cartButton.centerY = (STATUSBARHEIGHT + self.navigationBar.height)/2;
+        }
+        
+    } failure:^(StatusModel *status) {
+        [self hideFailedView];
+        [self showNotice:status.msg];
+        [self didRefresh];
+        [self reloadData];
+        [self showFaildView];
+        //        [[NSNotificationCenter defaultCenter] postNotificationName:kNOTIFY_APP_LAUNCH_REMOVE object:nil];
+    }];
 }
 
 @end

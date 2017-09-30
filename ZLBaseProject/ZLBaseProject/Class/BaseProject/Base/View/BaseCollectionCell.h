@@ -14,8 +14,8 @@
 
 + (NSString *)cellIdentifier;
 + (NSNumber *)heightForCell:(id)cellData;
-+ (instancetype)dequeueReusableCellForCollectionView:(UICollectionView *)collectionView
-                                        forIndexPath:(NSIndexPath *)indexPath;
++ (instancetype)dequeueCellForCollection:(UICollectionView *)collectionView
+                            forIndexPath:(NSIndexPath *)indexPath;
 - (void)reloadData;
 
 - (void)cellAddSubview:(UIView *)view;

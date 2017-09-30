@@ -82,6 +82,9 @@
     _effectView.frame = CGRectMake(0, 0, SCREENWIDTH, NAVBARHEIGHT);
     _bottomBorder.frame = CGRectMake(0, NAVBARCONTAINERHEIGHT - LINEWIDTH, SCREENWIDTH, LINEWIDTH);
     _titleLabel.frame = CGRectMake(0, 0, SCREENWIDTH, NAVBARCONTAINERHEIGHT);
+    
+    _rightButton.center = CGPointMake(_containerView.width - _rightButton.width/2 - 8, _containerView.height/2);
+    _leftButton.center = CGPointMake(_leftButton.width/2 + 8, _containerView.height/2);
 }
 
 #pragma mark - public method
@@ -104,7 +107,7 @@
                                     forState:UIControlStateNormal];
         [((UIButton *)leftButton) setTintColor:ZLThemeCtrInstance.navigationButtonColor];
     }
-    _leftButton.center = CGPointMake(_leftButton.width/2 + 8, self.containerView.height/2);
+    
     [self.containerView addSubview:_leftButton];
 }
 
@@ -118,8 +121,7 @@
                                        forState:UIControlStateNormal];
         [((UIButton *)rightButton) setTintColor:ZLThemeCtrInstance.navigationButtonColor];
     }
-    // 暂时这么写
-    rightButton.center = CGPointMake(self.containerView.width - rightButton.width/2 - 8, self.containerView.height/2);
+    
     [self.containerView addSubview:rightButton];
 }
 

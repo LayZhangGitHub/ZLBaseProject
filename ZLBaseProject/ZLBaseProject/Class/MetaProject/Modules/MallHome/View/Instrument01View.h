@@ -8,6 +8,9 @@
 
 #import "ZLMyBaseView.h"
 
+/**
+ * 带 icon 和 title
+ **/
 @interface Instrument01View : ZLMyBaseView
 
 @property (nonatomic, strong) NSDictionary *model;

@@ -47,6 +47,14 @@
 		48089C9A1F7DF9CE00DAF1B6 /* MHModule24Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C991F7DF9CE00DAF1B6 /* MHModule24Cell.m */; };
 		48089C9D1F7DF9D700DAF1B6 /* MHModule25Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C9C1F7DF9D700DAF1B6 /* MHModule25Cell.m */; };
 		48089CA01F7E31F000DAF1B6 /* Instrument03View.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089C9F1F7E31F000DAF1B6 /* Instrument03View.m */; };
+		48089CA31F7E5A4100DAF1B6 /* MallCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089CA21F7E5A4100DAF1B6 /* MallCategoryController.m */; };
+		48089CAC1F7F6B0F00DAF1B6 /* PMProductListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089CAB1F7F6B0F00DAF1B6 /* PMProductListController.m */; };
+		48089CB21F7F6EA700DAF1B6 /* ProductListResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089CB11F7F6EA700DAF1B6 /* ProductListResultModel.m */; };
+		48089CB51F7F6EB700DAF1B6 /* PMCatesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089CB41F7F6EB700DAF1B6 /* PMCatesModel.m */; };
+		48089CB81F7F6EC300DAF1B6 /* PMItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089CB71F7F6EC300DAF1B6 /* PMItemModel.m */; };
+		48089CBB1F7F6F0000DAF1B6 /* PMListItemMOdel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089CBA1F7F6F0000DAF1B6 /* PMListItemMOdel.m */; };
+		48089CBE1F7F6F3F00DAF1B6 /* PMCategoryResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089CBD1F7F6F3F00DAF1B6 /* PMCategoryResultModel.m */; };
+		48089CC21F7F71BB00DAF1B6 /* PointMallRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089CC11F7F71BA00DAF1B6 /* PointMallRequest.m */; };
 		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
 		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
 		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
@@ -190,6 +198,22 @@
 		48089C9C1F7DF9D700DAF1B6 /* MHModule25Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHModule25Cell.m; sourceTree = "<group>"; };
 		48089C9E1F7E31F000DAF1B6 /* Instrument03View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Instrument03View.h; sourceTree = "<group>"; };
 		48089C9F1F7E31F000DAF1B6 /* Instrument03View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instrument03View.m; sourceTree = "<group>"; };
+		48089CA11F7E5A4100DAF1B6 /* MallCategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MallCategoryController.h; sourceTree = "<group>"; };
+		48089CA21F7E5A4100DAF1B6 /* MallCategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MallCategoryController.m; sourceTree = "<group>"; };
+		48089CAA1F7F6B0F00DAF1B6 /* PMProductListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMProductListController.h; sourceTree = "<group>"; };
+		48089CAB1F7F6B0F00DAF1B6 /* PMProductListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMProductListController.m; sourceTree = "<group>"; };
+		48089CB01F7F6EA700DAF1B6 /* ProductListResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductListResultModel.h; sourceTree = "<group>"; };
+		48089CB11F7F6EA700DAF1B6 /* ProductListResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductListResultModel.m; sourceTree = "<group>"; };
+		48089CB31F7F6EB700DAF1B6 /* PMCatesModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMCatesModel.h; sourceTree = "<group>"; };
+		48089CB41F7F6EB700DAF1B6 /* PMCatesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMCatesModel.m; sourceTree = "<group>"; };
+		48089CB61F7F6EC300DAF1B6 /* PMItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMItemModel.h; sourceTree = "<group>"; };
+		48089CB71F7F6EC300DAF1B6 /* PMItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMItemModel.m; sourceTree = "<group>"; };
+		48089CB91F7F6F0000DAF1B6 /* PMListItemMOdel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMListItemMOdel.h; sourceTree = "<group>"; };
+		48089CBA1F7F6F0000DAF1B6 /* PMListItemMOdel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMListItemMOdel.m; sourceTree = "<group>"; };
+		48089CBC1F7F6F3F00DAF1B6 /* PMCategoryResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMCategoryResultModel.h; sourceTree = "<group>"; };
+		48089CBD1F7F6F3F00DAF1B6 /* PMCategoryResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMCategoryResultModel.m; sourceTree = "<group>"; };
+		48089CC01F7F71BA00DAF1B6 /* PointMallRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointMallRequest.h; sourceTree = "<group>"; };
+		48089CC11F7F71BA00DAF1B6 /* PointMallRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointMallRequest.m; sourceTree = "<group>"; };
 		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
 		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
 		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
@@ -365,6 +389,67 @@
 			path = Safe;
 			sourceTree = "<group>";
 		};
+		48089CA41F7F6AE900DAF1B6 /* PointMall */ = {
+			isa = PBXGroup;
+			children = (
+				48089CBF1F7F71BA00DAF1B6 /* Request */,
+				48089CA51F7F6AE900DAF1B6 /* ProductList */,
+			);
+			path = PointMall;
+			sourceTree = "<group>";
+		};
+		48089CA51F7F6AE900DAF1B6 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				48089CA61F7F6AE900DAF1B6 /* Controller */,
+				48089CA71F7F6AE900DAF1B6 /* Model */,
+				48089CA91F7F6AE900DAF1B6 /* View */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		48089CA61F7F6AE900DAF1B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48089CAA1F7F6B0F00DAF1B6 /* PMProductListController.h */,
+				48089CAB1F7F6B0F00DAF1B6 /* PMProductListController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		48089CA71F7F6AE900DAF1B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48089CBC1F7F6F3F00DAF1B6 /* PMCategoryResultModel.h */,
+				48089CBD1F7F6F3F00DAF1B6 /* PMCategoryResultModel.m */,
+				48089CB31F7F6EB700DAF1B6 /* PMCatesModel.h */,
+				48089CB41F7F6EB700DAF1B6 /* PMCatesModel.m */,
+				48089CB61F7F6EC300DAF1B6 /* PMItemModel.h */,
+				48089CB71F7F6EC300DAF1B6 /* PMItemModel.m */,
+				48089CB91F7F6F0000DAF1B6 /* PMListItemMOdel.h */,
+				48089CBA1F7F6F0000DAF1B6 /* PMListItemMOdel.m */,
+				48089CB01F7F6EA700DAF1B6 /* ProductListResultModel.h */,
+				48089CB11F7F6EA700DAF1B6 /* ProductListResultModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48089CA91F7F6AE900DAF1B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48089CBF1F7F71BA00DAF1B6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				48089CC01F7F71BA00DAF1B6 /* PointMallRequest.h */,
+				48089CC11F7F71BA00DAF1B6 /* PointMallRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		4845D30C1F7A56FA004D884B /* MallHome */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +466,8 @@
 			children = (
 				4845D3231F7A59E5004D884B /* MallHomeController.h */,
 				4845D3241F7A59E5004D884B /* MallHomeController.m */,
+				48089CA11F7E5A4100DAF1B6 /* MallCategoryController.h */,
+				48089CA21F7E5A4100DAF1B6 /* MallCategoryController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -801,6 +888,7 @@
 		48C1534D1F73CE0E00C577AB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				48089CA41F7F6AE900DAF1B6 /* PointMall */,
 				4845D30C1F7A56FA004D884B /* MallHome */,
 				48C1534E1F73CE0E00C577AB /* AppCommModule */,
 			);
@@ -1135,7 +1223,9 @@
 				48C152F61F739D6200C577AB /* UserInfo.m in Sources */,
 				48089B431F7CDD9B00DAF1B6 /* NSMutableArray+Safe.m in Sources */,
 				4845D32B1F7A5C4D004D884B /* MHResultModel.m in Sources */,
+				48089CAC1F7F6B0F00DAF1B6 /* PMProductListController.m in Sources */,
 				48089C7F1F7DF97400DAF1B6 /* MHModule15Cell.m in Sources */,
+				48089CB81F7F6EC300DAF1B6 /* PMItemModel.m in Sources */,
 				48089B4F1F7CF65400DAF1B6 /* ZLMyBaseView.m in Sources */,
 				48089C821F7DF97E00DAF1B6 /* MHModule16Cell.m in Sources */,
 				4845D3551F7B90B2004D884B /* ZLSliderView.m in Sources */,
@@ -1145,10 +1235,12 @@
 				48C152F71F739D6200C577AB /* UserInfoService.m in Sources */,
 				48C1533F1F73C03800C577AB /* UIView+ZLEX.m in Sources */,
 				48C152FD1F739D6200C577AB /* ZLTabbar.m in Sources */,
+				48089CC21F7F71BB00DAF1B6 /* PointMallRequest.m in Sources */,
 				4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */,
 				48089C761F7DF95500DAF1B6 /* MHModule12Cell.m in Sources */,
 				48089C9D1F7DF9D700DAF1B6 /* MHModule25Cell.m in Sources */,
 				4806F86E1F74BA8100A5B3CD /* BaseCollectionController.m in Sources */,
+				48089CBB1F7F6F0000DAF1B6 /* PMListItemMOdel.m in Sources */,
 				48089B491F7CF5E400DAF1B6 /* Instrument01View.m in Sources */,
 				48089B441F7CDD9B00DAF1B6 /* NSMutableDictionary+Safe.m in Sources */,
 				48C152EF1F739D6200C577AB /* BaseController.m in Sources */,
@@ -1160,6 +1252,7 @@
 				4845D3491F7B3D75004D884B /* UIColor+ZLEX.m in Sources */,
 				4845D31F1F7A57FB004D884B /* MHModule05Cell.m in Sources */,
 				48C152FC1F739D6200C577AB /* ZLNavigationBar.m in Sources */,
+				48089CBE1F7F6F3F00DAF1B6 /* PMCategoryResultModel.m in Sources */,
 				4806F8841F750AAB00A5B3CD /* View02Controller.m in Sources */,
 				4845D33A1F7A6522004D884B /* MHHeaderMoreModel.m in Sources */,
 				4845D31C1F7A57F3004D884B /* MHModule04Cell.m in Sources */,
@@ -1198,13 +1291,16 @@
 				4845D3281F7A5B98004D884B /* MallHomeRequest.m in Sources */,
 				48089C6A1F7DF92F00DAF1B6 /* MHModule08Cell.m in Sources */,
 				48089C731F7DF94B00DAF1B6 /* MHModule11Cell.m in Sources */,
+				48089CB21F7F6EA700DAF1B6 /* ProductListResultModel.m in Sources */,
 				4845D3161F7A57DC004D884B /* MHModule02Cell.m in Sources */,
 				485D211D1F78D5370033DD20 /* InstViewLayout.m in Sources */,
 				48C152F21F739D6200C577AB /* BaseApplicationEntity.m in Sources */,
+				48089CA31F7E5A4100DAF1B6 /* MallCategoryController.m in Sources */,
 				4806F8781F74E94800A5B3CD /* ZLNetworkCaptain.m in Sources */,
 				48C152FE1F739D6200C577AB /* ZLTabbarItem.m in Sources */,
 				48C152F01F739D6200C577AB /* BaseTableController.m in Sources */,
 				4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */,
+				48089CB51F7F6EB700DAF1B6 /* PMCatesModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

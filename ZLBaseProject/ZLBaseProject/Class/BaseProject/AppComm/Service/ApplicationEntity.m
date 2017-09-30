@@ -10,7 +10,10 @@
 #import "View01Controller.h"
 #import "View02Controller.h"
 #import "ZLTabbarController.h"
+
 #import "MallHomeController.h"
+#import "MallCategoryController.h"
+#import "PMProductListController.h"
 
 @interface ApplicationEntity() <ZLTabBarControllerDelegate>
 
@@ -87,8 +90,8 @@
     self.tabbarController = [[ZLTabbarController alloc] initWithViewControllers:
                              @[
                                [[MallHomeController alloc] init],
-                               [[View02Controller alloc] init],
-                               [[View01Controller alloc] init],
+                               [[MallCategoryController alloc] init],
+                               [[PMProductListController alloc] init],
                                [[View02Controller alloc] init]
                                ]];
     

@@ -8,6 +8,9 @@
 
 #import "ZLMyBaseView.h"
 
+/**
+ * 带 两个标题的大图
+ **/
 @interface Instrument03View : ZLMyBaseView
 
 @property (nonatomic, assign) NSTextAlignment textAlignment;
