@@ -64,9 +64,6 @@
     self.contentCollectionView.height = SCREENHEIGHT - NAVBARHEIGHT - TABBARHEIGHT;
     self.contentCollectionView.alwaysBounceVertical = YES;
     
-    self.hasHeader = YES;
-    
-    //self.title = @"全部分类";
     [self initData];
 }
 
@@ -206,7 +203,7 @@
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     MHModuleModel *model = self.items[section];
-    if (self.hasHeader && [self headerSectionCount] > section) {
+    if ([self headerSectionCount] > section) {
         if (section == 0 ) {
             return 1;
         }else {

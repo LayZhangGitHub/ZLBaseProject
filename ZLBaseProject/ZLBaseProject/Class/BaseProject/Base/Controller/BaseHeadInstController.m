@@ -11,16 +11,12 @@
 #import "DefaultInstHeadCell.h"
 
 @interface BaseHeadInstController ()
-
-
-
 @end
 
 @implementation BaseHeadInstController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.hasHeader = YES;
 }
 
 #pragma mark - override
@@ -64,7 +60,7 @@
 - (UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DefaultInstCell *cell =
     [DefaultInstCell dequeueCellForCollection:self.contentCollectionView
-                                             forIndexPath:indexPath];
+                                 forIndexPath:indexPath];
 //    cell.cellData = [NSString stringWithFormat:@"%ld", (long)indexPath.item];
     cell.cellData = @"DefaultInstCell";
     return cell;
@@ -78,6 +74,7 @@
     return CGSizeMake(SCREENWIDTH, [[DefaultInstCell heightForCell:[NSString stringWithFormat:@"%ld", (long)indexPath.item]] floatValue]);
 }
 
+// 非 head item count
 - (NSInteger)itemCount {
     return 0;
 }
@@ -92,7 +89,7 @@
 
 #pragma mark - InstViewDelegateFlowLayout
 - (NSInteger)collectionView:(UICollectionView *)collectionView layout:(InstViewLayout *)layout numberOfColumnsInSection:(NSInteger)section{
-    if ( self.hasHeader && [self headerSectionCount] > section ) {
+    if ([self headerSectionCount] > section) {
         return 1;
     }
     return 2;
@@ -100,21 +97,18 @@
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if ( self.hasHeader && [self headerSectionCount] > section ) {
+    if ([self headerSectionCount] > section) {
         return 1;
     }
     return [self itemCount];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    if (self.hasHeader) {
-        return [self headerSectionCount];
-    }
-    return [self itemSectionCount];
+    return [self headerSectionCount] + [self itemSectionCount];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if ( self.hasHeader && [self headerSectionCount] > indexPath.section ) {
+    if ([self headerSectionCount] > indexPath.section) {
         return [self cellForHeaderAtIndexPath:indexPath];
     } else {
         return [self cellForItemAtIndexPath:indexPath];
@@ -130,28 +124,28 @@
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(InstViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
-    if ( self.hasHeader && [self headerSectionCount] > section ) {
+    if ([self headerSectionCount] > section) {
         return 0;
     }
     return 5;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(InstViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
-    if ( self.hasHeader && [self headerSectionCount] > section ) {
+    if ([self headerSectionCount] > section) {
         return 0;
     }
     return 5;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(InstViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    if ( self.hasHeader && [self headerSectionCount] > section ) {
+    if ([self headerSectionCount] > section) {
         return UIEdgeInsetsMake(0, 0, 0, 0);
     }
     return UIEdgeInsetsMake(0, 5, 10, 5);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(InstViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    if ( self.hasHeader && [self headerSectionCount] > indexPath.section ) {
+    if ([self headerSectionCount] > indexPath.section) {
         return [self sizeForHeaderAtIndexPath:indexPath];
     }
     return [self sizeForItemAtIndexPath:indexPath];

@@ -101,10 +101,7 @@
     [self.navigationBar addSubview:leftButton];
     
     self.contentCollectionView.height = SCREENHEIGHT - NAVBARHEIGHT - TABBARHEIGHT;
-    //    self.contentCollectionView.showsInfiniteScrolling = NO;
     self.contentCollectionView.alwaysBounceVertical = YES;
-    
-//    self.hasHeader = YES;
     
     self.title = @"淘梦商城";
     [self initData];
@@ -229,7 +226,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     MHModuleModel *model = [self.items objectAtIndex:section];
-    if (self.hasHeader && [self headerSectionCount] > section) {
+    if ([self headerSectionCount] > section) {
         if (section == 0) {
             return 1;
         } else {

@@ -8,6 +8,9 @@
 
 #import "PMProductListController.h"
 #import "PointMallRequest.h"
+#import "PMCatrogryCell.h"
+#import "PMTitleHeaderCell.h"
+#import "PMInstrumentCell.h"
 
 @interface PMProductListController ()<UITextFieldDelegate>
 
@@ -25,7 +28,7 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.tabbarItem = [[ZLTabbarItem alloc] initWithTitle:@"分类"
+        self.tabbarItem = [[ZLTabbarItem alloc] initWithTitle:@"淘米商城"
                                                    titleColor:ZLGray(153)
                                            selectedTitleColor:ZLRedColor
                                                          icon:[UIImage imageNamed:@"icon_tabbar_point_normal"]
@@ -56,6 +59,105 @@
 
 - (void)handleSearchButton {
     //    [[ZLNavigationService sharedService] openUrl:LOCALSCHEMA(@"search?cateId=%@&type=pointSearch",self.cateId)];
+}
+
+- (void)registCell {
+    [self.contentCollectionView registerClass:[PMInstrumentCell class] forCellWithReuseIdentifier:[PMInstrumentCell cellIdentifier]];
+    [self.contentCollectionView registerClass:[PMCatrogryCell class] forCellWithReuseIdentifier:[PMCatrogryCell cellIdentifier]];
+    [self.contentCollectionView registerClass:[PMTitleHeaderCell class] forCellWithReuseIdentifier:[PMTitleHeaderCell cellIdentifier]];
+    
+    [self.contentCollectionView registerClass:[BaseCollectionCell class] forCellWithReuseIdentifier:[BaseCollectionCell cellIdentifier]];
+}
+
+- (NSInteger)itemSectionCount {
+    return 1;
+}
+
+- (NSInteger)headerSectionCount {
+    return self.items.count + 1;
+}
+
+- (UICollectionViewCell *)cellForHeaderAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        
+        PMCatrogryCell *cell = [PMCatrogryCell dequeueCellForCollection:self.contentCollectionView
+                                                           forIndexPath:indexPath];
+        cell.cellData = self.categoryArray;
+        return cell;
+    }
+    
+    if (indexPath.section > 0) {
+        PMListItemMOdel *list = self.items[indexPath.section - 1];
+        if (indexPath.item == 0) {
+            PMTitleHeaderCell *cell = [PMTitleHeaderCell dequeueCellForCollection:self.contentCollectionView
+                                                                     forIndexPath:indexPath];
+            cell.cellData = list.title;
+            return cell;
+        }else {
+            PMInstrumentCell *cell = [PMInstrumentCell dequeueCellForCollection:self.contentCollectionView
+                                                                   forIndexPath:indexPath];
+
+            NSMutableDictionary *items = [NSMutableDictionary dictionary];
+            items[@"leftItem"]  = list.items[(indexPath.row-1) * 2];
+            items[@"rightItem"] = list.items[(indexPath.row-1) * 2 + 1];
+            cell.cellData = items;
+            return cell;
+        }
+
+    }
+    
+    BaseCollectionCell * cell = [BaseCollectionCell dequeueCellForCollection:self.contentCollectionView
+                                                                forIndexPath:indexPath];
+    return cell;
+}
+
+- (CGSize)sizeForHeaderAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = 0;
+    if (indexPath.section == 0) {
+        height = [[PMCatrogryCell heightForCell:self.categoryArray] floatValue];
+    }
+    
+    if (indexPath.section > 0) {
+        if (indexPath.item == 0) {
+            PMListItemMOdel *list = self.items[indexPath.section - 1];
+            height = [[PMTitleHeaderCell heightForCell:list.title] floatValue];
+        }else {
+            PMListItemMOdel *list = self.items[indexPath.section - 1];
+
+            NSMutableDictionary *items = [NSMutableDictionary dictionary];
+            items[@"leftItem"]  = list.items[(indexPath.row - 1) * 2];
+            items[@"rightItem"] = list.items[(indexPath.row - 1) * 2 + 1];
+            height = [[PMInstrumentCell heightForCell:items] floatValue];
+        }
+    }
+    return CGSizeMake(SCREENWIDTH, height);
+}
+
+- (UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    BaseCollectionCell * cell = [BaseCollectionCell dequeueCellForCollection:self.contentCollectionView
+                                                                forIndexPath:indexPath];
+    return cell;
+}
+
+- (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake((SCREENWIDTH - 15) / 2, 0);
+}
+
+
+#pragma mark - WallViewDelegateFlowLayout
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    if ([self headerSectionCount] > section) {
+        
+        if (section == 0 ) {
+            return 1;
+        } else {
+            PMListItemMOdel *list = self.items[section-1];
+            return ceil(list.items.count/2.0f) + 1;
+        }
+        return 0;
+    }
+    
+    return 0;
 }
 
 #pragma mark - properties
@@ -140,7 +242,7 @@
         
         [self.items removeAllObjects];
         
-        if ( resultModel && resultModel.list ) {
+        if (resultModel && resultModel.list) {
             
             [self.items addObjectsFromArray:resultModel.list];
             

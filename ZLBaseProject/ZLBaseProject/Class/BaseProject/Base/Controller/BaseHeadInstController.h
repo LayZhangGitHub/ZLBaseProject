@@ -11,6 +11,4 @@
 
 @interface BaseHeadInstController : BaseCollectionController <InstFlowLayoutDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (nonatomic, assign) BOOL hasHeader;
-
 @end

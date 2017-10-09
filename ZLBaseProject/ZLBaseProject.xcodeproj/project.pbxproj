@@ -55,6 +55,11 @@
 		48089CBB1F7F6F0000DAF1B6 /* PMListItemMOdel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089CBA1F7F6F0000DAF1B6 /* PMListItemMOdel.m */; };
 		48089CBE1F7F6F3F00DAF1B6 /* PMCategoryResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089CBD1F7F6F3F00DAF1B6 /* PMCategoryResultModel.m */; };
 		48089CC21F7F71BB00DAF1B6 /* PointMallRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 48089CC11F7F71BA00DAF1B6 /* PointMallRequest.m */; };
+		481A72EE1F8B248F00EF3242 /* PMCatrogryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A72ED1F8B248F00EF3242 /* PMCatrogryCell.m */; };
+		481A72F11F8B25DA00EF3242 /* PMCategoryModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A72F01F8B25DA00EF3242 /* PMCategoryModuleView.m */; };
+		481A72F41F8B51F800EF3242 /* PMTitleHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A72F31F8B51F800EF3242 /* PMTitleHeaderCell.m */; };
+		481A72F71F8B521300EF3242 /* PMInstrumentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A72F61F8B521300EF3242 /* PMInstrumentCell.m */; };
+		481A72FA1F8B549A00EF3242 /* PMInstrumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A72F91F8B549A00EF3242 /* PMInstrumentView.m */; };
 		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
 		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
 		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
@@ -214,6 +219,16 @@
 		48089CBD1F7F6F3F00DAF1B6 /* PMCategoryResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMCategoryResultModel.m; sourceTree = "<group>"; };
 		48089CC01F7F71BA00DAF1B6 /* PointMallRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointMallRequest.h; sourceTree = "<group>"; };
 		48089CC11F7F71BA00DAF1B6 /* PointMallRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointMallRequest.m; sourceTree = "<group>"; };
+		481A72EC1F8B248F00EF3242 /* PMCatrogryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMCatrogryCell.h; sourceTree = "<group>"; };
+		481A72ED1F8B248F00EF3242 /* PMCatrogryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMCatrogryCell.m; sourceTree = "<group>"; };
+		481A72EF1F8B25DA00EF3242 /* PMCategoryModuleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMCategoryModuleView.h; sourceTree = "<group>"; };
+		481A72F01F8B25DA00EF3242 /* PMCategoryModuleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMCategoryModuleView.m; sourceTree = "<group>"; };
+		481A72F21F8B51F800EF3242 /* PMTitleHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMTitleHeaderCell.h; sourceTree = "<group>"; };
+		481A72F31F8B51F800EF3242 /* PMTitleHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMTitleHeaderCell.m; sourceTree = "<group>"; };
+		481A72F51F8B521300EF3242 /* PMInstrumentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMInstrumentCell.h; sourceTree = "<group>"; };
+		481A72F61F8B521300EF3242 /* PMInstrumentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMInstrumentCell.m; sourceTree = "<group>"; };
+		481A72F81F8B549A00EF3242 /* PMInstrumentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMInstrumentView.h; sourceTree = "<group>"; };
+		481A72F91F8B549A00EF3242 /* PMInstrumentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMInstrumentView.m; sourceTree = "<group>"; };
 		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
 		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
 		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
@@ -437,6 +452,16 @@
 		48089CA91F7F6AE900DAF1B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				481A72EC1F8B248F00EF3242 /* PMCatrogryCell.h */,
+				481A72ED1F8B248F00EF3242 /* PMCatrogryCell.m */,
+				481A72EF1F8B25DA00EF3242 /* PMCategoryModuleView.h */,
+				481A72F01F8B25DA00EF3242 /* PMCategoryModuleView.m */,
+				481A72F21F8B51F800EF3242 /* PMTitleHeaderCell.h */,
+				481A72F31F8B51F800EF3242 /* PMTitleHeaderCell.m */,
+				481A72F51F8B521300EF3242 /* PMInstrumentCell.h */,
+				481A72F61F8B521300EF3242 /* PMInstrumentCell.m */,
+				481A72F81F8B549A00EF3242 /* PMInstrumentView.h */,
+				481A72F91F8B549A00EF3242 /* PMInstrumentView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1217,6 +1242,7 @@
 				48C152F11F739D6200C577AB /* ScrollableController.m in Sources */,
 				48089B421F7CDD9B00DAF1B6 /* NSDictionary+Safe.m in Sources */,
 				48089B411F7CDD9B00DAF1B6 /* NSArray+Safe.m in Sources */,
+				481A72EE1F8B248F00EF3242 /* PMCatrogryCell.m in Sources */,
 				48089C9A1F7DF9CE00DAF1B6 /* MHModule24Cell.m in Sources */,
 				48089C881F7DF99100DAF1B6 /* MHModule18Cell.m in Sources */,
 				48089C6D1F7DF93900DAF1B6 /* MHModule09Cell.m in Sources */,
@@ -1235,6 +1261,7 @@
 				48C152F71F739D6200C577AB /* UserInfoService.m in Sources */,
 				48C1533F1F73C03800C577AB /* UIView+ZLEX.m in Sources */,
 				48C152FD1F739D6200C577AB /* ZLTabbar.m in Sources */,
+				481A72FA1F8B549A00EF3242 /* PMInstrumentView.m in Sources */,
 				48089CC21F7F71BB00DAF1B6 /* PointMallRequest.m in Sources */,
 				4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */,
 				48089C761F7DF95500DAF1B6 /* MHModule12Cell.m in Sources */,
@@ -1247,11 +1274,13 @@
 				4845D3221F7A5804004D884B /* MHModule06Cell.m in Sources */,
 				48C1533C1F73C03800C577AB /* UIButton+ZLEX.m in Sources */,
 				4806F87B1F74F1B500A5B3CD /* StatusModel.m in Sources */,
+				481A72F11F8B25DA00EF3242 /* PMCategoryModuleView.m in Sources */,
 				4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */,
 				48089B2B1F7BB06B00DAF1B6 /* ShowToast.m in Sources */,
 				4845D3491F7B3D75004D884B /* UIColor+ZLEX.m in Sources */,
 				4845D31F1F7A57FB004D884B /* MHModule05Cell.m in Sources */,
 				48C152FC1F739D6200C577AB /* ZLNavigationBar.m in Sources */,
+				481A72F41F8B51F800EF3242 /* PMTitleHeaderCell.m in Sources */,
 				48089CBE1F7F6F3F00DAF1B6 /* PMCategoryResultModel.m in Sources */,
 				4806F8841F750AAB00A5B3CD /* View02Controller.m in Sources */,
 				4845D33A1F7A6522004D884B /* MHHeaderMoreModel.m in Sources */,
@@ -1264,6 +1293,7 @@
 				4806F8711F74C03A00A5B3CD /* BaseCollectionCell.m in Sources */,
 				48089B321F7CD9CB00DAF1B6 /* UIImageView+ZLEX.m in Sources */,
 				48C1533A1F73C03800C577AB /* NSObject+Runtime.m in Sources */,
+				481A72F71F8B521300EF3242 /* PMInstrumentCell.m in Sources */,
 				48089CA01F7E31F000DAF1B6 /* Instrument03View.m in Sources */,
 				48C153391F73C03800C577AB /* CALayer+ZLEX.m in Sources */,
 				4845D3131F7A57CA004D884B /* MHModule01Cell.m in Sources */,
