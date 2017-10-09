@@ -46,7 +46,7 @@
 }
 
 - (void)d {
-    [[ZLNavigationService sharedService] openUrl:@"xiaoma://login"];
+    [[ZLNavigationService sharedService] openUrl:@""];
 }
 
 - (void)didReceiveMemoryWarning {

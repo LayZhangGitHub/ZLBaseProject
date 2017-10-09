@@ -81,7 +81,6 @@
     shareButton.hidden = NO;
     self.shareButton = shareButton;
     
-    
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeCustom];
     infoButton.frame = CGRectMake(0, 0, 40, 20);
     [infoButton setImage:[UIImage imageNamed:@"btn_cart"] forState:UIControlStateNormal];
@@ -109,6 +108,7 @@
     //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(launchViewWillRemove:) name:LaunchViewWillRemoveNotification object:nil];
     //    [self showTips:@"te/st"];
     //    [self showFaildView];
+    
 }
 
 - (void)registCell {

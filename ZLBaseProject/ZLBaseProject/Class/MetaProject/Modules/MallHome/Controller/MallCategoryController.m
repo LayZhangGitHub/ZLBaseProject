@@ -65,6 +65,8 @@
     self.contentCollectionView.alwaysBounceVertical = YES;
     
     [self initData];
+    
+    [[ZLNavigationService sharedService] openUrl:SConnect(AppSchemeCompeled, LoginHost)];
 }
 
 #pragma mark - properties

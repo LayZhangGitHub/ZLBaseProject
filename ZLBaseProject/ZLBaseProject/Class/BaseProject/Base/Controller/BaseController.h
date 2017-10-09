@@ -35,6 +35,8 @@
 - (void)showNavigationBar;
 - (void)hideNavigationBar;
 
+- (void)initComponent;
+
 #pragma mark - alert
 - (void)showAlert:(NSString *)message;
 - (void)showAlert:(NSString *)message didClickButton:(ClickbuttonAtIndex)didClickBlock;

@@ -19,4 +19,13 @@
 #define IS_IPHONE6                  (SCREENHEIGHT == 667)
 #define IS_IPHONE6Plus              (SCREENHEIGHT == 736)
 
+//#define APP_SCHEME @"jump"
+#define APP_SCHEME         APP_INNER_SCHEME
+#define APP_LOCAL_SCHEME   [AppInfoManager sharedManager].localScheme
+#define APP_INNER_SCHEME   [AppInfoManager sharedManager].internalScheme
+#define APP_EXTERN_SCHEME  [AppInfoManager sharedManager].externalScheme
+
+//标准宏
+#define LOCALSCHEME(x,...)  [NSString stringWithFormat:(@"%@://" x),APP_LOCAL_SCHEME,##__VA_ARGS__]
+
 #endif /* SystemMacro_h */

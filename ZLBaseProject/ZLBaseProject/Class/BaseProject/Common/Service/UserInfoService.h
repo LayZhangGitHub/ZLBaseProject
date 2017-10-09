@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserInfo.h"
 
 @interface UserInfoService : NSObject
+
+@property (nonatomic, strong) UserInfo *userInfo;
 
 + (instancetype)shareUserInfo;
 

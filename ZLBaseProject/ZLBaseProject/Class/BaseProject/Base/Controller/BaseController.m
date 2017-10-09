@@ -19,7 +19,6 @@
 
 @implementation BaseController
 
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     ZLFuncLineLog();
@@ -37,7 +36,10 @@
     [self.navigationController.navigationBar setHidden:YES];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.needBlurEffect = YES;
+    [self initComponent];
 }
+
+- (void)initComponent {}
 
 #pragma mark - override uiviewcontroller settitle
 - (void)setTitle:(NSString *)title {

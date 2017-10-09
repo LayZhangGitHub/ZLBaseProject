@@ -7,15 +7,12 @@
 //
 
 #import "UserInfoService.h"
-#import "UserInfo.h"
 
 #define UserInfoFileName @"UserInfoFileName"
 
 #define UserInfoDataKey @"UserInfoDataKey"
 
 @interface UserInfoService()
-
-@property (nonatomic, strong) UserInfo *userInfo;
 
 @end
 

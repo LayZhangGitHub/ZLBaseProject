@@ -19,7 +19,7 @@
 @property(nonatomic, strong, readonly) NSArray *childrenControllers; // children controllers
 @property (nonatomic, strong, readonly) NSArray *defaultViewControllers;
 @property(nonatomic, strong, readonly) BaseController *selectedViewController;
-@property(nonatomic, assign, readonly) NSInteger selectIndex;
+@property(nonatomic, assign) NSInteger selectIndex;
 
 @property(nonatomic, weak) id<ZLTabBarControllerDelegate> tabBarControllerDelegate;
 

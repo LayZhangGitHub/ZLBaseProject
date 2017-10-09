@@ -29,20 +29,21 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
-  - CocoaLumberjack (3.2.1):
-    - CocoaLumberjack/Default (= 3.2.1)
-    - CocoaLumberjack/Extensions (= 3.2.1)
-  - CocoaLumberjack/Default (3.2.1)
-  - CocoaLumberjack/Extensions (3.2.1):
+  - CocoaLumberjack (3.3.0):
+    - CocoaLumberjack/Default (= 3.3.0)
+    - CocoaLumberjack/Extensions (= 3.3.0)
+  - CocoaLumberjack/Default (3.3.0)
+  - CocoaLumberjack/Extensions (3.3.0):
     - CocoaLumberjack/Default
   - GDataXML-HTML (1.3.0)
   - Masonry (1.0.2)
-  - MJRefresh (3.1.13)
+  - MJRefresh (3.1.14)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SwipeView (1.3.2)
   - UITableView+FDTemplateLayoutCell (1.6)
+  - WeChat_SDK (1.7.5.1)
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
@@ -58,22 +59,24 @@ DEPENDENCIES:
   - SDWebImage (~> 4.0.0)
   - SwipeView (~> 1.3.2)
   - UITableView+FDTemplateLayoutCell
+  - WeChat_SDK
   - YYCategories
   - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
-  CocoaLumberjack: 2800c03334042fe80589423c8d80e582dcaec482
+  CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
   GDataXML-HTML: 7adc03668cab35c288f1dbb8929a179f0fece898
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  MJRefresh: 56a28aa628c9895e97a518dabaecf70b18f92f32
+  MJRefresh: 6642e35b3227a5447b9fd5e17c552c90196c9859
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SwipeView: bd67cfaf7760c036438446b3ccb28a3b84fce009
   UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  WeChat_SDK: 235a2ae8967bcbe54c1e5668c187641c886b19af
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: e3df05804dedd6ed64c0a11c0d1d284bbd5141a1
+PODFILE CHECKSUM: 90305c7ae9d1fceef0d4ea4c18594f5ba3dfc4bd
 
 COCOAPODS: 1.2.0

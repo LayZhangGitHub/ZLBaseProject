@@ -60,6 +60,12 @@
 		481A72F41F8B51F800EF3242 /* PMTitleHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A72F31F8B51F800EF3242 /* PMTitleHeaderCell.m */; };
 		481A72F71F8B521300EF3242 /* PMInstrumentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A72F61F8B521300EF3242 /* PMInstrumentCell.m */; };
 		481A72FA1F8B549A00EF3242 /* PMInstrumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A72F91F8B549A00EF3242 /* PMInstrumentView.m */; };
+		481A73021F8B6C9500EF3242 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73011F8B6C9400EF3242 /* LoginController.m */; };
+		481A73051F8B732700EF3242 /* ThirdPartLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73041F8B732700EF3242 /* ThirdPartLoginView.m */; };
+		481A73081F8B780A00EF3242 /* CountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73071F8B780A00EF3242 /* CountDownButton.m */; };
+		481A730B1F8B7CB100EF3242 /* UserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A730A1F8B7CB100EF3242 /* UserRequest.m */; };
+		481A730E1F8B7D0400EF3242 /* TMUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A730D1F8B7D0400EF3242 /* TMUserInfoModel.m */; };
+		481A73111F8B7D3800EF3242 /* TMUserInfoResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73101F8B7D3800EF3242 /* TMUserInfoResultModel.m */; };
 		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
 		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
 		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
@@ -229,6 +235,18 @@
 		481A72F61F8B521300EF3242 /* PMInstrumentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMInstrumentCell.m; sourceTree = "<group>"; };
 		481A72F81F8B549A00EF3242 /* PMInstrumentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMInstrumentView.h; sourceTree = "<group>"; };
 		481A72F91F8B549A00EF3242 /* PMInstrumentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMInstrumentView.m; sourceTree = "<group>"; };
+		481A73001F8B6C9400EF3242 /* LoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		481A73011F8B6C9400EF3242 /* LoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		481A73031F8B732700EF3242 /* ThirdPartLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartLoginView.h; sourceTree = "<group>"; };
+		481A73041F8B732700EF3242 /* ThirdPartLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdPartLoginView.m; sourceTree = "<group>"; };
+		481A73061F8B780900EF3242 /* CountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButton.h; sourceTree = "<group>"; };
+		481A73071F8B780A00EF3242 /* CountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownButton.m; sourceTree = "<group>"; };
+		481A73091F8B7CB100EF3242 /* UserRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRequest.h; sourceTree = "<group>"; };
+		481A730A1F8B7CB100EF3242 /* UserRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserRequest.m; sourceTree = "<group>"; };
+		481A730C1F8B7D0400EF3242 /* TMUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMUserInfoModel.h; sourceTree = "<group>"; };
+		481A730D1F8B7D0400EF3242 /* TMUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMUserInfoModel.m; sourceTree = "<group>"; };
+		481A730F1F8B7D3800EF3242 /* TMUserInfoResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMUserInfoResultModel.h; sourceTree = "<group>"; };
+		481A73101F8B7D3800EF3242 /* TMUserInfoResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMUserInfoResultModel.m; sourceTree = "<group>"; };
 		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
 		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
 		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
@@ -475,6 +493,55 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		481A72FB1F8B6C7B00EF3242 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				481A72FC1F8B6C7B00EF3242 /* Controller */,
+				481A72FD1F8B6C7B00EF3242 /* Model */,
+				481A72FE1F8B6C7B00EF3242 /* Request */,
+				481A72FF1F8B6C7B00EF3242 /* View */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		481A72FC1F8B6C7B00EF3242 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				481A73001F8B6C9400EF3242 /* LoginController.h */,
+				481A73011F8B6C9400EF3242 /* LoginController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		481A72FD1F8B6C7B00EF3242 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				481A730C1F8B7D0400EF3242 /* TMUserInfoModel.h */,
+				481A730D1F8B7D0400EF3242 /* TMUserInfoModel.m */,
+				481A730F1F8B7D3800EF3242 /* TMUserInfoResultModel.h */,
+				481A73101F8B7D3800EF3242 /* TMUserInfoResultModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		481A72FE1F8B6C7B00EF3242 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				481A73091F8B7CB100EF3242 /* UserRequest.h */,
+				481A730A1F8B7CB100EF3242 /* UserRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		481A72FF1F8B6C7B00EF3242 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				481A73031F8B732700EF3242 /* ThirdPartLoginView.h */,
+				481A73041F8B732700EF3242 /* ThirdPartLoginView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4845D30C1F7A56FA004D884B /* MallHome */ = {
 			isa = PBXGroup;
 			children = (
@@ -706,6 +773,8 @@
 		48C152C31F739D6200C577AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				481A73061F8B780900EF3242 /* CountDownButton.h */,
+				481A73071F8B780A00EF3242 /* CountDownButton.m */,
 				48089B291F7BB06A00DAF1B6 /* ShowToast.h */,
 				48089B2A1F7BB06A00DAF1B6 /* ShowToast.m */,
 				4845D3441F7B3B60004D884B /* ZLAlertView.h */,
@@ -913,6 +982,7 @@
 		48C1534D1F73CE0E00C577AB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				481A72FB1F8B6C7B00EF3242 /* User */,
 				48089CA41F7F6AE900DAF1B6 /* PointMall */,
 				4845D30C1F7A56FA004D884B /* MallHome */,
 				48C1534E1F73CE0E00C577AB /* AppCommModule */,
@@ -1232,13 +1302,16 @@
 				48C153021F73A10000C577AB /* ApplicationEntity.m in Sources */,
 				48089B521F7D08EC00DAF1B6 /* Instrument02View.m in Sources */,
 				48089C8B1F7DF99B00DAF1B6 /* MHModule19Cell.m in Sources */,
+				481A73051F8B732700EF3242 /* ThirdPartLoginView.m in Sources */,
 				48089B451F7CDD9B00DAF1B6 /* NSMutableSet+Safe.m in Sources */,
 				4845D3431F7A6732004D884B /* ShareInfoModel.m in Sources */,
 				48C152F91F739D6200C577AB /* ZLModuleEntity.m in Sources */,
 				48089C701F7DF94100DAF1B6 /* MHModule10Cell.m in Sources */,
 				48089C8E1F7DF9A500DAF1B6 /* MHModule20Cell.m in Sources */,
 				48C152F51F739D6200C577AB /* ZLTabbarController.m in Sources */,
+				481A730B1F8B7CB100EF3242 /* UserRequest.m in Sources */,
 				48C1533E1F73C03800C577AB /* UIView+QuickNew.m in Sources */,
+				481A73081F8B780A00EF3242 /* CountDownButton.m in Sources */,
 				48C152F11F739D6200C577AB /* ScrollableController.m in Sources */,
 				48089B421F7CDD9B00DAF1B6 /* NSDictionary+Safe.m in Sources */,
 				48089B411F7CDD9B00DAF1B6 /* NSArray+Safe.m in Sources */,
@@ -1246,6 +1319,7 @@
 				48089C9A1F7DF9CE00DAF1B6 /* MHModule24Cell.m in Sources */,
 				48089C881F7DF99100DAF1B6 /* MHModule18Cell.m in Sources */,
 				48089C6D1F7DF93900DAF1B6 /* MHModule09Cell.m in Sources */,
+				481A73021F8B6C9500EF3242 /* LoginController.m in Sources */,
 				48C152F61F739D6200C577AB /* UserInfo.m in Sources */,
 				48089B431F7CDD9B00DAF1B6 /* NSMutableArray+Safe.m in Sources */,
 				4845D32B1F7A5C4D004D884B /* MHResultModel.m in Sources */,
@@ -1287,7 +1361,9 @@
 				4845D31C1F7A57F3004D884B /* MHModule04Cell.m in Sources */,
 				4845D3311F7A6415004D884B /* MHBannerModel.m in Sources */,
 				4806F87E1F74F47700A5B3CD /* ResponseModel.m in Sources */,
+				481A73111F8B7D3800EF3242 /* TMUserInfoResultModel.m in Sources */,
 				4806F8871F7553B600A5B3CD /* NSURL+ZLEX.m in Sources */,
+				481A730E1F8B7D0400EF3242 /* TMUserInfoModel.m in Sources */,
 				48C153231F73BF7000C577AB /* ZLThemeControl.m in Sources */,
 				4845D34C1F7B48B2004D884B /* ZLTipsView.m in Sources */,
 				4806F8711F74C03A00A5B3CD /* BaseCollectionCell.m in Sources */,

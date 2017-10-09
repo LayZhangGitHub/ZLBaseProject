@@ -13,14 +13,13 @@
 #import "ZLNavigationService.h"
 
 
-#define AppScheme           @"xiaoma"
-#define AppSchemeCompeled   @"xiaoma://"
+#define AppScheme           @"taomeng"
+#define AppSchemeCompeled   @"taomeng://"
 
 #define LoginHost           @"login"
 
-#define _SConnect(x, y) [NSString stringWithFormat:@"%@,%@", x,y]
+#define _SConnect(x, y) [NSString stringWithFormat:@"%@%@", x,y]
 #define SConnect(x, y) _SConnect(x, y)
-
 
 
 #endif /* AppMacro_h */

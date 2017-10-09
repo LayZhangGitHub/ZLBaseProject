@@ -11,6 +11,10 @@
 #import "View01Controller.h"
 #import "ApplicationEntity.h"
 
+#import "UserInfoService.h"
+
+#import "LoginController.h"
+
 @implementation AppModuleEntity
 
 + (id)shareEntity {
@@ -24,8 +28,8 @@
 
 + (void)load {
     [[ZLNavigationService sharedService] registerModule:self
-                                             withScheme:@"xiaoma"
-                                                   host:@"login"];
+                                             withScheme:AppScheme
+                                                   host:LoginHost];
 }
 
 
@@ -40,25 +44,20 @@
     NSURL *url = [NSURL URLWithString:strUrl];
     
     NSMutableDictionary *urlParams = [[url parameters] mutableCopy];
-    if ([url.host isEqualToString:@"login"]){
-//        [[UserService sharedService] clearLoginInfo];
-//        [[ApplicationEntrance shareEntrance].tabbarController selectAtIndex:0];
-//        
-//        UIViewController *topVC = navigationController.topViewController;
-//        if ([topVC isKindOfClass:[LoginViewController class]]) {
-//            return;
-//        }
-//        if( [navigationController.childViewControllers count] > 1 ){
-//            [navigationController popToRootViewControllerAnimated:NO onCompletion:^{
-//                LoginViewController *vc = [[LoginViewController alloc] init];
-//                [navigationController pushViewController:vc animated:YES];
-//            }];
-//        } else {
-//            LoginViewController *vc = [[LoginViewController alloc] init];
-//            [navigationController pushViewController:vc animated:YES];
-//        }
-        UIViewController *loginView = [[View01Controller alloc] init];
-        [navigationController pushViewController:loginView animated:YES];
+    if ([url.host isEqualToString:LoginHost]){
+        [[UserInfoService shareUserInfo] clearData];
+        [[ApplicationEntity shareInstance].tabbarController setSelectIndex:0];
+        
+        UIViewController *topVC = navigationController.topViewController;
+        if ([topVC isKindOfClass:[LoginController class]]) {
+            return;
+        }
+        if([navigationController.childViewControllers count] > 1){
+            [navigationController popToRootViewControllerAnimated:NO];
+            
+        }
+        LoginController *vc = [[LoginController alloc] init];
+        [navigationController pushViewController:vc animated:YES];
     }
 }
 @end
