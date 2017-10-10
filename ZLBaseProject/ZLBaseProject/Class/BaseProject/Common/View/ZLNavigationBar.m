@@ -107,8 +107,8 @@
                                     forState:UIControlStateNormal];
         [((UIButton *)leftButton) setTintColor:ZLThemeCtrInstance.navigationButtonColor];
     }
-    
-    [self.containerView addSubview:_leftButton];
+    leftButton.center = CGPointMake(leftButton.width / 2, self.containerView.height / 2);
+    [self.containerView addSubview:leftButton];
 }
 
 - (void)setRightButton:(UIView *)rightButton {

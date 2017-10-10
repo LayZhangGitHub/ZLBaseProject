@@ -24,6 +24,8 @@
 #import "UITableView+FDTemplateLayoutCell.h"
 #import "NSObject+Runtime.h"
 #import "NSArray+YYAdd.h"
+#import "UIApplication+YYAdd.h"
+#import "UIDevice+ZLEX.h"
 
 // util
 #import "Masonry.h"

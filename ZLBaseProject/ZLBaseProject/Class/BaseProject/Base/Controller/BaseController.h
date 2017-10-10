@@ -32,10 +32,12 @@
  */
 @property (nonatomic, strong) NSDictionary *extraParams;
 
+- (void)navigationBackAction;
 - (void)showNavigationBar;
 - (void)hideNavigationBar;
 
 - (void)initComponent;
+- (void)initData;
 
 #pragma mark - alert
 - (void)showAlert:(NSString *)message;

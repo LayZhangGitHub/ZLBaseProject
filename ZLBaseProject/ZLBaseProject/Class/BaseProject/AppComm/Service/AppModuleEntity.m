@@ -14,6 +14,8 @@
 #import "UserInfoService.h"
 
 #import "LoginController.h"
+#import "BecomeMemberController.h"
+#import "SettingController.h"
 
 @implementation AppModuleEntity
 
@@ -30,6 +32,12 @@
     [[ZLNavigationService sharedService] registerModule:self
                                              withScheme:AppScheme
                                                    host:LoginHost];
+    [[ZLNavigationService sharedService] registerModule:self
+                                             withScheme:AppScheme
+                                                   host:BecomeMemberHost];
+    [[ZLNavigationService sharedService] registerModule:self
+                                             withScheme:AppScheme
+                                                   host:SettingHost];
 }
 
 
@@ -44,8 +52,8 @@
     NSURL *url = [NSURL URLWithString:strUrl];
     
     NSMutableDictionary *urlParams = [[url parameters] mutableCopy];
-    if ([url.host isEqualToString:LoginHost]){
-        [[UserInfoService shareUserInfo] clearData];
+    if ([url.host isEqualToString:LoginHost]) {
+        [[UserInfoService shareUserInfo] logoutAndClearData];
         [[ApplicationEntity shareInstance].tabbarController setSelectIndex:0];
         
         UIViewController *topVC = navigationController.topViewController;
@@ -57,6 +65,14 @@
             
         }
         LoginController *vc = [[LoginController alloc] init];
+        [navigationController pushViewController:vc animated:YES];
+    }
+    else if ([url.host isEqualToString:BecomeMemberHost]) {
+        BecomeMemberController *vc = [[BecomeMemberController alloc] init];
+        [navigationController pushViewController:vc animated:YES];
+    }
+    else if ([url.host isEqualToString:SettingHost]) {
+        SettingController *vc = [[SettingController alloc] init];
         [navigationController pushViewController:vc animated:YES];
     }
 }

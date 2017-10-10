@@ -8,7 +8,15 @@
 
 #import "BaseController.h"
 
+typedef NS_ENUM(NSInteger, ScrollViewRefreshType) {
+    ScrollViewRefreshTypeNone               = 1 << 0,
+    ScrollViewRefreshTypeHeader             = 1 << 1,
+    ScrollViewRefreshTypeFooter             = 1 << 2,
+};
+
 @interface ScrollableController : BaseController
+
+@property (nonatomic, assign) ScrollViewRefreshType scrollViewRefreshType;
 
 @property (nonatomic, assign) BOOL      isBackToTop;
 @property (nonatomic, strong) UIButton  *backToTopButton;

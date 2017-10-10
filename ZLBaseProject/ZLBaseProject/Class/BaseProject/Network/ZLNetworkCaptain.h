@@ -35,4 +35,20 @@
             success:(void (^)(NSDictionary *result))success
             failure:(void (^)(StatusModel *status))failure;
 
+
+#pragma mark - image upload
+- (void)postImageWithUrl:(NSString *)URLString
+                   image:(id)imageData
+              parameters:(NSDictionary *)parameters
+                progress:(void (^)(NSProgress *))progress
+                 success:(void (^)(NSDictionary *result))success
+                 failure:(void (^)(StatusModel *status))failure;
+
+
+- (void)postImageWithUrl:(NSString *)URLString
+                   image:(id)imageData
+              parameters:(NSDictionary *)parameters
+                 success:(void (^)(NSDictionary *result))success
+                 failure:(void (^)(StatusModel *status))failure;
+
 @end

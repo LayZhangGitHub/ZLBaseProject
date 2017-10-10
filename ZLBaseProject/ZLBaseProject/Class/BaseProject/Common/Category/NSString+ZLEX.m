@@ -9,6 +9,9 @@
 #import "NSString+ZLEX.h"
 #import <UIKit/UIKit.h>
 
+#import <CommonCrypto/CommonDigest.h>
+#import <AdSupport/AdSupport.h>
+
 @implementation NSString (ZLEX)
 
 - (void)showNotice{
@@ -66,4 +69,20 @@
     return (__bridge_transfer  NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)self, (__bridge CFStringRef)kCharactersToLeaveUnescapedInQueryStringPairKey, (__bridge CFStringRef)kCharactersToBeEscapedInQueryString, kCFStringEncodingUTF8);
 }
 
+
+- (NSString *)md5{
+    return [self getMd5_32Bit];
+}
+
+- (NSString *)getMd5_32Bit {
+    
+    const char *newStr = [self UTF8String];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(newStr,(unsigned int)strlen(newStr),result);
+    NSMutableString *outStr = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH];
+    for(int i = 0;i<CC_MD5_DIGEST_LENGTH;i++){
+        [outStr appendFormat:@"%02x",result[i]];//注意：这边如果是x则输出32位小写加密字符串，如果是X则输出32位大写字符串
+    }
+    return outStr;
+}
 @end

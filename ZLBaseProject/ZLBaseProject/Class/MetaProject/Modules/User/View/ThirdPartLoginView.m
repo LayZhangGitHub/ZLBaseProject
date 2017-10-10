@@ -17,13 +17,8 @@
 @property (nonatomic, strong) UIView *rightLine;
 
 @property (nonatomic, strong) UIButton *weiboButton;
-@property (nonatomic, strong) UILabel *weiboLabel;
-
 @property (nonatomic, strong) UIButton *wechatButton;
-@property (nonatomic, strong) UILabel *wechatLabel;
-
 @property (nonatomic, strong) UIButton *qqButton;
-@property (nonatomic, strong) UILabel *qqLabel;
 
 @end
 
@@ -35,47 +30,13 @@
     [self addSubview:self.rightLine];
     
     [self addSubview:self.weiboButton];
-    [self addSubview:self.weiboLabel];
     [self addSubview:self.wechatButton];
-    [self addSubview:self.wechatLabel];
     [self addSubview:self.qqButton];
-    [self addSubview:self.qqLabel];
-    
-    if ([WXApi isWXAppInstalled]) {
-        self.wechatButton.hidden = NO;
-        self.wechatLabel.hidden = NO;
-        
-        self.qqButton.centerX = SCREENWIDTH / 6.f;
-        self.qqLabel.centerX = self.qqButton.centerX;
-        
-        self.wechatButton.centerX = SCREENWIDTH / 2.f;
-        self.wechatLabel.centerX = self.wechatButton.centerX;
-        
-        self.weiboButton.centerX = SCREENWIDTH * 5 / 6.f;
-        self.weiboLabel.centerX = self.weiboButton.centerX;
-        
-    } else {
-        self.wechatButton.hidden = YES;
-        self.wechatLabel.hidden = YES;
-        
-        self.qqButton.centerX = SCREENWIDTH / 4.f;
-        self.qqLabel.centerX = self.qqButton.centerX;
-        
-        self.weiboButton.centerX = SCREENWIDTH * 3 / 4.f;
-        self.weiboLabel.centerX = self.weiboButton.centerX;
-    }
-}
-
-- (void)setHideName:(BOOL)hideName {
-    _hideName = hideName;
-    self.wechatLabel.hidden = _hideName;
-    self.weiboLabel.hidden = _hideName;
-    self.qqLabel.hidden = _hideName;
 }
 
 #pragma mark -Subviews
 
-- (UIView*)leftLine {
+- (UIView *)leftLine {
     if (!_leftLine) {
         UIView *view = [[UIView alloc]initWithFrame:CGRectMake(50, 0, 80, LINEWIDTH)];
         view.backgroundColor =  ZLGray(125);
@@ -99,7 +60,7 @@
     return _titleLabel;
 }
 
-- (UIView*)rightLine {
+- (UIView *)rightLine {
     if (!_rightLine) {
         UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 80, LINEWIDTH)];
         view.backgroundColor =  ZLGray(125);
@@ -110,76 +71,34 @@
     return _rightLine;
 }
 
-- (UIButton*)weiboButton {
+- (UIButton *)weiboButton {
     if (!_weiboButton) {
-        UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, BUTTON_WIDTH, BUTTON_WIDTH)];
+        UIButton *button = [[UIButton alloc] init];
         [button setImage:[UIImage imageNamed:@"login_weibo"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(weiboButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-        button.centerX = self.leftLine.centerX;
-        button.bottom = self.height - 30;
         _weiboButton = button;
     }
     return _weiboButton;
 }
 
-- (UILabel*)weiboLabel {
-    if (!_weiboLabel) {
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(12, 0, 0, 0)];
-        label.font = ZLNormalFont(14);
-        label.text = @"微博";
-        [label sizeToFit];
-        label.top = self.weiboButton.bottom + 4;
-        _weiboLabel = label;
-    }
-    return _weiboLabel;
-}
-
 - (UIButton*)wechatButton {
     if (!_wechatButton) {
-        UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, BUTTON_WIDTH, BUTTON_WIDTH)];
+        UIButton *button = [[UIButton alloc] init];
         [button setImage:[UIImage imageNamed:@"login_wechat"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(wechatButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-        button.centerX = SCREENWIDTH / 2;
-        button.bottom = self.weiboButton.bottom;
         _wechatButton = button;
     }
     return _wechatButton;
 }
 
-- (UILabel*)wechatLabel {
-    if (!_wechatLabel) {
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(12, 0, 0, 0)];
-        label.font = ZLNormalFont(14);
-        label.text = @"微信";
-        [label sizeToFit];
-        label.top = self.weiboButton.bottom + 4;
-        _wechatLabel = label;
-    }
-    return _wechatLabel;
-}
-
-- (UIButton*)qqButton {
+- (UIButton *)qqButton {
     if (!_qqButton) {
-        UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, BUTTON_WIDTH, BUTTON_WIDTH)];
+        UIButton *button = [[UIButton alloc] init];
         [button setImage:[UIImage imageNamed:@"login_qq"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(qqButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-        button.centerX = self.rightLine.centerX;
-        button.bottom = self.weiboButton.bottom;
         _qqButton = button;
     }
     return _qqButton;
-}
-
-- (UILabel*)qqLabel {
-    if (!_qqLabel) {
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(12, 0, 0, 0)];
-        label.font = ZLNormalFont(14);
-        label.text = @"QQ";
-        [label sizeToFit];
-        label.top = self.weiboButton.bottom + 4;
-        _qqLabel = label;
-    }
-    return _qqLabel;
 }
 
 #pragma mark - Button Actions
@@ -198,6 +117,38 @@
 - (void)qqButtonTapped {
     if (_delegate && [_delegate respondsToSelector:@selector(tencentAuthorizeLogin)]) {
         [self.delegate tencentAuthorizeLogin];
+    }
+}
+
++ (BOOL)requiresConstraintBasedLayout {
+    return NO;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    _qqButton.size = CGSizeMake(BUTTON_WIDTH, BUTTON_WIDTH);
+    _weiboButton.size = CGSizeMake(BUTTON_WIDTH, BUTTON_WIDTH);
+    _wechatButton.size = CGSizeMake(BUTTON_WIDTH, BUTTON_WIDTH);
+    
+    _weiboButton.centerX = _leftLine.centerX;
+    _weiboButton.bottom = self.height - 30;
+    _qqButton.centerX = _rightLine.centerX;
+    _qqButton.bottom = _weiboButton.bottom;
+    _wechatButton.centerX = self.width / 2;
+    _wechatButton.bottom = _weiboButton.bottom;
+    
+    if ([WXApi isWXAppInstalled]) {
+        _wechatButton.hidden = NO;
+        
+        _qqButton.centerX = SCREENWIDTH / 6.f;
+        _wechatButton.centerX = SCREENWIDTH / 2.f;
+        _weiboButton.centerX = SCREENWIDTH * 5 / 6.f;
+    } else {
+        _wechatButton.hidden = YES;
+        
+        _qqButton.centerX = SCREENWIDTH / 4.f;
+        _weiboButton.centerX = SCREENWIDTH * 3 / 4.f;
     }
 }
 

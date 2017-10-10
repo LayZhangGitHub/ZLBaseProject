@@ -19,9 +19,6 @@
 
 @interface ThirdPartLoginView : ZLMyBaseView
 
-
-@property (nonatomic, assign) BOOL hideName;
-
 @property (nonatomic, weak) id <ThirdPartLoginViewDelegate> delegate;
 
 

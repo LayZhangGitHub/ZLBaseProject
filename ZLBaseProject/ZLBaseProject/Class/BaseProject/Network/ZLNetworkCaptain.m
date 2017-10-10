@@ -22,12 +22,6 @@
 
 #endif
 
-typedef NS_ENUM(NSInteger, ResponseCode) {
-    ResponseSuccess         = 1001,
-    ResponseNotLoggedIn     = 1002,
-    ResponseFailed          = 404,
-};
-
 @implementation ZLNetworkCaptain
 
 + (instancetype)sharedInstance {
@@ -183,6 +177,19 @@ typedef NS_ENUM(NSInteger, ResponseCode) {
 - (void)postImageWithUrl:(NSString *)URLString
                    image:(id)imageData
               parameters:(NSDictionary *)parameters
+                 success:(void (^)(NSDictionary *))success
+                 failure:(void (^)(StatusModel *))failure {
+    [self postImageWithUrl:URLString
+                     image:imageData
+                parameters:parameters
+                  progress:nil
+                   success:success
+                   failure:failure];
+}
+
+- (void)postImageWithUrl:(NSString *)URLString
+                   image:(id)imageData
+              parameters:(NSDictionary *)parameters
                 progress:(void (^)(NSProgress *))progress
                  success:(void (^)(NSDictionary *result))success
                  failure:(void (^)(StatusModel *status))failure {
@@ -238,12 +245,12 @@ typedef NS_ENUM(NSInteger, ResponseCode) {
     
     // 解析获得 返回数据， 可根据不同项目 做不同解析
     
-    if (responseModel && responseModel.status && ResponseSuccess == responseModel.status.code){
+    if (responseModel && responseModel.status && StatusCodeSuccess == responseModel.status.code){
         if (success) {
             success(responseModel.result);
         }
     } else {
-        if (responseModel && responseModel.status && ResponseNotLoggedIn == responseModel.status.code) {
+        if (responseModel && responseModel.status && StatusCodeUnlogin == responseModel.status.code) {
             [[ZLNavigationService sharedService] openUrl:SConnect(AppSchemeCompeled, LoginHost)];
             return;
         }
@@ -253,7 +260,7 @@ typedef NS_ENUM(NSInteger, ResponseCode) {
             if (!responseModel || !responseModel.status) {
                 StatusModel *status = [[StatusModel alloc] init];
                 
-                status.code = ResponseFailed;
+                status.code = StatusCodeFailed;
                 status.msg = @"网络异常";
                 
                 failure(status);
@@ -281,7 +288,16 @@ typedef NS_ENUM(NSInteger, ResponseCode) {
     if (params) {
         [appParams addEntriesFromDictionary:params];
     }
-    return params;
+    
+    if ([UserInfoService shareUserInfo].userInfo.isLogin) {
+        appParams[@"sign"] = [UserInfoService shareUserInfo].userInfo.sign;
+    }
+    
+    appParams[@"platform"] = @"ios";
+    appParams[@"versionName"] = [UIApplication sharedExtensionApplication].appVersion;
+    appParams[@"did"] = [UIDevice uniqueID];
+    
+    return appParams;
 }
 
 - (void)addHeadFields:(NSDictionary *)params {

@@ -12,6 +12,8 @@
 /** notification **/
 #pragma mark - notification
 #define DefaultNotificationCenter [NSNotificationCenter defaultCenter]
-#define TimerCellDeallocNotification @"TimerCellDeallocNotification"
+
+#define kNotificationUserLogin @"kNotificationUserLogin"
+#define kNotificationUserLogout @"kNotificationUserLogout"
 
 #endif /* NotificationMacro_h */

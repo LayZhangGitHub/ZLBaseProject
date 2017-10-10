@@ -15,7 +15,7 @@
 
 + (instancetype)shareUserInfo;
 
-- (void)saveData;
-- (void)clearData;
+- (void)logoutAndClearData;
+- (void)loginAndSaveData;
 
 @end

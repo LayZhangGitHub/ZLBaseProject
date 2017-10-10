@@ -45,6 +45,9 @@
     NSLog(@"%@", dictionary);
     
     UserInfo *userInfo = [NSKeyedUnarchiver unarchiveObjectWithData:dictionary[UserInfoDataKey]];
+    if (!userInfo) {
+        userInfo = [[UserInfo alloc] init];
+    }
     self.userInfo = userInfo;
 }
 
@@ -66,9 +69,18 @@
 }
 
 - (void)clearData {
-    _userInfo = nil;
+    _userInfo = [[UserInfo alloc] init];
     [self saveData];
 }
 
+- (void)logoutAndClearData {
+    [self clearData];
+    [DefaultNotificationCenter postNotificationName:kNotificationUserLogout object:nil];
+}
+
+- (void)loginAndSaveData {
+    [self saveData];
+    [DefaultNotificationCenter postNotificationName:kNotificationUserLogin object:nil];
+}
 
 @end

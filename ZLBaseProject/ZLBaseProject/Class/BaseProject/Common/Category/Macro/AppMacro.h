@@ -11,15 +11,22 @@
 
 #import "ZLThemeControl.h"
 #import "ZLNavigationService.h"
+#import "UserInfoService.h"
+
+#import "ApplicationEntity.h"
 
 
-#define AppScheme           @"taomeng"
-#define AppSchemeCompeled   @"taomeng://"
+#define AppScheme           @"xiaoma"
+#define AppSchemeCompeled   @"xiaoma://"
 
 #define LoginHost           @"login"
+#define BecomeMemberHost    @"becomeMember"
+#define SettingHost         @"setting"
+#define TopUpHos            @"topUp"
 
 #define _SConnect(x, y) [NSString stringWithFormat:@"%@%@", x,y]
 #define SConnect(x, y) _SConnect(x, y)
 
+#define LocalAppHost(x) SConnect(@"xiaoma://", x)
 
 #endif /* AppMacro_h */

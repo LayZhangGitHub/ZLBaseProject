@@ -65,8 +65,6 @@
     self.contentCollectionView.alwaysBounceVertical = YES;
     
     [self initData];
-    
-    [[ZLNavigationService sharedService] openUrl:SConnect(AppSchemeCompeled, LoginHost)];
 }
 
 #pragma mark - properties
@@ -128,7 +126,6 @@
 - (NSInteger)headerSectionCount {
     return self.items.count;
 }
-
 
 #pragma mark - dequeue cell
 - (UICollectionViewCell *)cellForHeaderAtIndexPath:(NSIndexPath *)indexPath {

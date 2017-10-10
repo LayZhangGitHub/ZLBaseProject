@@ -14,6 +14,7 @@
 #import "MallHomeController.h"
 #import "MallCategoryController.h"
 #import "PMProductListController.h"
+#import "MineController.h"
 
 @interface ApplicationEntity() <ZLTabBarControllerDelegate>
 
@@ -92,7 +93,7 @@
                                [[MallHomeController alloc] init],
                                [[MallCategoryController alloc] init],
                                [[PMProductListController alloc] init],
-                               [[View02Controller alloc] init]
+                               [[MineController alloc] init]
                                ]];
     
     self.tabbarController.tabBarControllerDelegate = self;

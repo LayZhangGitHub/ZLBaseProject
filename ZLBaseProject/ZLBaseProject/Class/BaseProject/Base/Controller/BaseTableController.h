@@ -14,4 +14,6 @@
 
 - (void)reloadData;
 
+- (void)couldScrollToFooter:(BOOL)couldScrollToFooter;
+
 @end

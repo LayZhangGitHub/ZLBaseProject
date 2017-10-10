@@ -12,7 +12,7 @@
 #import "UserRequest.h"
 #import "UserInfoService.h"
 
-@interface LoginController () <UITextFieldDelegate>
+@interface LoginController () <UITextFieldDelegate, ThirdPartLoginViewDelegate>
 
 @property (nonatomic, strong) UIView *headBackgroundView;
 @property (nonatomic, strong) UIImageView *iconImageView;
@@ -168,7 +168,7 @@
 }
 
 - (UIView *)lineView2 {
-    if ( !_lineView2 ) {
+    if (!_lineView2) {
         _lineView2 = [[UIView alloc] initWithFrame:CGRectMake( 50, 12,SCREENWIDTH - 50*2, 1)];
         _lineView2.backgroundColor = ZLGray(229);
         _lineView2.top = self.lineView1.bottom + 48;
@@ -197,12 +197,12 @@
 }
 
 
-- (ThirdPartLoginView*)thirdLoginView {
+- (ThirdPartLoginView *)thirdLoginView {
     if (!_thirdLoginView) {
         _thirdLoginView = [[ThirdPartLoginView alloc] init];
+        _thirdLoginView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENWIDTH / 7 + 82);
         _thirdLoginView.delegate = self;
-        _thirdLoginView.bottom = SCREENHEIGHT-0;
-        _thirdLoginView.hideName = YES;
+        _thirdLoginView.bottom = SCREENHEIGHT;
     }
     return _thirdLoginView;
 }
@@ -258,41 +258,44 @@
         [UserInfoService shareUserInfo].userInfo.sign = model.sign;
         [UserInfoService shareUserInfo].userInfo.gender = model.gender;
         [UserInfoService shareUserInfo].userInfo.isLogin = YES;
-        [[UserInfoService shareUserInfo] saveData];
+        [[UserInfoService shareUserInfo] loginAndSaveData];
         
         [self showNotice:@"登录成功"];
         
-        [self clickback];
+        [self navigationBackAction];
         
-//        NSMutableDictionary *p = [NSMutableDictionary dictionary];
-//        params[@"deviceToken"] = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
-//        [UserRequest uploadPushTokenWithParams:p success:^{
-//            NSLog(@"success upload");
-//            [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"lastUploadToken"];
-//        } failure:^(StatusModel *status) {
-//            NSLog(@"failed upload");
-//            [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"lastUploadToken"];
-//        }];
+        NSMutableDictionary *p = [NSMutableDictionary dictionary];
+        params[@"deviceToken"] = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
+        [UserRequest uploadPushTokenWithParams:p success:^{
+            NSLog(@"success upload");
+            [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"lastUploadToken"];
+        } failure:^(StatusModel *status) {
+            NSLog(@"failed upload");
+            [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"lastUploadToken"];
+        }];
         
     } failure:^(StatusModel *status) {
         [self setNextButtonEnabled:YES];
-        if( status ) {
-            strongify(self);
-            if (status.code == 1003) {
-                TTNavigationController *navigationController = [[ApplicationEntrance shareEntrance] currentNavigationController];
-                RegisterStepTwoViewController *vc = [[RegisterStepTwoViewController alloc] init];
-                vc.phone = [self.phoneTextField.text trim];
-                vc.code = [self.captchaTextField.text trim];
-                [navigationController pushViewController:vc animated:YES];
+        if(status) {
+            strongSelf(self);
+            if (status.code == StatusCodeUnregistered) {
+                ZLNavigationController *navigationController = [[ApplicationEntity shareInstance] currentNavigationController];
+//                RegisterStepTwoViewController *vc = [[RegisterStepTwoViewController alloc] init];
+//                vc.phone = [self.phoneTextField.text trim];
+//                vc.code = [self.captchaTextField.text trim];
+//                [navigationController pushViewController:vc animated:YES];
             }else
                 [self showNotice:status.msg];
         } else {
             [self showNotice:@"登录失败"];
         }
-        
     }];
-    
 }
+
+#pragma mark - third part login delegate
+- (void)wechatAuthorizeLogin {}
+- (void)weiboAuthorizeLogin {}
+- (void)tencentAuthorizeLogin {}
 
 #pragma mark - UITextFieldDelegate
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

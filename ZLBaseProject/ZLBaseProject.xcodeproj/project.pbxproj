@@ -66,6 +66,20 @@
 		481A730B1F8B7CB100EF3242 /* UserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A730A1F8B7CB100EF3242 /* UserRequest.m */; };
 		481A730E1F8B7D0400EF3242 /* TMUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A730D1F8B7D0400EF3242 /* TMUserInfoModel.m */; };
 		481A73111F8B7D3800EF3242 /* TMUserInfoResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73101F8B7D3800EF3242 /* TMUserInfoResultModel.m */; };
+		481A73191F8C695D00EF3242 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73181F8C695D00EF3242 /* MineController.m */; };
+		481A731C1F8C6DE200EF3242 /* TMChangeAvatarResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A731B1F8C6DE200EF3242 /* TMChangeAvatarResultModel.m */; };
+		481A731F1F8C6E7E00EF3242 /* TMMineOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A731E1F8C6E7E00EF3242 /* TMMineOrderModel.m */; };
+		481A73221F8C6EC800EF3242 /* TMMineInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73211F8C6EC800EF3242 /* TMMineInfoModel.m */; };
+		481A73251F8C6EE100EF3242 /* TMVipModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73241F8C6EE100EF3242 /* TMVipModel.m */; };
+		481A73281F8C70AD00EF3242 /* MineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73271F8C70AD00EF3242 /* MineRequest.m */; };
+		481A732B1F8C9C6900EF3242 /* MineHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A732A1F8C9C6900EF3242 /* MineHeaderCell.m */; };
+		481A732E1F8CA5DA00EF3242 /* UIDevice+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A732D1F8CA5DA00EF3242 /* UIDevice+ZLEX.m */; };
+		481A73311F8CB2A700EF3242 /* MineOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73301F8CB2A700EF3242 /* MineOrderCell.m */; };
+		481A73341F8CBB6E00EF3242 /* MineMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73331F8CBB6E00EF3242 /* MineMenuCell.m */; };
+		481A73371F8CC47900EF3242 /* BecomeMemberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73361F8CC47900EF3242 /* BecomeMemberController.m */; };
+		481A733D1F8CD17400EF3242 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A733C1F8CD17400EF3242 /* SettingController.m */; };
+		481A73401F8CD51700EF3242 /* TMSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A733F1F8CD51700EF3242 /* TMSettingCell.m */; };
+		481A73431F8CD53100EF3242 /* TMSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73421F8CD53100EF3242 /* TMSingleCell.m */; };
 		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
 		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
 		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
@@ -247,6 +261,34 @@
 		481A730D1F8B7D0400EF3242 /* TMUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMUserInfoModel.m; sourceTree = "<group>"; };
 		481A730F1F8B7D3800EF3242 /* TMUserInfoResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMUserInfoResultModel.h; sourceTree = "<group>"; };
 		481A73101F8B7D3800EF3242 /* TMUserInfoResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMUserInfoResultModel.m; sourceTree = "<group>"; };
+		481A73171F8C695D00EF3242 /* MineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
+		481A73181F8C695D00EF3242 /* MineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
+		481A731A1F8C6DE200EF3242 /* TMChangeAvatarResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMChangeAvatarResultModel.h; sourceTree = "<group>"; };
+		481A731B1F8C6DE200EF3242 /* TMChangeAvatarResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMChangeAvatarResultModel.m; sourceTree = "<group>"; };
+		481A731D1F8C6E7E00EF3242 /* TMMineOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMineOrderModel.h; sourceTree = "<group>"; };
+		481A731E1F8C6E7E00EF3242 /* TMMineOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMineOrderModel.m; sourceTree = "<group>"; };
+		481A73201F8C6EC800EF3242 /* TMMineInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMMineInfoModel.h; sourceTree = "<group>"; };
+		481A73211F8C6EC800EF3242 /* TMMineInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMMineInfoModel.m; sourceTree = "<group>"; };
+		481A73231F8C6EE100EF3242 /* TMVipModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMVipModel.h; sourceTree = "<group>"; };
+		481A73241F8C6EE100EF3242 /* TMVipModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMVipModel.m; sourceTree = "<group>"; };
+		481A73261F8C70AD00EF3242 /* MineRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineRequest.h; sourceTree = "<group>"; };
+		481A73271F8C70AD00EF3242 /* MineRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineRequest.m; sourceTree = "<group>"; };
+		481A73291F8C9C6900EF3242 /* MineHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHeaderCell.h; sourceTree = "<group>"; };
+		481A732A1F8C9C6900EF3242 /* MineHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHeaderCell.m; sourceTree = "<group>"; };
+		481A732C1F8CA5DA00EF3242 /* UIDevice+ZLEX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ZLEX.h"; sourceTree = "<group>"; };
+		481A732D1F8CA5DA00EF3242 /* UIDevice+ZLEX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ZLEX.m"; sourceTree = "<group>"; };
+		481A732F1F8CB2A700EF3242 /* MineOrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineOrderCell.h; sourceTree = "<group>"; };
+		481A73301F8CB2A700EF3242 /* MineOrderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineOrderCell.m; sourceTree = "<group>"; };
+		481A73321F8CBB6E00EF3242 /* MineMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineMenuCell.h; sourceTree = "<group>"; };
+		481A73331F8CBB6E00EF3242 /* MineMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineMenuCell.m; sourceTree = "<group>"; };
+		481A73351F8CC47900EF3242 /* BecomeMemberController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BecomeMemberController.h; sourceTree = "<group>"; };
+		481A73361F8CC47900EF3242 /* BecomeMemberController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BecomeMemberController.m; sourceTree = "<group>"; };
+		481A733B1F8CD17400EF3242 /* SettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
+		481A733C1F8CD17400EF3242 /* SettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
+		481A733E1F8CD51700EF3242 /* TMSettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMSettingCell.h; sourceTree = "<group>"; };
+		481A733F1F8CD51700EF3242 /* TMSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMSettingCell.m; sourceTree = "<group>"; };
+		481A73411F8CD53100EF3242 /* TMSingleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMSingleCell.h; sourceTree = "<group>"; };
+		481A73421F8CD53100EF3242 /* TMSingleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMSingleCell.m; sourceTree = "<group>"; };
 		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
 		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
 		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
@@ -538,6 +580,94 @@
 			children = (
 				481A73031F8B732700EF3242 /* ThirdPartLoginView.h */,
 				481A73041F8B732700EF3242 /* ThirdPartLoginView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		481A73121F8C694100EF3242 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				481A73131F8C694100EF3242 /* Controller */,
+				481A73141F8C694100EF3242 /* Model */,
+				481A73151F8C694100EF3242 /* Request */,
+				481A73161F8C694100EF3242 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		481A73131F8C694100EF3242 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				481A73171F8C695D00EF3242 /* MineController.h */,
+				481A73181F8C695D00EF3242 /* MineController.m */,
+				481A73351F8CC47900EF3242 /* BecomeMemberController.h */,
+				481A73361F8CC47900EF3242 /* BecomeMemberController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		481A73141F8C694100EF3242 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				481A731A1F8C6DE200EF3242 /* TMChangeAvatarResultModel.h */,
+				481A731B1F8C6DE200EF3242 /* TMChangeAvatarResultModel.m */,
+				481A731D1F8C6E7E00EF3242 /* TMMineOrderModel.h */,
+				481A731E1F8C6E7E00EF3242 /* TMMineOrderModel.m */,
+				481A73201F8C6EC800EF3242 /* TMMineInfoModel.h */,
+				481A73211F8C6EC800EF3242 /* TMMineInfoModel.m */,
+				481A73231F8C6EE100EF3242 /* TMVipModel.h */,
+				481A73241F8C6EE100EF3242 /* TMVipModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		481A73151F8C694100EF3242 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				481A73261F8C70AD00EF3242 /* MineRequest.h */,
+				481A73271F8C70AD00EF3242 /* MineRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		481A73161F8C694100EF3242 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				481A73291F8C9C6900EF3242 /* MineHeaderCell.h */,
+				481A732A1F8C9C6900EF3242 /* MineHeaderCell.m */,
+				481A732F1F8CB2A700EF3242 /* MineOrderCell.h */,
+				481A73301F8CB2A700EF3242 /* MineOrderCell.m */,
+				481A73321F8CBB6E00EF3242 /* MineMenuCell.h */,
+				481A73331F8CBB6E00EF3242 /* MineMenuCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		481A73381F8CD13700EF3242 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				481A73391F8CD13700EF3242 /* Controller */,
+				481A733A1F8CD13700EF3242 /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		481A73391F8CD13700EF3242 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				481A733B1F8CD17400EF3242 /* SettingController.h */,
+				481A733C1F8CD17400EF3242 /* SettingController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		481A733A1F8CD13700EF3242 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				481A733E1F8CD51700EF3242 /* TMSettingCell.h */,
+				481A733F1F8CD51700EF3242 /* TMSettingCell.m */,
+				481A73411F8CD53100EF3242 /* TMSingleCell.h */,
+				481A73421F8CD53100EF3242 /* TMSingleCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -954,6 +1084,8 @@
 				4845D3481F7B3D75004D884B /* UIColor+ZLEX.m */,
 				48089B301F7CD9CB00DAF1B6 /* UIImageView+ZLEX.h */,
 				48089B311F7CD9CB00DAF1B6 /* UIImageView+ZLEX.m */,
+				481A732C1F8CA5DA00EF3242 /* UIDevice+ZLEX.h */,
+				481A732D1F8CA5DA00EF3242 /* UIDevice+ZLEX.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -982,6 +1114,8 @@
 		48C1534D1F73CE0E00C577AB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				481A73381F8CD13700EF3242 /* Settings */,
+				481A73121F8C694100EF3242 /* Mine */,
 				481A72FB1F8B6C7B00EF3242 /* User */,
 				48089CA41F7F6AE900DAF1B6 /* PointMall */,
 				4845D30C1F7A56FA004D884B /* MallHome */,
@@ -1306,10 +1440,12 @@
 				48089B451F7CDD9B00DAF1B6 /* NSMutableSet+Safe.m in Sources */,
 				4845D3431F7A6732004D884B /* ShareInfoModel.m in Sources */,
 				48C152F91F739D6200C577AB /* ZLModuleEntity.m in Sources */,
+				481A73221F8C6EC800EF3242 /* TMMineInfoModel.m in Sources */,
 				48089C701F7DF94100DAF1B6 /* MHModule10Cell.m in Sources */,
 				48089C8E1F7DF9A500DAF1B6 /* MHModule20Cell.m in Sources */,
 				48C152F51F739D6200C577AB /* ZLTabbarController.m in Sources */,
 				481A730B1F8B7CB100EF3242 /* UserRequest.m in Sources */,
+				481A732E1F8CA5DA00EF3242 /* UIDevice+ZLEX.m in Sources */,
 				48C1533E1F73C03800C577AB /* UIView+QuickNew.m in Sources */,
 				481A73081F8B780A00EF3242 /* CountDownButton.m in Sources */,
 				48C152F11F739D6200C577AB /* ScrollableController.m in Sources */,
@@ -1319,21 +1455,27 @@
 				48089C9A1F7DF9CE00DAF1B6 /* MHModule24Cell.m in Sources */,
 				48089C881F7DF99100DAF1B6 /* MHModule18Cell.m in Sources */,
 				48089C6D1F7DF93900DAF1B6 /* MHModule09Cell.m in Sources */,
+				481A73311F8CB2A700EF3242 /* MineOrderCell.m in Sources */,
 				481A73021F8B6C9500EF3242 /* LoginController.m in Sources */,
 				48C152F61F739D6200C577AB /* UserInfo.m in Sources */,
 				48089B431F7CDD9B00DAF1B6 /* NSMutableArray+Safe.m in Sources */,
 				4845D32B1F7A5C4D004D884B /* MHResultModel.m in Sources */,
 				48089CAC1F7F6B0F00DAF1B6 /* PMProductListController.m in Sources */,
 				48089C7F1F7DF97400DAF1B6 /* MHModule15Cell.m in Sources */,
+				481A731C1F8C6DE200EF3242 /* TMChangeAvatarResultModel.m in Sources */,
+				481A73281F8C70AD00EF3242 /* MineRequest.m in Sources */,
+				481A73251F8C6EE100EF3242 /* TMVipModel.m in Sources */,
 				48089CB81F7F6EC300DAF1B6 /* PMItemModel.m in Sources */,
 				48089B4F1F7CF65400DAF1B6 /* ZLMyBaseView.m in Sources */,
 				48089C821F7DF97E00DAF1B6 /* MHModule16Cell.m in Sources */,
 				4845D3551F7B90B2004D884B /* ZLSliderView.m in Sources */,
 				48C152AC1F739CE900C577AB /* ViewController.m in Sources */,
 				48089C671F7DF92000DAF1B6 /* MHModule07Cell.m in Sources */,
+				481A73431F8CD53100EF3242 /* TMSingleCell.m in Sources */,
 				48C152FA1F739D6200C577AB /* ZLNavigationService.m in Sources */,
 				48C152F71F739D6200C577AB /* UserInfoService.m in Sources */,
 				48C1533F1F73C03800C577AB /* UIView+ZLEX.m in Sources */,
+				481A73371F8CC47900EF3242 /* BecomeMemberController.m in Sources */,
 				48C152FD1F739D6200C577AB /* ZLTabbar.m in Sources */,
 				481A72FA1F8B549A00EF3242 /* PMInstrumentView.m in Sources */,
 				48089CC21F7F71BB00DAF1B6 /* PointMallRequest.m in Sources */,
@@ -1362,10 +1504,12 @@
 				4845D3311F7A6415004D884B /* MHBannerModel.m in Sources */,
 				4806F87E1F74F47700A5B3CD /* ResponseModel.m in Sources */,
 				481A73111F8B7D3800EF3242 /* TMUserInfoResultModel.m in Sources */,
+				481A73401F8CD51700EF3242 /* TMSettingCell.m in Sources */,
 				4806F8871F7553B600A5B3CD /* NSURL+ZLEX.m in Sources */,
 				481A730E1F8B7D0400EF3242 /* TMUserInfoModel.m in Sources */,
 				48C153231F73BF7000C577AB /* ZLThemeControl.m in Sources */,
 				4845D34C1F7B48B2004D884B /* ZLTipsView.m in Sources */,
+				481A73341F8CBB6E00EF3242 /* MineMenuCell.m in Sources */,
 				4806F8711F74C03A00A5B3CD /* BaseCollectionCell.m in Sources */,
 				48089B321F7CD9CB00DAF1B6 /* UIImageView+ZLEX.m in Sources */,
 				48C1533A1F73C03800C577AB /* NSObject+Runtime.m in Sources */,
@@ -1378,11 +1522,13 @@
 				48089C791F7DF96000DAF1B6 /* MHModule13Cell.m in Sources */,
 				48C1533B1F73C03800C577AB /* NSString+ZLEX.m in Sources */,
 				4845D32E1F7A63D5004D884B /* MHModuleModel.m in Sources */,
+				481A732B1F8C9C6900EF3242 /* MineHeaderCell.m in Sources */,
 				48C152A91F739CE900C577AB /* AppDelegate.m in Sources */,
 				48089B461F7CDD9B00DAF1B6 /* NSObject+Safe.m in Sources */,
 				4845D3461F7B3B60004D884B /* ZLAlertView.m in Sources */,
 				48089C941F7DF9B900DAF1B6 /* MHModule22Cell.m in Sources */,
 				4845D3371F7A64E3004D884B /* MHHeaderModel.m in Sources */,
+				481A731F1F8C6E7E00EF3242 /* TMMineOrderModel.m in Sources */,
 				48089C971F7DF9C400DAF1B6 /* MHModule23Cell.m in Sources */,
 				4845D3341F7A6497004D884B /* MHHeaderBarModel.m in Sources */,
 				4845D33D1F7A6542004D884B /* MHHeaderTitleModel.m in Sources */,
@@ -1401,11 +1547,13 @@
 				4845D3161F7A57DC004D884B /* MHModule02Cell.m in Sources */,
 				485D211D1F78D5370033DD20 /* InstViewLayout.m in Sources */,
 				48C152F21F739D6200C577AB /* BaseApplicationEntity.m in Sources */,
+				481A733D1F8CD17400EF3242 /* SettingController.m in Sources */,
 				48089CA31F7E5A4100DAF1B6 /* MallCategoryController.m in Sources */,
 				4806F8781F74E94800A5B3CD /* ZLNetworkCaptain.m in Sources */,
 				48C152FE1F739D6200C577AB /* ZLTabbarItem.m in Sources */,
 				48C152F01F739D6200C577AB /* BaseTableController.m in Sources */,
 				4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */,
+				481A73191F8C695D00EF3242 /* MineController.m in Sources */,
 				48089CB51F7F6EB700DAF1B6 /* PMCatesModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

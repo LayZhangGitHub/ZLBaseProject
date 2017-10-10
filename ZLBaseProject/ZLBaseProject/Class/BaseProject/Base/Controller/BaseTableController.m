@@ -35,6 +35,7 @@
         _contentTableView = [[UITableView alloc] initWithFrame:tableRect
                                                          style:UITableViewStylePlain];
         _contentTableView.delegate = self;
+        _contentTableView.dataSource = self;
         
         _contentTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _contentTableView.backgroundColor = ZLClearColor;
@@ -43,16 +44,43 @@
 }
 
 - (void)addRefreshAction {
-    weakSelf(self);
-    self.contentTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        strongSelf(self);
-        [self willRefresh];
-    }];
+    BOOL isAddHeader = (self.scrollViewRefreshType & ScrollViewRefreshTypeHeader) == ScrollViewRefreshTypeHeader;
+    BOOL isAddFooter = (self.scrollViewRefreshType & ScrollViewRefreshTypeFooter) == ScrollViewRefreshTypeFooter;
     
-    self.contentTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        strongSelf(self);
-        [self willLoadMore];
-    }];
+    weakSelf(self);
+    if (isAddHeader) {
+        self.contentTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            strongSelf(self);
+            [self willRefresh];
+        }];
+    }
+    
+    if (isAddFooter) {
+        self.contentTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            strongSelf(self);
+            [self willLoadMore];
+        }];
+    }
+}
+
+- (void)couldScrollToFooter:(BOOL)couldScrollToFooter {
+    BOOL isAddFooter = (self.scrollViewRefreshType & ScrollViewRefreshTypeFooter) == ScrollViewRefreshTypeFooter;
+    if (!isAddFooter) {
+        return;
+    }
+    if (couldScrollToFooter) {
+        if (!self.contentTableView.mj_footer) {
+            weakSelf(self);
+            self.contentTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+                strongSelf(self);
+                [self willLoadMore];
+            }];
+        }
+    } else {
+        if (self.contentTableView.mj_footer) {
+            self.contentTableView.mj_footer = nil;
+        }
+    }
 }
 
 - (void)reloadData{

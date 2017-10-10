@@ -25,19 +25,23 @@
 
 #pragma mark - component
 - (void)addCollectionView {
-    UICollectionViewLayout *layout = [[UICollectionViewLayout alloc] init];
-    
-    CGFloat top = self.isHideNavigationBar ? 0 : NAVBARHEIGHT;
-    
-    self.contentCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, top, SCREENWIDTH, SCREENHEIGHT - top) collectionViewLayout:layout];
-    
-    self.contentCollectionView.delegate = self;
-    self.contentCollectionView.dataSource = self;
-    self.contentCollectionView.backgroundColor = [UIColor clearColor];
-    
-    [self registCell];
-    
     [self.view addSubview:self.contentCollectionView];
+    [self registCell];
+}
+
+- (UICollectionView *)contentCollectionView {
+    if (!_contentCollectionView) {
+        UICollectionViewLayout *layout = [[UICollectionViewLayout alloc] init];
+        
+        CGFloat top = self.isHideNavigationBar ? 0 : NAVBARHEIGHT;
+        
+        _contentCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, top, SCREENWIDTH, SCREENHEIGHT - top) collectionViewLayout:layout];
+        
+        _contentCollectionView.delegate = self;
+        _contentCollectionView.dataSource = self;
+        _contentCollectionView.backgroundColor = [UIColor clearColor];
+    }
+    return _contentCollectionView;
 }
 
 #pragma mark - abstract methods
@@ -48,8 +52,8 @@
 
 - (void)addRefreshAction {
     
-    BOOL isAddHeader = (_scrollViewRefreshType & ScrollViewRefreshTypeHeader) == ScrollViewRefreshTypeHeader;
-    BOOL isAddFooter = (_scrollViewRefreshType & ScrollViewRefreshTypeFooter) == ScrollViewRefreshTypeFooter;
+    BOOL isAddHeader = (self.scrollViewRefreshType & ScrollViewRefreshTypeHeader) == ScrollViewRefreshTypeHeader;
+    BOOL isAddFooter = (self.scrollViewRefreshType & ScrollViewRefreshTypeFooter) == ScrollViewRefreshTypeFooter;
     
     weakSelf(self);
     if (isAddHeader) {
@@ -68,7 +72,7 @@
 }
 
 - (void)couldScrollToFooter:(BOOL)couldScrollToFooter {
-    BOOL isAddFooter = (_scrollViewRefreshType & ScrollViewRefreshTypeFooter) == ScrollViewRefreshTypeFooter;
+    BOOL isAddFooter = (self.scrollViewRefreshType & ScrollViewRefreshTypeFooter) == ScrollViewRefreshTypeFooter;
     if (!isAddFooter) {
         return;
     }
@@ -128,7 +132,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BaseCollectionCell *cell = [BaseCollectionCell dequeueCellForCollection:collectionView
-                                                                           forIndexPath:indexPath];
+                                                               forIndexPath:indexPath];
     return cell;
 }
 

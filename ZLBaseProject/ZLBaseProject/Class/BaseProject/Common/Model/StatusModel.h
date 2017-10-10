@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, StatusCode) {
+    StatusCodeNone                  = 0,
+    StatusCodeSuccess               = 1001,
+    StatusCodeUnlogin               = 1002,
+    StatusCodeFailed                = 404,
+    StatusCodeUnregistered          = 1003,
+    StatusCodeCaptchaCodeErr        = 1120, // 验证码 错误
+};
+
 @interface StatusModel : NSObject
 
 @property (nonatomic, assign) NSInteger code;

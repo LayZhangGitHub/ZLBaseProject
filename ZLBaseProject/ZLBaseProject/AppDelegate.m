@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ApplicationEntity.h"
 
 @interface AppDelegate ()
 

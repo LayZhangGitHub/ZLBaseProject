@@ -40,6 +40,7 @@
 }
 
 - (void)initComponent {}
+- (void)initData {}
 
 #pragma mark - override uiviewcontroller settitle
 - (void)setTitle:(NSString *)title {
@@ -69,7 +70,10 @@
         UIButton *backButton = [UIButton buttonWithTarget:self
                                                    action:@selector(navigationBackAction)
                                          forControlEvents:UIControlEventTouchUpInside];
+        UIImage *backImage = [UIImage imageNamed:@"navigation_bar_back"];
+        [backButton setImage:backImage forState:UIControlStateNormal];
         backButton.size = CGSizeMake(40, 40);
+        backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
         [_navigationBar setLeftButton:backButton];
     }
     [_navigationBar setBottomBorderColor:ZLThemeCtrInstance.navigationBottomBorderColor];
