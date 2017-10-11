@@ -38,6 +38,7 @@
 
 #pragma mark - reigiste
 - (void)registerModule:(Class)moduleClass withScheme:(NSString *)scheme host:(NSString *)host {
+    ZLLog(@"regist %@, %@, %@", moduleClass, scheme, host);
     if (!scheme) {
         return;
     }
@@ -51,7 +52,7 @@
                 hostDict = [NSMutableDictionary dictionary];
                 [self.registeredModules setObject:hostDict forKey:scheme];
             }
-            if ([host isEmptyString]) {
+            if (![host isNotEmptyString]) {
                 [hostDict setObject:moduleEntity forKey:[NSNull null]];
             } else {
                 [hostDict setObject:moduleEntity forKey:host];
@@ -73,14 +74,14 @@
 
 - (void)openUrl:(NSString *)urlString userInfo:(NSDictionary *)userInfo from:(id)from complete:(void (^)(void))complete {
     
-    if (![urlString isEmptyString]) {
+    if ([urlString isNotEmptyString]) {
         
         NSString *resultUrlString = [urlString trim];
         NSString *strUrl = [resultUrlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         NSURL *url = [NSURL URLWithString:strUrl];
         
         // 若没有scheme 默认 http
-        if ([url.scheme isEmptyString] && ![resultUrlString isEmptyString]) {
+        if (![url.scheme isNotEmptyString] && [resultUrlString isNotEmptyString]) {
             if (![resultUrlString hasPrefix:@"http://"]) {
                 NSString *preUrl = @"http://";
                 resultUrlString = [NSString stringWithFormat:@"%@%@", preUrl, resultUrlString];
@@ -89,12 +90,11 @@
         }
         
         if (url) {
-            id host = [NSNull null];
-            if (![url.host isEmptyString]) {
-                host = url.host;
-            }
             
-            ZLModuleEntity *moduleEntity = self.registeredModules[url.scheme][host];
+            ZLModuleEntity *moduleEntity = self.registeredModules[url.scheme][[NSNull null]];
+            if (!moduleEntity) {
+                moduleEntity = self.registeredModules[url.scheme][url.host];
+            }
             if (moduleEntity) {
                 [moduleEntity handleOpenUrl:resultUrlString userInfo:userInfo from:from complete:complete];
             } else {
@@ -115,7 +115,7 @@
     
     if (url) {
         id host = [NSNull null];
-        if (![url.host isEmptyString]) {
+        if ([url.host isNotEmptyString]) {
             host = url.host;
         }
         

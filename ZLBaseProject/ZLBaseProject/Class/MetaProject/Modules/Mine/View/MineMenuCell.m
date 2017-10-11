@@ -38,7 +38,7 @@
         NSDictionary *itemData = (NSDictionary *)self.cellData;
         NSString *iconName = itemData[@"icon"];
         
-        if (![iconName isEmptyString]) {
+        if ([iconName isNotEmptyString]) {
             self.iconImageView.image = [UIImage imageNamed:itemData[@"icon"]];
             [self.iconImageView sizeToFit];
             self.iconImageView.centerX = 29;
@@ -48,7 +48,7 @@
         
         self.titleLabel.text = itemData[@"title"];
         [self.titleLabel sizeToFit];
-        if (![iconName isEmptyString]) {
+        if ([iconName isNotEmptyString]) {
             self.titleLabel.left = self.iconImageView.right + 13;
         } else {
             self.titleLabel.left = 20;

@@ -235,7 +235,8 @@
 - (void)loadData {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params = [NSMutableDictionary dictionaryWithDictionary:self.extraParams];
-    [params setObject:self.cateId forKey:@"cateId"];
+//    [params setObject:self.cateId forKey:@"cateId"];
+    params[@"cateId"] = self.cateId;
     
     [PointMallRequest getProductListDataWithParams:params success:^(ProductListResultModel *resultModel) {
         [self hideFailedView];

@@ -27,18 +27,19 @@
 }
 
 - (NSString *)trim {
-    if( self == nil || [self isKindOfClass:[NSNull class]] ) {
+    // 不需要判断self nil 的情况， 因为 对空对象发送消息 返回nil
+    if([self isKindOfClass:[NSNull class]]) {
         return nil;
     }
-    
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (BOOL)isEmptyString {
-    if (!self || [self.trim isEqualToString:@""]) {
-        return YES;
+- (BOOL)isNotEmptyString {
+    // 不需要判断self nil 的情况， 因为 空对象
+    if ([self.trim isEqualToString:@""]) {
+        return NO;
     }
-    return NO;
+    return YES;
 }
 
 - (CGSize)sizeWithUIFont:(UIFont *)font forWidth:(CGFloat)width {
@@ -85,4 +86,28 @@
     }
     return outStr;
 }
+
+- (NSString *)addURLParamsFromDictionary:(NSDictionary *)params {
+    NSMutableString *_add = nil;
+    if (NSNotFound != [self rangeOfString:@"?"].location) {
+        _add = [NSMutableString stringWithString:@"&"];
+    }else {
+        _add = [NSMutableString stringWithString:@"?"];
+    }
+    for (NSString* key in [params allKeys]) {
+        NSString *value = [params objectForKey:key];
+        if (value && [value isKindOfClass:[NSString class]] && 0 < [value length]) {
+            [_add appendFormat:@"%@=%@&",[key urlencode],[value urlencode]];
+        }
+    }
+    NSInteger position = self.length;
+    NSRange range = [self rangeOfString:@"#"];
+    if (range.length > 0) {
+        position = range.location;
+    }
+    NSMutableString *string = [self mutableCopy];
+    [string insertString:[_add substringToIndex:[_add length] - 1] atIndex:position];
+    return string;
+}
+
 @end

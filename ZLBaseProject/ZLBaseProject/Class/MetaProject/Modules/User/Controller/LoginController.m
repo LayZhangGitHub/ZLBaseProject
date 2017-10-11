@@ -210,7 +210,7 @@
 - (void)handleCaptchaButton {
     NSString *phoneText = self.phoneTextField.text;
     
-    if ([phoneText isEmptyString]) {
+    if (![phoneText isNotEmptyString]) {
         [self showNotice:@"请输入手机号"];
         return;
     }
@@ -310,7 +310,7 @@
         captchaText = [textField.text stringByReplacingCharactersInRange:range withString:string];
     }
     
-    if (![phoneText isEmptyString] && ![captchaText isEmptyString]) {
+    if ([phoneText isNotEmptyString] && [captchaText isNotEmptyString]) {
         [self setNextButtonEnabled:YES];
     } else {
         [self setNextButtonEnabled:NO];

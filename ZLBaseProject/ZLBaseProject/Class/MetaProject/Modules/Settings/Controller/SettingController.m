@@ -11,7 +11,9 @@
 #import "TMSettingCell.h"
 #import "TMSingleCell.h"
 
-@interface SettingController ()
+#import "MineRequest.h"
+
+@interface SettingController ()<UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) NSArray *menu;
 
@@ -43,7 +45,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (1 == section ) {
+    if (1 == section) {
         return 1;
     }
     
@@ -51,7 +53,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (1 == indexPath.section ) {
+    if (1 == indexPath.section) {
         TMSingleCell *cell = [TMSingleCell dequeueReusableCellForTableView:tableView];
         return cell;
     }
@@ -73,7 +75,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = 0;
 
-    if (1 == indexPath.section ) {
+    if (1 == indexPath.section) {
         height = [[TMSingleCell heightForCell:nil] floatValue];
     } else {
         height = [[TMSettingCell heightForCell:self.menu[indexPath.row]] floatValue];
@@ -84,26 +86,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (0 == indexPath.section ) {
+    if (0 == indexPath.section) {
         NSDictionary *itemData = self.menu[indexPath.row];
         
-        if ([@"avatar" isEqualToString:itemData[@"type"]] ) {
+        if ([@"avatar" isEqualToString:itemData[@"type"]]) {
             
             UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"请选择头像来源" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"从手机相册选取", nil];
             actionSheet.tag = 1;
             [actionSheet showInView:self.view];
             
-        } else if ([@"name" isEqualToString:itemData[@"type"]] ) {
+        } else if ([@"name" isEqualToString:itemData[@"type"]]) {
             
-            [[ZLNavigationService sharedService] openUrl:@"xiaoma://changeName"];
+            [[ZLNavigationService sharedService] openUrl:LocalAppHost(ChangeNick)];
             
-        } else if ([@"gender" isEqualToString:itemData[@"type"]] ) {
+        } else if ([@"gender" isEqualToString:itemData[@"type"]]) {
             
-            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"请选择性别" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"男", @"女", nil];
-            actionSheet.tag = 2;
-            [actionSheet showInView:self.view];
-            
-            //[[TTNavigationService sharedService] openUrl:@"xiaoma://changeGender"];
+            [[ZLNavigationService sharedService] openUrl:LocalAppHost(ChangeGender)];
             
         }else if ([@"consignee" isEqualToString:itemData[@"type"]]) {
             
@@ -124,6 +122,60 @@
             [[ZLNavigationService sharedService] openUrl:protocolLink];
         }
     }
+}
+
+#pragma mark - action sheet delegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:
+            [self avatarFromSourceType:UIImagePickerControllerSourceTypeCamera];
+            break;
+        case 1: // 从手机相册选取
+            [self avatarFromSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - pick image
+- (void)avatarFromSourceType:(UIImagePickerControllerSourceType)sourceType {
+    if ([UIImagePickerController isSourceTypeAvailable:sourceType]) {
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.sourceType = sourceType;
+        imagePicker.allowsEditing = YES;
+        imagePicker.delegate = self;
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+    
+    if ([mediaType isEqualToString:(__bridge NSString *)kUTTypeImage]){
+        
+        UIImage *avatarImage = [info objectForKey:UIImagePickerControllerEditedImage];
+        
+        weakSelf(self);
+        [MineRequest changeAvatarWithParams:nil image:avatarImage success:^(TMChangeAvatarResultModel *resultModel){
+            
+            [UserInfoService shareUserInfo].userInfo.avatar = resultModel.avatar;;
+            [[UserInfoService shareUserInfo] saveData];
+            
+            strongSelf(self);
+            [self reloadData];
+            
+        } failure:^(StatusModel *status) {
+            [self showNotice:status.msg];
+        }];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - failed and reload deleaget

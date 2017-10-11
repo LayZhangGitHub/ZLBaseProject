@@ -16,6 +16,8 @@
 #import "LoginController.h"
 #import "BecomeMemberController.h"
 #import "SettingController.h"
+#import "TMChangeNickController.h"
+#import "TMChangeGenderController.h"
 
 @implementation AppModuleEntity
 
@@ -29,15 +31,12 @@
 }
 
 + (void)load {
-    [[ZLNavigationService sharedService] registerModule:self
-                                             withScheme:AppScheme
-                                                   host:LoginHost];
-    [[ZLNavigationService sharedService] registerModule:self
-                                             withScheme:AppScheme
-                                                   host:BecomeMemberHost];
-    [[ZLNavigationService sharedService] registerModule:self
-                                             withScheme:AppScheme
-                                                   host:SettingHost];
+    NSArray *hosts = @[LoginHost, BecomeMemberHost, SettingHost, ChangeGender, ChangeNick];
+    for (NSString *host in hosts) {
+        [[ZLNavigationService sharedService] registerModule:self
+                                                 withScheme:AppScheme
+                                                       host:host];
+    }
 }
 
 
@@ -53,7 +52,7 @@
     
     NSMutableDictionary *urlParams = [[url parameters] mutableCopy];
     if ([url.host isEqualToString:LoginHost]) {
-        [[UserInfoService shareUserInfo] logoutAndClearData];
+        [[UserInfoService shareUserInfo] clearData];
         [[ApplicationEntity shareInstance].tabbarController setSelectIndex:0];
         
         UIViewController *topVC = navigationController.topViewController;
@@ -73,6 +72,14 @@
     }
     else if ([url.host isEqualToString:SettingHost]) {
         SettingController *vc = [[SettingController alloc] init];
+        [navigationController pushViewController:vc animated:YES];
+    }
+    else if ([url.host isEqualToString:ChangeNick]) {
+        TMChangeNickController *vc = [[TMChangeNickController alloc] init];
+        [navigationController pushViewController:vc animated:YES];
+    }
+    else if ([url.host isEqualToString:ChangeGender]) {
+        TMChangeGenderController *vc = [[TMChangeGenderController alloc] init];
         [navigationController pushViewController:vc animated:YES];
     }
 }

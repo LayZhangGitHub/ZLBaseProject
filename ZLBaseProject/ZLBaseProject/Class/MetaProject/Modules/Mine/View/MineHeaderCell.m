@@ -39,7 +39,7 @@
     
     if ([UserInfoService shareUserInfo].userInfo.isLogin) {
         self.avatarImageView.hidden = NO;
-        if (![[UserInfoService shareUserInfo].userInfo.avatar isEmptyString]) {
+        if ([[UserInfoService shareUserInfo].userInfo.avatar isNotEmptyString]) {
             [self.avatarImageView setOnlineImage:[UserInfoService shareUserInfo].userInfo.avatar
                                 placeHolderImage:[UIImage imageNamed:@"mine_default_avatar"]];
         }else{
@@ -115,7 +115,7 @@
         [button setTitleColor:ZLWhiteColor forState:UIControlStateNormal];
         button.titleLabel.font = ZLNormalFont(14);
         [button bk_whenTapped:^{
-            [[ZLNavigationService sharedService]openUrl:LocalAppHost(TopUpHos)];
+            [[ZLNavigationService sharedService]openUrl:LocalAppHost(TopUpHost)];
         }];
         _topUpButton = button;
     }

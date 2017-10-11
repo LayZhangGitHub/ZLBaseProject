@@ -36,11 +36,15 @@
 
 - (CGSize)sizeWithSize:(CGSize)size font:(NSInteger)font;
 
-- (BOOL)isEmptyString;
+- (BOOL)isNotEmptyString;
 
 - (NSString *)urldecode;
 - (NSString *)urlencode;
 
 - (NSString *)md5;
 
+/**
+ * urlString add params
+ **/
+- (NSString *)addURLParamsFromDictionary:(NSDictionary *)params;
 @end

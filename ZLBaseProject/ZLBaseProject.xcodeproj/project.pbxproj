@@ -80,6 +80,10 @@
 		481A733D1F8CD17400EF3242 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A733C1F8CD17400EF3242 /* SettingController.m */; };
 		481A73401F8CD51700EF3242 /* TMSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A733F1F8CD51700EF3242 /* TMSettingCell.m */; };
 		481A73431F8CD53100EF3242 /* TMSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73421F8CD53100EF3242 /* TMSingleCell.m */; };
+		481A73461F8DB52200EF3242 /* TMChangeGenderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73451F8DB52200EF3242 /* TMChangeGenderController.m */; };
+		481A73491F8DB52F00EF3242 /* TMChangeNickController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A73481F8DB52F00EF3242 /* TMChangeNickController.m */; };
+		481A734C1F8DCA2B00EF3242 /* WebModuleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A734B1F8DCA2B00EF3242 /* WebModuleEntity.m */; };
+		481A734F1F8DCBA900EF3242 /* BaseWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A734E1F8DCBA900EF3242 /* BaseWebController.m */; };
 		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
 		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
 		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
@@ -289,6 +293,14 @@
 		481A733F1F8CD51700EF3242 /* TMSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMSettingCell.m; sourceTree = "<group>"; };
 		481A73411F8CD53100EF3242 /* TMSingleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMSingleCell.h; sourceTree = "<group>"; };
 		481A73421F8CD53100EF3242 /* TMSingleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMSingleCell.m; sourceTree = "<group>"; };
+		481A73441F8DB52200EF3242 /* TMChangeGenderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMChangeGenderController.h; sourceTree = "<group>"; };
+		481A73451F8DB52200EF3242 /* TMChangeGenderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMChangeGenderController.m; sourceTree = "<group>"; };
+		481A73471F8DB52F00EF3242 /* TMChangeNickController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMChangeNickController.h; sourceTree = "<group>"; };
+		481A73481F8DB52F00EF3242 /* TMChangeNickController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMChangeNickController.m; sourceTree = "<group>"; };
+		481A734A1F8DCA2B00EF3242 /* WebModuleEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebModuleEntity.h; sourceTree = "<group>"; };
+		481A734B1F8DCA2B00EF3242 /* WebModuleEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebModuleEntity.m; sourceTree = "<group>"; };
+		481A734D1F8DCBA900EF3242 /* BaseWebController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWebController.h; sourceTree = "<group>"; };
+		481A734E1F8DCBA900EF3242 /* BaseWebController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWebController.m; sourceTree = "<group>"; };
 		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
 		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
 		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
@@ -657,6 +669,10 @@
 			children = (
 				481A733B1F8CD17400EF3242 /* SettingController.h */,
 				481A733C1F8CD17400EF3242 /* SettingController.m */,
+				481A73441F8DB52200EF3242 /* TMChangeGenderController.h */,
+				481A73451F8DB52200EF3242 /* TMChangeGenderController.m */,
+				481A73471F8DB52F00EF3242 /* TMChangeNickController.h */,
+				481A73481F8DB52F00EF3242 /* TMChangeNickController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -892,10 +908,12 @@
 		48C152C01F739D6200C577AB /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				48C152C11F739D6200C577AB /* AppModuleEntity.h */,
-				48C152C21F739D6200C577AB /* AppModuleEntity.m */,
 				48C153001F73A10000C577AB /* ApplicationEntity.h */,
 				48C153011F73A10000C577AB /* ApplicationEntity.m */,
+				48C152C11F739D6200C577AB /* AppModuleEntity.h */,
+				48C152C21F739D6200C577AB /* AppModuleEntity.m */,
+				481A734A1F8DCA2B00EF3242 /* WebModuleEntity.h */,
+				481A734B1F8DCA2B00EF3242 /* WebModuleEntity.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -952,6 +970,8 @@
 				48C152CB1F739D6200C577AB /* ScrollableController.m */,
 				4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */,
 				4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */,
+				481A734D1F8DCBA900EF3242 /* BaseWebController.h */,
+				481A734E1F8DCBA900EF3242 /* BaseWebController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1446,8 +1466,11 @@
 				48C152F51F739D6200C577AB /* ZLTabbarController.m in Sources */,
 				481A730B1F8B7CB100EF3242 /* UserRequest.m in Sources */,
 				481A732E1F8CA5DA00EF3242 /* UIDevice+ZLEX.m in Sources */,
+				481A734C1F8DCA2B00EF3242 /* WebModuleEntity.m in Sources */,
 				48C1533E1F73C03800C577AB /* UIView+QuickNew.m in Sources */,
 				481A73081F8B780A00EF3242 /* CountDownButton.m in Sources */,
+				481A73491F8DB52F00EF3242 /* TMChangeNickController.m in Sources */,
+				481A73461F8DB52200EF3242 /* TMChangeGenderController.m in Sources */,
 				48C152F11F739D6200C577AB /* ScrollableController.m in Sources */,
 				48089B421F7CDD9B00DAF1B6 /* NSDictionary+Safe.m in Sources */,
 				48089B411F7CDD9B00DAF1B6 /* NSArray+Safe.m in Sources */,
@@ -1543,6 +1566,7 @@
 				4845D3281F7A5B98004D884B /* MallHomeRequest.m in Sources */,
 				48089C6A1F7DF92F00DAF1B6 /* MHModule08Cell.m in Sources */,
 				48089C731F7DF94B00DAF1B6 /* MHModule11Cell.m in Sources */,
+				481A734F1F8DCBA900EF3242 /* BaseWebController.m in Sources */,
 				48089CB21F7F6EA700DAF1B6 /* ProductListResultModel.m in Sources */,
 				4845D3161F7A57DC004D884B /* MHModule02Cell.m in Sources */,
 				485D211D1F78D5370033DD20 /* InstViewLayout.m in Sources */,

@@ -22,7 +22,9 @@
 #define LoginHost           @"login"
 #define BecomeMemberHost    @"becomeMember"
 #define SettingHost         @"setting"
-#define TopUpHos            @"topUp"
+#define TopUpHost           @"topUp"
+#define ChangeGender        @"changeGender"
+#define ChangeNick          @"changeNick"
 
 #define _SConnect(x, y) [NSString stringWithFormat:@"%@%@", x,y]
 #define SConnect(x, y) _SConnect(x, y)

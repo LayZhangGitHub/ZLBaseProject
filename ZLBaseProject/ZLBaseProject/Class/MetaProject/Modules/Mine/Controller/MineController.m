@@ -205,13 +205,13 @@ static NSInteger const sectionMenu = 1;
             [UserInfoService shareUserInfo].userInfo.name = resultModel.nickName;
             [UserInfoService shareUserInfo].userInfo.avatar = resultModel.avatar;
             
-            if (![resultModel.aboutLink isEmptyString]) {
+            if ([resultModel.aboutLink isNotEmptyString]) {
                 [[NSUserDefaults standardUserDefaults] setObject:resultModel.aboutLink forKey:@"aboutLink"];
             }
-            if (![resultModel.supportLink isEmptyString]) {
+            if ([resultModel.supportLink isNotEmptyString]) {
                 [[NSUserDefaults standardUserDefaults] setObject:resultModel.supportLink forKey:@"supportLink"];
             }
-            if (![resultModel.protocolLink isEmptyString]) {
+            if ([resultModel.protocolLink isNotEmptyString]) {
                 [[NSUserDefaults standardUserDefaults] setObject:resultModel.protocolLink forKey:@"protocolLink"];
             }
             

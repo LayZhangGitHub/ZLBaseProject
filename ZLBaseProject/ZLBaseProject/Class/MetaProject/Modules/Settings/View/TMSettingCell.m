@@ -43,7 +43,7 @@
         if ([@"avatar" isEqualToString:itemData[@"type"]]) {
             self.avatarImageView.hidden = NO;
             self.valueLabel.hidden = YES;
-            if (![[UserInfoService shareUserInfo].userInfo.avatar isEmptyString]) {
+            if ([[UserInfoService shareUserInfo].userInfo.avatar isNotEmptyString]) {
                 [self.avatarImageView setOnlineImage:[UserInfoService shareUserInfo].userInfo.avatar
                                     placeHolderImage:[UIImage imageNamed:@"mine_default_avatar"]];
             }else{

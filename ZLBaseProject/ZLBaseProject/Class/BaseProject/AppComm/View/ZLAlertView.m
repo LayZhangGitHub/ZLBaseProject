@@ -105,7 +105,7 @@
         
         //先算出当前的按钮个数
         int numberOfButton = 0;
-        if (![confirmButtonTitle isEmptyString]) {
+        if ([confirmButtonTitle isNotEmptyString]) {
             numberOfButton = 1;
         }
         numberOfButton += otherButtonTitles.count;
@@ -130,7 +130,7 @@
                 btnSegmentLine.backgroundColor = ZLGray(230);
                 [self addSubview:btnSegmentLine];
                 
-                if (![confirmButtonTitle isEmptyString]) {
+                if ([confirmButtonTitle isNotEmptyString]) {
                     
                     NSString *otherButtonTitle = [otherButtonTitles firstObject];
                     UIButton *anotherButton = [UIButton buttonWithTitle:otherButtonTitle frame:CGRectMake(0, totalHeight, ALERT_WIDTH / 2, 45.f) target:self action:@selector(buttonDidtouched:) forControlEvents:UIControlEventTouchUpInside];
@@ -165,7 +165,7 @@
                 
             }else {
                 
-                if (![confirmButtonTitle isEmptyString]) {
+                if ([confirmButtonTitle isNotEmptyString]) {
                     
                     UIView *contentBtnSegementLine = [[UIView alloc] initWithFrame:CGRectMake(0, totalHeight, ALERT_WIDTH, 1/[[UIScreen mainScreen] scale])];
                     contentBtnSegementLine.backgroundColor = ZLGray(228);
