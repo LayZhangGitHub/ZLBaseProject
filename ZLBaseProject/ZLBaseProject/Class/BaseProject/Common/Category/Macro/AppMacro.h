@@ -19,12 +19,25 @@
 #define AppScheme           @"xiaoma"
 #define AppSchemeCompeled   @"xiaoma://"
 
+// app
+#define ConsigneeSelect     @"consigneeSelect"
 #define LoginHost           @"login"
 #define BecomeMemberHost    @"becomeMember"
 #define SettingHost         @"setting"
-#define TopUpHost           @"topUp"
 #define ChangeGender        @"changeGender"
 #define ChangeNick          @"changeNick"
+
+// mall
+#define MyCollection        @"myCollection"
+#define MallOrderList       @"mallOrderList"
+#define MallCart            @"mallCart"
+#define PointDetail         @"pointDetail"
+
+#define MallItem            @"mallItem"
+
+// unknow
+#define TopUpHost           @"topUp"
+
 
 #define _SConnect(x, y) [NSString stringWithFormat:@"%@%@", x,y]
 #define SConnect(x, y) _SConnect(x, y)

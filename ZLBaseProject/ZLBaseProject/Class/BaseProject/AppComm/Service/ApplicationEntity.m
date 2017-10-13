@@ -7,8 +7,6 @@
 //
 
 #import "ApplicationEntity.h"
-#import "View01Controller.h"
-#import "View02Controller.h"
 #import "ZLTabbarController.h"
 
 #import "MallHomeController.h"

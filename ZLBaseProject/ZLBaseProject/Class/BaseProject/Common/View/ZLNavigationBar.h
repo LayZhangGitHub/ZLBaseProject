@@ -25,7 +25,8 @@
 /**
  right button
  */
-@property (nonatomic, strong) UIView *rightButton;
+@property (nonatomic, strong) UIView *rightButton;      // 第一个
+@property (nonatomic, strong) UIView *rightDesButton;   // 第二个
 
 /**
  主界面

@@ -65,6 +65,7 @@
 
 #pragma mark - open url
 - (void)openUrl:(NSString *)urlString {
+    ZLLog(@"handle link is %@", urlString);
     [self openUrl:urlString userInfo:nil];
 }
 

@@ -84,6 +84,8 @@
     _titleLabel.frame = CGRectMake(0, 0, SCREENWIDTH, NAVBARCONTAINERHEIGHT);
     
     _rightButton.center = CGPointMake(_containerView.width - _rightButton.width/2 - 8, _containerView.height/2);
+    _rightDesButton.right = _rightButton.left;
+    _rightDesButton.centerY = _rightButton.centerY;
     _leftButton.center = CGPointMake(_leftButton.width/2 + 8, _containerView.height/2);
 }
 
@@ -98,6 +100,9 @@
 }
 
 - (void)setLeftButton:(UIView *)leftButton {
+    if (leftButton == _leftButton) {
+        return;
+    }
     if (_leftButton) {
         [_leftButton removeFromSuperview];
     }
@@ -107,11 +112,14 @@
                                     forState:UIControlStateNormal];
         [((UIButton *)leftButton) setTintColor:ZLThemeCtrInstance.navigationButtonColor];
     }
-    leftButton.center = CGPointMake(leftButton.width / 2, self.containerView.height / 2);
+//    leftButton.center = CGPointMake(leftButton.width / 2, self.containerView.height / 2);
     [self.containerView addSubview:leftButton];
 }
 
 - (void)setRightButton:(UIView *)rightButton {
+    if (rightButton == _rightButton) {
+        return;
+    }
     if (_rightButton) {
         [_rightButton removeFromSuperview];
     }
@@ -123,6 +131,25 @@
     }
     
     [self.containerView addSubview:rightButton];
+    [self setNeedsLayout];
+}
+
+- (void)setRightDesButton:(UIView *)rightDesButton {
+    if (rightDesButton == _rightDesButton) {
+        return;
+    }
+    if (_rightDesButton) {
+        [_rightDesButton removeFromSuperview];
+    }
+    _rightDesButton = rightDesButton;
+    if ([rightDesButton isKindOfClass:[UIButton class]]) {
+        [((UIButton *)rightDesButton) setTitleColor:ZLThemeCtrInstance.navigationButtonColor
+                                        forState:UIControlStateNormal];
+        [((UIButton *)rightDesButton) setTintColor:ZLThemeCtrInstance.navigationButtonColor];
+    }
+    
+    [self.containerView addSubview:rightDesButton];
+    [self setNeedsLayout];
 }
 
 - (void)setBottomBorderColor:(UIColor *)color {

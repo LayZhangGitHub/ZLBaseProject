@@ -23,7 +23,9 @@
 #define STATUSBARHEIGHT             20.f
 #define NAVBARCONTAINERHEIGHT       44.f
 #define NAVBARHEIGHT                (NAVBARCONTAINERHEIGHT + STATUSBARHEIGHT)
-#define TABBARHEIGHT                49   
+#define TABBARHEIGHT                49
+
+#define TABSVIEWHEIGHT             39
 
 /** color **/
 #pragma mark - color
