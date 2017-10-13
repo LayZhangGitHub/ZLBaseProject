@@ -108,6 +108,25 @@
 		481A74911F8F735300EF3242 /* MyCollectionPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74901F8F735300EF3242 /* MyCollectionPagerController.m */; };
 		481A749A1F8F765F00EF3242 /* TMPointDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74991F8F765F00EF3242 /* TMPointDetailController.m */; };
 		481A74A21F8F79FB00EF3242 /* MallItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74A11F8F79FB00EF3242 /* MallItemController.m */; };
+		481A74A51F908DEA00EF3242 /* ItemToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74A41F908DEA00EF3242 /* ItemToolBarView.m */; };
+		481A74B51F90AA0E00EF3242 /* ItemPropertyKVModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74B41F90AA0E00EF3242 /* ItemPropertyKVModel.m */; };
+		481A74C71F90AAFD00EF3242 /* ItemDefaultSKUInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74BE1F90AAFD00EF3242 /* ItemDefaultSKUInfoModel.m */; };
+		481A74C81F90AAFD00EF3242 /* ItemPropertyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74C01F90AAFD00EF3242 /* ItemPropertyModel.m */; };
+		481A74C91F90AAFD00EF3242 /* ItemSKUCoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74C21F90AAFD00EF3242 /* ItemSKUCoverModel.m */; };
+		481A74CA1F90AAFD00EF3242 /* ItemSKUInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74C41F90AAFD00EF3242 /* ItemSKUInfoModel.m */; };
+		481A74CB1F90AAFD00EF3242 /* ItemStockInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74C61F90AAFD00EF3242 /* ItemStockInfoModel.m */; };
+		481A74D81F90AFDD00EF3242 /* DSRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74D51F90AFDD00EF3242 /* DSRModel.m */; };
+		481A74D91F90AFDD00EF3242 /* DSRValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74D71F90AFDD00EF3242 /* DSRValueModel.m */; };
+		481A74DC1F90AFFB00EF3242 /* ItemShopInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74DB1F90AFFB00EF3242 /* ItemShopInfoModel.m */; };
+		481A74E01F90B1F800EF3242 /* ItemCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74DF1F90B1F800EF3242 /* ItemCommentModel.m */; };
+		481A74E31F90B26000EF3242 /* ItemCommentsInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74E21F90B26000EF3242 /* ItemCommentsInfoModel.m */; };
+		481A74EA1F90B6A700EF3242 /* ItemRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74E91F90B6A700EF3242 /* ItemRecommendModel.m */; };
+		481A74ED1F90B70000EF3242 /* ItemRecommendsInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74EC1F90B70000EF3242 /* ItemRecommendsInfoModel.m */; };
+		481A74F01F90B82500EF3242 /* ItemResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74EF1F90B82500EF3242 /* ItemResultModel.m */; };
+		481A74F41F90BE1400EF3242 /* ItemCoverImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74F31F90BE1400EF3242 /* ItemCoverImageModel.m */; };
+		481A74F81F90BEFD00EF3242 /* ItemDetailContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74F71F90BEFC00EF3242 /* ItemDetailContentModel.m */; };
+		481A74FB1F90C06100EF3242 /* ItemInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74FA1F90C06100EF3242 /* ItemInfoModel.m */; };
+		481A74FE1F90C29200EF3242 /* ItemRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74FD1F90C29200EF3242 /* ItemRequest.m */; };
 		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
 		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
 		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
@@ -356,6 +375,44 @@
 		481A74991F8F765F00EF3242 /* TMPointDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMPointDetailController.m; sourceTree = "<group>"; };
 		481A74A01F8F79FB00EF3242 /* MallItemController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MallItemController.h; sourceTree = "<group>"; };
 		481A74A11F8F79FB00EF3242 /* MallItemController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MallItemController.m; sourceTree = "<group>"; };
+		481A74A31F908DEA00EF3242 /* ItemToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemToolBarView.h; sourceTree = "<group>"; };
+		481A74A41F908DEA00EF3242 /* ItemToolBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemToolBarView.m; sourceTree = "<group>"; };
+		481A74B31F90AA0E00EF3242 /* ItemPropertyKVModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemPropertyKVModel.h; sourceTree = "<group>"; };
+		481A74B41F90AA0E00EF3242 /* ItemPropertyKVModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemPropertyKVModel.m; sourceTree = "<group>"; };
+		481A74BD1F90AAFD00EF3242 /* ItemDefaultSKUInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDefaultSKUInfoModel.h; sourceTree = "<group>"; };
+		481A74BE1F90AAFD00EF3242 /* ItemDefaultSKUInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDefaultSKUInfoModel.m; sourceTree = "<group>"; };
+		481A74BF1F90AAFD00EF3242 /* ItemPropertyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemPropertyModel.h; sourceTree = "<group>"; };
+		481A74C01F90AAFD00EF3242 /* ItemPropertyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemPropertyModel.m; sourceTree = "<group>"; };
+		481A74C11F90AAFD00EF3242 /* ItemSKUCoverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemSKUCoverModel.h; sourceTree = "<group>"; };
+		481A74C21F90AAFD00EF3242 /* ItemSKUCoverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemSKUCoverModel.m; sourceTree = "<group>"; };
+		481A74C31F90AAFD00EF3242 /* ItemSKUInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemSKUInfoModel.h; sourceTree = "<group>"; };
+		481A74C41F90AAFD00EF3242 /* ItemSKUInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemSKUInfoModel.m; sourceTree = "<group>"; };
+		481A74C51F90AAFD00EF3242 /* ItemStockInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStockInfoModel.h; sourceTree = "<group>"; };
+		481A74C61F90AAFD00EF3242 /* ItemStockInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStockInfoModel.m; sourceTree = "<group>"; };
+		481A74D41F90AFDD00EF3242 /* DSRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRModel.h; sourceTree = "<group>"; };
+		481A74D51F90AFDD00EF3242 /* DSRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRModel.m; sourceTree = "<group>"; };
+		481A74D61F90AFDD00EF3242 /* DSRValueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRValueModel.h; sourceTree = "<group>"; };
+		481A74D71F90AFDD00EF3242 /* DSRValueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRValueModel.m; sourceTree = "<group>"; };
+		481A74DA1F90AFFB00EF3242 /* ItemShopInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemShopInfoModel.h; sourceTree = "<group>"; };
+		481A74DB1F90AFFB00EF3242 /* ItemShopInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemShopInfoModel.m; sourceTree = "<group>"; };
+		481A74DE1F90B1F800EF3242 /* ItemCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCommentModel.h; sourceTree = "<group>"; };
+		481A74DF1F90B1F800EF3242 /* ItemCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCommentModel.m; sourceTree = "<group>"; };
+		481A74E11F90B26000EF3242 /* ItemCommentsInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCommentsInfoModel.h; sourceTree = "<group>"; };
+		481A74E21F90B26000EF3242 /* ItemCommentsInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCommentsInfoModel.m; sourceTree = "<group>"; };
+		481A74E81F90B6A700EF3242 /* ItemRecommendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemRecommendModel.h; sourceTree = "<group>"; };
+		481A74E91F90B6A700EF3242 /* ItemRecommendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemRecommendModel.m; sourceTree = "<group>"; };
+		481A74EB1F90B70000EF3242 /* ItemRecommendsInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemRecommendsInfoModel.h; sourceTree = "<group>"; };
+		481A74EC1F90B70000EF3242 /* ItemRecommendsInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemRecommendsInfoModel.m; sourceTree = "<group>"; };
+		481A74EE1F90B82500EF3242 /* ItemResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemResultModel.h; sourceTree = "<group>"; };
+		481A74EF1F90B82500EF3242 /* ItemResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemResultModel.m; sourceTree = "<group>"; };
+		481A74F21F90BE1400EF3242 /* ItemCoverImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCoverImageModel.h; sourceTree = "<group>"; };
+		481A74F31F90BE1400EF3242 /* ItemCoverImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCoverImageModel.m; sourceTree = "<group>"; };
+		481A74F61F90BEFC00EF3242 /* ItemDetailContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemDetailContentModel.h; sourceTree = "<group>"; };
+		481A74F71F90BEFC00EF3242 /* ItemDetailContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemDetailContentModel.m; sourceTree = "<group>"; };
+		481A74F91F90C06100EF3242 /* ItemInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemInfoModel.h; sourceTree = "<group>"; };
+		481A74FA1F90C06100EF3242 /* ItemInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemInfoModel.m; sourceTree = "<group>"; };
+		481A74FC1F90C29200EF3242 /* ItemRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemRequest.h; sourceTree = "<group>"; };
+		481A74FD1F90C29200EF3242 /* ItemRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemRequest.m; sourceTree = "<group>"; };
 		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
 		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
 		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
@@ -1188,6 +1245,17 @@
 		481A749D1F8F79DE00EF3242 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				481A74F51F90BEE300EF3242 /* DetailContent */,
+				481A74F11F90BDEF00EF3242 /* CoverImage */,
+				481A74E71F90B69400EF3242 /* Recommend */,
+				481A74DD1F90B16C00EF3242 /* Comment */,
+				481A74D31F90AFDD00EF3242 /* ShopDSRModel */,
+				481A74BC1F90AAFD00EF3242 /* SKUModel */,
+				481A74B21F90A9FE00EF3242 /* KVModel */,
+				481A74EE1F90B82500EF3242 /* ItemResultModel.h */,
+				481A74EF1F90B82500EF3242 /* ItemResultModel.m */,
+				481A74F91F90C06100EF3242 /* ItemInfoModel.h */,
+				481A74FA1F90C06100EF3242 /* ItemInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1195,6 +1263,8 @@
 		481A749E1F8F79DE00EF3242 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				481A74FC1F90C29200EF3242 /* ItemRequest.h */,
+				481A74FD1F90C29200EF3242 /* ItemRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1202,8 +1272,89 @@
 		481A749F1F8F79DE00EF3242 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				481A74A31F908DEA00EF3242 /* ItemToolBarView.h */,
+				481A74A41F908DEA00EF3242 /* ItemToolBarView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		481A74B21F90A9FE00EF3242 /* KVModel */ = {
+			isa = PBXGroup;
+			children = (
+				481A74B31F90AA0E00EF3242 /* ItemPropertyKVModel.h */,
+				481A74B41F90AA0E00EF3242 /* ItemPropertyKVModel.m */,
+			);
+			path = KVModel;
+			sourceTree = "<group>";
+		};
+		481A74BC1F90AAFD00EF3242 /* SKUModel */ = {
+			isa = PBXGroup;
+			children = (
+				481A74BD1F90AAFD00EF3242 /* ItemDefaultSKUInfoModel.h */,
+				481A74BE1F90AAFD00EF3242 /* ItemDefaultSKUInfoModel.m */,
+				481A74BF1F90AAFD00EF3242 /* ItemPropertyModel.h */,
+				481A74C01F90AAFD00EF3242 /* ItemPropertyModel.m */,
+				481A74C11F90AAFD00EF3242 /* ItemSKUCoverModel.h */,
+				481A74C21F90AAFD00EF3242 /* ItemSKUCoverModel.m */,
+				481A74C31F90AAFD00EF3242 /* ItemSKUInfoModel.h */,
+				481A74C41F90AAFD00EF3242 /* ItemSKUInfoModel.m */,
+				481A74C51F90AAFD00EF3242 /* ItemStockInfoModel.h */,
+				481A74C61F90AAFD00EF3242 /* ItemStockInfoModel.m */,
+			);
+			path = SKUModel;
+			sourceTree = "<group>";
+		};
+		481A74D31F90AFDD00EF3242 /* ShopDSRModel */ = {
+			isa = PBXGroup;
+			children = (
+				481A74D41F90AFDD00EF3242 /* DSRModel.h */,
+				481A74D51F90AFDD00EF3242 /* DSRModel.m */,
+				481A74D61F90AFDD00EF3242 /* DSRValueModel.h */,
+				481A74D71F90AFDD00EF3242 /* DSRValueModel.m */,
+				481A74DA1F90AFFB00EF3242 /* ItemShopInfoModel.h */,
+				481A74DB1F90AFFB00EF3242 /* ItemShopInfoModel.m */,
+			);
+			path = ShopDSRModel;
+			sourceTree = "<group>";
+		};
+		481A74DD1F90B16C00EF3242 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				481A74DE1F90B1F800EF3242 /* ItemCommentModel.h */,
+				481A74DF1F90B1F800EF3242 /* ItemCommentModel.m */,
+				481A74E11F90B26000EF3242 /* ItemCommentsInfoModel.h */,
+				481A74E21F90B26000EF3242 /* ItemCommentsInfoModel.m */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		481A74E71F90B69400EF3242 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				481A74E81F90B6A700EF3242 /* ItemRecommendModel.h */,
+				481A74E91F90B6A700EF3242 /* ItemRecommendModel.m */,
+				481A74EB1F90B70000EF3242 /* ItemRecommendsInfoModel.h */,
+				481A74EC1F90B70000EF3242 /* ItemRecommendsInfoModel.m */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		481A74F11F90BDEF00EF3242 /* CoverImage */ = {
+			isa = PBXGroup;
+			children = (
+				481A74F21F90BE1400EF3242 /* ItemCoverImageModel.h */,
+				481A74F31F90BE1400EF3242 /* ItemCoverImageModel.m */,
+			);
+			path = CoverImage;
+			sourceTree = "<group>";
+		};
+		481A74F51F90BEE300EF3242 /* DetailContent */ = {
+			isa = PBXGroup;
+			children = (
+				481A74F61F90BEFC00EF3242 /* ItemDetailContentModel.h */,
+				481A74F71F90BEFC00EF3242 /* ItemDetailContentModel.m */,
+			);
+			path = DetailContent;
 			sourceTree = "<group>";
 		};
 		485D211A1F78D4B20033DD20 /* Layout */ = {
@@ -1671,11 +1822,13 @@
 				481A74861F8F720E00EF3242 /* PointMallRequest.m in Sources */,
 				481A74761F8F720E00EF3242 /* TMVipModel.m in Sources */,
 				48C152F31F739D6200C577AB /* BaseTableCell.m in Sources */,
+				481A74C81F90AAFD00EF3242 /* ItemPropertyModel.m in Sources */,
 				4845D34F1F7B5525004D884B /* ZLFailedAndReloadView.m in Sources */,
 				481A74411F8F720E00EF3242 /* TMChangeNickController.m in Sources */,
 				481A74671F8F720E00EF3242 /* MHModule16Cell.m in Sources */,
 				481A746B1F8F720E00EF3242 /* MHModule20Cell.m in Sources */,
 				481A74461F8F720E00EF3242 /* TMUserInfoResultModel.m in Sources */,
+				481A74F01F90B82500EF3242 /* ItemResultModel.m in Sources */,
 				481A74561F8F720E00EF3242 /* Instrument02View.m in Sources */,
 				481A74521F8F720E00EF3242 /* MHResultModel.m in Sources */,
 				481A74711F8F720E00EF3242 /* BecomeMemberController.m in Sources */,
@@ -1683,8 +1836,12 @@
 				481A74881F8F720E00EF3242 /* OrderListController.m in Sources */,
 				481A74811F8F720E00EF3242 /* PMCategoryModuleView.m in Sources */,
 				481A74891F8F720E00EF3242 /* OrderPagerController.m in Sources */,
+				481A74DC1F90AFFB00EF3242 /* ItemShopInfoModel.m in Sources */,
 				481A745C1F8F720E00EF3242 /* MHModule05Cell.m in Sources */,
+				481A74CA1F90AAFD00EF3242 /* ItemSKUInfoModel.m in Sources */,
 				481A74801F8F720E00EF3242 /* ProductListResultModel.m in Sources */,
+				481A74F41F90BE1400EF3242 /* ItemCoverImageModel.m in Sources */,
+				481A74FE1F90C29200EF3242 /* ItemRequest.m in Sources */,
 				48C152F41F739D6200C577AB /* ZLNavigationController.m in Sources */,
 				48C153021F73A10000C577AB /* ApplicationEntity.m in Sources */,
 				481A74641F8F720E00EF3242 /* MHModule13Cell.m in Sources */,
@@ -1695,6 +1852,7 @@
 				48C152F91F739D6200C577AB /* ZLModuleEntity.m in Sources */,
 				481A74751F8F720E00EF3242 /* TMMineOrderModel.m in Sources */,
 				48C152F51F739D6200C577AB /* ZLTabbarController.m in Sources */,
+				481A74A51F908DEA00EF3242 /* ItemToolBarView.m in Sources */,
 				481A74631F8F720E00EF3242 /* MHModule12Cell.m in Sources */,
 				481A74571F8F720E00EF3242 /* Instrument03View.m in Sources */,
 				481A732E1F8CA5DA00EF3242 /* UIDevice+ZLEX.m in Sources */,
@@ -1717,7 +1875,9 @@
 				481A74541F8F720E00EF3242 /* MallHomeRequest.m in Sources */,
 				48089B431F7CDD9B00DAF1B6 /* NSMutableArray+Safe.m in Sources */,
 				481A745D1F8F720E00EF3242 /* MHModule06Cell.m in Sources */,
+				481A74F81F90BEFD00EF3242 /* ItemDetailContentModel.m in Sources */,
 				481A74511F8F720E00EF3242 /* MHModuleModel.m in Sources */,
+				481A74B51F90AA0E00EF3242 /* ItemPropertyKVModel.m in Sources */,
 				481A746F1F8F720E00EF3242 /* MHModule24Cell.m in Sources */,
 				481A74A21F8F79FB00EF3242 /* MallItemController.m in Sources */,
 				48089B4F1F7CF65400DAF1B6 /* ZLMyBaseView.m in Sources */,
@@ -1726,12 +1886,15 @@
 				48C152FA1F739D6200C577AB /* ZLNavigationService.m in Sources */,
 				48C152F71F739D6200C577AB /* UserInfoService.m in Sources */,
 				48C1533F1F73C03800C577AB /* UIView+ZLEX.m in Sources */,
+				481A74C71F90AAFD00EF3242 /* ItemDefaultSKUInfoModel.m in Sources */,
+				481A74C91F90AAFD00EF3242 /* ItemSKUCoverModel.m in Sources */,
 				481A744A1F8F720E00EF3242 /* MallHomeController.m in Sources */,
 				481A747A1F8F720E00EF3242 /* MineOrderCell.m in Sources */,
 				48C152FD1F739D6200C577AB /* ZLTabbar.m in Sources */,
 				481A747B1F8F720E00EF3242 /* PMProductListController.m in Sources */,
 				481A74721F8F720E00EF3242 /* MineController.m in Sources */,
 				481A74661F8F720E00EF3242 /* MHModule15Cell.m in Sources */,
+				481A74FB1F90C06100EF3242 /* ItemInfoModel.m in Sources */,
 				481A744C1F8F720E00EF3242 /* MHHeaderBarModel.m in Sources */,
 				481A74441F8F720E00EF3242 /* LoginController.m in Sources */,
 				4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */,
@@ -1740,13 +1903,16 @@
 				481A74431F8F720E00EF3242 /* TMSingleCell.m in Sources */,
 				48089B441F7CDD9B00DAF1B6 /* NSMutableDictionary+Safe.m in Sources */,
 				481A745E1F8F720E00EF3242 /* MHModule07Cell.m in Sources */,
+				481A74EA1F90B6A700EF3242 /* ItemRecommendModel.m in Sources */,
 				481A74911F8F735300EF3242 /* MyCollectionPagerController.m in Sources */,
 				481A74831F8F720E00EF3242 /* PMInstrumentCell.m in Sources */,
 				48C152EF1F739D6200C577AB /* BaseController.m in Sources */,
+				481A74CB1F90AAFD00EF3242 /* ItemStockInfoModel.m in Sources */,
 				48C1533C1F73C03800C577AB /* UIButton+ZLEX.m in Sources */,
 				4806F87B1F74F1B500A5B3CD /* StatusModel.m in Sources */,
 				4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */,
 				481A74851F8F720E00EF3242 /* PMTitleHeaderCell.m in Sources */,
+				481A74ED1F90B70000EF3242 /* ItemRecommendsInfoModel.m in Sources */,
 				48089B2B1F7BB06B00DAF1B6 /* ShowToast.m in Sources */,
 				4845D3491F7B3D75004D884B /* UIColor+ZLEX.m in Sources */,
 				481A74401F8F720E00EF3242 /* TMChangeGenderController.m in Sources */,
@@ -1760,6 +1926,7 @@
 				481A744F1F8F720E00EF3242 /* MHHeaderTitleModel.m in Sources */,
 				481A74451F8F720E00EF3242 /* TMUserInfoModel.m in Sources */,
 				481A735D1F8F558300EF3242 /* ZLPagerController.m in Sources */,
+				481A74D91F90AFDD00EF3242 /* DSRValueModel.m in Sources */,
 				481A74551F8F720E00EF3242 /* Instrument01View.m in Sources */,
 				481A745A1F8F720E00EF3242 /* MHModule03Cell.m in Sources */,
 				481A747D1F8F720E00EF3242 /* PMCatesModel.m in Sources */,
@@ -1794,12 +1961,15 @@
 				48C152EE1F739D6200C577AB /* AppModuleEntity.m in Sources */,
 				481A74841F8F720E00EF3242 /* PMInstrumentView.m in Sources */,
 				4845D3581F7BAC0D004D884B /* ZLPageCountView.m in Sources */,
+				481A74E31F90B26000EF3242 /* ItemCommentsInfoModel.m in Sources */,
+				481A74D81F90AFDD00EF3242 /* DSRModel.m in Sources */,
 				48C1533D1F73C03800C577AB /* UIImage+ZLEX.m in Sources */,
 				481A734F1F8DCBA900EF3242 /* BaseWebController.m in Sources */,
 				485D211D1F78D5370033DD20 /* InstViewLayout.m in Sources */,
 				481A74501F8F720E00EF3242 /* MHItemModel.m in Sources */,
 				48C152F21F739D6200C577AB /* BaseApplicationEntity.m in Sources */,
 				4806F8781F74E94800A5B3CD /* ZLNetworkCaptain.m in Sources */,
+				481A74E01F90B1F800EF3242 /* ItemCommentModel.m in Sources */,
 				48C152FE1F739D6200C577AB /* ZLTabbarItem.m in Sources */,
 				48C152F01F739D6200C577AB /* BaseTableController.m in Sources */,
 				481A74771F8F720E00EF3242 /* MineRequest.m in Sources */,
