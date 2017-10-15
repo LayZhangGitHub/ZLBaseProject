@@ -10,4 +10,14 @@
 
 @implementation ItemSKUInfoModel
 
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{
+             @"properties" : [ItemPropertyModel class],
+             @"stockInfo" : [ItemStockInfoModel class],
+             @"covers" : [ItemSKUCoverModel class]
+             };
+}
+
+
 @end

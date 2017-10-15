@@ -34,7 +34,7 @@
 #define ZLBlackColor    [UIColor blackColor]
 #define ZLRedColor      [UIColor redColor]
 
-#define ZLRGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define ZLRGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 #define ZLRGB(r,g,b)    ZLRGBA(r,g,b,1)
 #define ZLGray(g)       ZLRGB(g,g,g)
 

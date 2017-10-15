@@ -10,4 +10,11 @@
 
 @implementation ItemPropertyModel
 
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{
+             @"propertyValueList" : [ItemPropertyKVModel class]
+             };
+}
+
 @end

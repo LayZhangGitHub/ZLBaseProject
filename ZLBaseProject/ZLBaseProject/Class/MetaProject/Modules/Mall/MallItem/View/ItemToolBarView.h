@@ -17,7 +17,7 @@
 
 @interface ItemToolBarModel : NSObject
 
-- (instancetype)initWithIsFav:(BOOL)isFav status:(NSString *)status;
++ (instancetype)modelWithIsFav:(BOOL)isFav status:(NSString *)status;
 
 @property (nonatomic, assign) BOOL isFav;       // 是否收藏
 @property (nonatomic, strong) NSString *status; // 销售 状态  正常、售罄、下架

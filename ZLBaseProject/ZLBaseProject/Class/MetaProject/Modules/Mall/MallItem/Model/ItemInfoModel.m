@@ -10,4 +10,11 @@
 
 @implementation ItemInfoModel
 
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{
+             @"detailContent" : [ItemDetailContentModel class]
+             };
+}
+
+
 @end

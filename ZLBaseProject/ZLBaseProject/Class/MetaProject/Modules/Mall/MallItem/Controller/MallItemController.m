@@ -39,24 +39,24 @@
     
     self.title = @"商品详情";
     
-//    UIButton *shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    shareButton.frame = CGRectMake(0, 0, 40, 20);
-//    [shareButton setImage:[UIImage imageNamed:@"mall_item_share"] forState:UIControlStateNormal];
-//    [shareButton addTarget:self action:@selector(handleShareButton) forControlEvents:UIControlEventTouchUpInside];
-//    self.navigationBar.rightButton = shareButton;
-//    self.shareButton = shareButton;
-//    
-//    UIButton *cartButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    cartButton.frame = CGRectMake(0, 0, 40, 20);
-//    [cartButton setImage:[UIImage imageNamed:@"btn_cart"] forState:UIControlStateNormal];
-//    [cartButton setImage:[UIImage imageNamed:@"btn_cart_unempty"] forState:UIControlStateSelected];
-//    [cartButton addTarget:self action:@selector(handleShowCartButton) forControlEvents:UIControlEventTouchUpInside];
-//    self.navigationBar.rightDesButton = cartButton;
-//    self.cartButton = cartButton;
-//    
-//    self.contentTableView.height = SCREENHEIGHT - NAVBARHEIGHT;
-//    
-//    [self initData];
+    UIButton *shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    shareButton.frame = CGRectMake(0, 0, 40, 20);
+    [shareButton setImage:[UIImage imageNamed:@"mall_item_share"] forState:UIControlStateNormal];
+    [shareButton addTarget:self action:@selector(handleShareButton) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationBar.rightButton = shareButton;
+    self.shareButton = shareButton;
+    
+    UIButton *cartButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    cartButton.frame = CGRectMake(0, 0, 40, 20);
+    [cartButton setImage:[UIImage imageNamed:@"btn_cart"] forState:UIControlStateNormal];
+    [cartButton setImage:[UIImage imageNamed:@"btn_cart_unempty"] forState:UIControlStateSelected];
+    [cartButton addTarget:self action:@selector(handleShowCartButton) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationBar.rightDesButton = cartButton;
+    self.cartButton = cartButton;
+    
+    self.contentTableView.height = SCREENHEIGHT - NAVBARHEIGHT;
+    
+    [self initData];
 }
 
 - (void)initData {
@@ -69,7 +69,7 @@
         _itemToolBarView = [[ItemToolBarView alloc] init];
         _itemToolBarView.frame = CGRectMake(0, SCREENHEIGHT - 45, SCREENWIDTH, 45);
         _itemToolBarView.delegate = self;
-        _itemToolBarView.model = [[ItemToolBarModel alloc] initWithIsFav:NO status:StatusUnderCarriage];
+        _itemToolBarView.model = [ItemToolBarModel modelWithIsFav:NO status:StatusOnSell];
     }
     return _itemToolBarView;
 }
@@ -127,6 +127,7 @@
 //            [self.view addSubview:self.pointToolBarView];
         }else {
             [self.view addSubview:self.itemToolBarView];
+            self.itemToolBarView.model = [ItemToolBarModel modelWithIsFav:self.itemInfoModel.isFav status:self.itemInfoModel.status];
         }
         
         [self reloadData];

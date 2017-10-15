@@ -70,7 +70,7 @@
         self.likeImageView.image = [UIImage imageNamed:@"icon_like"];
     }
     
-    if ( [model.status isEqualToString:StatusOnSell]) {
+    if ([model.status isEqualToString:StatusOnSell]) {
         self.buyButton.enabled = YES;
         self.addToCartButton.enabled = YES;
         self.addToCartButton.alpha = 1;
@@ -82,10 +82,10 @@
         self.addToCartButton.alpha = 0.38;
         self.buyButton.alpha = 0.38;
         
-        if ( [StatusSellOut isEqualToString:model.status] ) {
+        if ([StatusSellOut isEqualToString:model.status]) {
             self.statusLabel.hidden = NO;
             self.statusLabel.text = @"已售罄";
-        } else if ( [StatusUnderCarriage isEqualToString:model.status] ) {
+        } else if ([StatusUnderCarriage isEqualToString:model.status]) {
             self.statusLabel.hidden = NO;
             self.statusLabel.text = @"已下架";
         }
@@ -324,6 +324,10 @@
 @end
 
 @implementation ItemToolBarModel
+
++ (instancetype)modelWithIsFav:(BOOL)isFav status:(NSString *)status {
+    return [[ItemToolBarModel alloc] initWithIsFav:isFav status:status];
+}
 
 - (instancetype)initWithIsFav:(BOOL)isFav status:(NSString *)status {
     if (self = [super init]) {
