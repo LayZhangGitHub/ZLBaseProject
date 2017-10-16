@@ -16,7 +16,7 @@
     dispatch_once(&onceToken, ^{
         
         Class arrayMClass = NSClassFromString(@"__NSArrayM");
-        // 获取索引元素
+        // 获取索引元素  objectAtIndex: , objectAtIndexedSubscript: , has same behavior???
         [arrayMClass exchangeInstanceMethodFromSel:@selector(objectAtIndex:)
                                              toSel:@selector(safeObjectAtIndexM:)];
         
@@ -26,6 +26,9 @@
         // 索替换
         [arrayMClass exchangeInstanceMethodFromSel:@selector(setObject:atIndexedSubscript:)
                                              toSel:@selector(setSafeObject:atIndexedSubscript:)];
+        
+        [arrayMClass exchangeInstanceMethodFromSel:@selector(setObject:atIndex:)
+                                             toSel:@selector(setSafeObject:atIndex:)];
         
         // 索引移除
         [arrayMClass exchangeInstanceMethodFromSel:@selector(removeObjectAtIndex:)
@@ -57,7 +60,8 @@
     
     id object = nil;
     @try {
-        object = [self safeObjectAtIndexedSubscriptM:index];
+        // bugs here  iOS11 和 之前的 不一样 safeObjectAtIndexedSubscriptM会陷入循环调用
+        object = [self safeObjectAtIndexM:index];
     }
     @catch (NSException *exception) {
         NSString *reason = @"__NSArrayM objectAtIndexedSubscript return nil.";
@@ -72,6 +76,19 @@
 - (void)setSafeObject:(id)obj atIndexedSubscript:(NSUInteger)idx {
     @try {
         [self setSafeObject:obj atIndexedSubscript:idx];
+    }
+    @catch (NSException *exception) {
+        NSString *reason = @"__NSArrayM setObject atIndexedSubscript maybe nil";
+        [NSObject noticeException:exception withReason:reason];
+    }
+    @finally {
+        
+    }
+}
+
+- (void)setSafeObject:(id)obj atIndex:(NSUInteger)idx {
+    @try {
+        [self setSafeObject:obj atIndex:idx];
     }
     @catch (NSException *exception) {
         NSString *reason = @"__NSArrayM setObject maybe nil";
