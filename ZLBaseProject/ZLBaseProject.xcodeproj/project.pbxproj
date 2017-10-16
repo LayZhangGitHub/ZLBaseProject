@@ -127,6 +127,13 @@
 		481A74F81F90BEFD00EF3242 /* ItemDetailContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74F71F90BEFC00EF3242 /* ItemDetailContentModel.m */; };
 		481A74FB1F90C06100EF3242 /* ItemInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74FA1F90C06100EF3242 /* ItemInfoModel.m */; };
 		481A74FE1F90C29200EF3242 /* ItemRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A74FD1F90C29200EF3242 /* ItemRequest.m */; };
+		481A75011F9459AC00EF3242 /* PointToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A75001F9459AC00EF3242 /* PointToolBarView.m */; };
+		481A75051F9464C600EF3242 /* ItemCoverImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A75041F9464C600EF3242 /* ItemCoverImageCell.m */; };
+		481A75081F948D5D00EF3242 /* ZLPhotoBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A75071F948D5D00EF3242 /* ZLPhotoBrowserView.m */; };
+		481A750B1F94905900EF3242 /* ItemInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A750A1F94905900EF3242 /* ItemInfoCell.m */; };
+		481A750E1F949A1E00EF3242 /* ItemRebateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A750D1F949A1E00EF3242 /* ItemRebateCell.m */; };
+		481A75111F94A4E300EF3242 /* ItemTipsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A75101F94A4E300EF3242 /* ItemTipsCell.m */; };
+		481A75141F94A9ED00EF3242 /* ItemSUKSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A75131F94A9ED00EF3242 /* ItemSUKSelectCell.m */; };
 		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
 		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
 		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
@@ -413,6 +420,20 @@
 		481A74FA1F90C06100EF3242 /* ItemInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemInfoModel.m; sourceTree = "<group>"; };
 		481A74FC1F90C29200EF3242 /* ItemRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemRequest.h; sourceTree = "<group>"; };
 		481A74FD1F90C29200EF3242 /* ItemRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemRequest.m; sourceTree = "<group>"; };
+		481A74FF1F9459AC00EF3242 /* PointToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointToolBarView.h; sourceTree = "<group>"; };
+		481A75001F9459AC00EF3242 /* PointToolBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointToolBarView.m; sourceTree = "<group>"; };
+		481A75031F9464C600EF3242 /* ItemCoverImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCoverImageCell.h; sourceTree = "<group>"; };
+		481A75041F9464C600EF3242 /* ItemCoverImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCoverImageCell.m; sourceTree = "<group>"; };
+		481A75061F948D5D00EF3242 /* ZLPhotoBrowserView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLPhotoBrowserView.h; sourceTree = "<group>"; };
+		481A75071F948D5D00EF3242 /* ZLPhotoBrowserView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLPhotoBrowserView.m; sourceTree = "<group>"; };
+		481A75091F94905900EF3242 /* ItemInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemInfoCell.h; sourceTree = "<group>"; };
+		481A750A1F94905900EF3242 /* ItemInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemInfoCell.m; sourceTree = "<group>"; };
+		481A750C1F949A1E00EF3242 /* ItemRebateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemRebateCell.h; sourceTree = "<group>"; };
+		481A750D1F949A1E00EF3242 /* ItemRebateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemRebateCell.m; sourceTree = "<group>"; };
+		481A750F1F94A4E300EF3242 /* ItemTipsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemTipsCell.h; sourceTree = "<group>"; };
+		481A75101F94A4E300EF3242 /* ItemTipsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemTipsCell.m; sourceTree = "<group>"; };
+		481A75121F94A9ED00EF3242 /* ItemSUKSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemSUKSelectCell.h; sourceTree = "<group>"; };
+		481A75131F94A9ED00EF3242 /* ItemSUKSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemSUKSelectCell.m; sourceTree = "<group>"; };
 		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
 		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
 		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
@@ -1272,8 +1293,11 @@
 		481A749F1F8F79DE00EF3242 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				481A75021F9464A100EF3242 /* Cell */,
 				481A74A31F908DEA00EF3242 /* ItemToolBarView.h */,
 				481A74A41F908DEA00EF3242 /* ItemToolBarView.m */,
+				481A74FF1F9459AC00EF3242 /* PointToolBarView.h */,
+				481A75001F9459AC00EF3242 /* PointToolBarView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1355,6 +1379,23 @@
 				481A74F71F90BEFC00EF3242 /* ItemDetailContentModel.m */,
 			);
 			path = DetailContent;
+			sourceTree = "<group>";
+		};
+		481A75021F9464A100EF3242 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				481A75031F9464C600EF3242 /* ItemCoverImageCell.h */,
+				481A75041F9464C600EF3242 /* ItemCoverImageCell.m */,
+				481A75091F94905900EF3242 /* ItemInfoCell.h */,
+				481A750A1F94905900EF3242 /* ItemInfoCell.m */,
+				481A750C1F949A1E00EF3242 /* ItemRebateCell.h */,
+				481A750D1F949A1E00EF3242 /* ItemRebateCell.m */,
+				481A750F1F94A4E300EF3242 /* ItemTipsCell.h */,
+				481A75101F94A4E300EF3242 /* ItemTipsCell.m */,
+				481A75121F94A9ED00EF3242 /* ItemSUKSelectCell.h */,
+				481A75131F94A9ED00EF3242 /* ItemSUKSelectCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		485D211A1F78D4B20033DD20 /* Layout */ = {
@@ -1620,6 +1661,8 @@
 				48C152EB1F739D6200C577AB /* ZLTabbar.m */,
 				48C152EC1F739D6200C577AB /* ZLTabbarItem.h */,
 				48C152ED1F739D6200C577AB /* ZLTabbarItem.m */,
+				481A75061F948D5D00EF3242 /* ZLPhotoBrowserView.h */,
+				481A75071F948D5D00EF3242 /* ZLPhotoBrowserView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1777,7 +1820,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		796F2E6852C4CDB257FB509C /* [CP] Copy Pods Resources */ = {
@@ -1817,6 +1860,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481A750B1F94905900EF3242 /* ItemInfoCell.m in Sources */,
+				481A75051F9464C600EF3242 /* ItemCoverImageCell.m in Sources */,
 				481A74421F8F720E00EF3242 /* TMSettingCell.m in Sources */,
 				481A743E1F8F720E00EF3242 /* ConsigneeSelectController.m in Sources */,
 				481A74861F8F720E00EF3242 /* PointMallRequest.m in Sources */,
@@ -1833,8 +1878,10 @@
 				481A74521F8F720E00EF3242 /* MHResultModel.m in Sources */,
 				481A74711F8F720E00EF3242 /* BecomeMemberController.m in Sources */,
 				481A746D1F8F720E00EF3242 /* MHModule22Cell.m in Sources */,
+				481A75141F94A9ED00EF3242 /* ItemSUKSelectCell.m in Sources */,
 				481A74881F8F720E00EF3242 /* OrderListController.m in Sources */,
 				481A74811F8F720E00EF3242 /* PMCategoryModuleView.m in Sources */,
+				481A75111F94A4E300EF3242 /* ItemTipsCell.m in Sources */,
 				481A74891F8F720E00EF3242 /* OrderPagerController.m in Sources */,
 				481A74DC1F90AFFB00EF3242 /* ItemShopInfoModel.m in Sources */,
 				481A745C1F8F720E00EF3242 /* MHModule05Cell.m in Sources */,
@@ -1878,6 +1925,7 @@
 				481A74F81F90BEFD00EF3242 /* ItemDetailContentModel.m in Sources */,
 				481A74511F8F720E00EF3242 /* MHModuleModel.m in Sources */,
 				481A74B51F90AA0E00EF3242 /* ItemPropertyKVModel.m in Sources */,
+				481A750E1F949A1E00EF3242 /* ItemRebateCell.m in Sources */,
 				481A746F1F8F720E00EF3242 /* MHModule24Cell.m in Sources */,
 				481A74A21F8F79FB00EF3242 /* MallItemController.m in Sources */,
 				48089B4F1F7CF65400DAF1B6 /* ZLMyBaseView.m in Sources */,
@@ -1935,6 +1983,7 @@
 				48C153231F73BF7000C577AB /* ZLThemeControl.m in Sources */,
 				481A746E1F8F720E00EF3242 /* MHModule23Cell.m in Sources */,
 				4845D34C1F7B48B2004D884B /* ZLTipsView.m in Sources */,
+				481A75081F948D5D00EF3242 /* ZLPhotoBrowserView.m in Sources */,
 				481A74681F8F720E00EF3242 /* MHModule17Cell.m in Sources */,
 				481A735A1F8F425100EF3242 /* MallModuleEntity.m in Sources */,
 				481A74871F8F720E00EF3242 /* CartController.m in Sources */,
@@ -1965,6 +2014,7 @@
 				481A74D81F90AFDD00EF3242 /* DSRModel.m in Sources */,
 				48C1533D1F73C03800C577AB /* UIImage+ZLEX.m in Sources */,
 				481A734F1F8DCBA900EF3242 /* BaseWebController.m in Sources */,
+				481A75011F9459AC00EF3242 /* PointToolBarView.m in Sources */,
 				485D211D1F78D5370033DD20 /* InstViewLayout.m in Sources */,
 				481A74501F8F720E00EF3242 /* MHItemModel.m in Sources */,
 				48C152F21F739D6200C577AB /* BaseApplicationEntity.m in Sources */,

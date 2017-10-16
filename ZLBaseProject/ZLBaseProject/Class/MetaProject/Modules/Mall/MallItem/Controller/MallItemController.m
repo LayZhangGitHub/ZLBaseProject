@@ -8,18 +8,50 @@
 
 #import "MallItemController.h"
 
+#import "BaseTableCell.h"
+#import "ItemCoverImageCell.h"
+#import "ItemInfoCell.h"
+#import "ItemRebateCell.h"
+#import "ItemTipsCell.h"
+
 #import "ItemToolBarView.h"
+#import "PointToolBarView.h"
 
 #import "ItemResultModel.h"
 
 #import "ItemRequest.h"
 
-@interface MallItemController ()<ItemToolBarDelegate>
+static CGFloat const toolBarHeight = 45.;
+
+typedef NS_ENUM(NSInteger, ItemDetailSection) {
+    ItemDetailSectionItem       = 0,
+    ItemDetailSectionSKU        = 1,
+    ItemDetailSectionComment    = 2,
+    ItemDetailSectionShop       = 3,
+    ItemDetailSectionImages     = 4,
+    ItemDetailSectionRecommend  = 5,
+    ItemDetailSectionEmpty      = 6,
+};
+
+typedef NS_ENUM(NSInteger, ItemDetailRow) {
+    ItemDetailRowImage  = 0,
+    ItemDetailRowInfo   = 1,
+    ItemDetailRowRule   = 2,
+    ItemDetailRowTip    = 4,
+};
+
+const NSInteger itemDetailSKURowInfo        = 0;
+const NSInteger itemDetailCommentRowHead    = 0;
+const NSInteger itemDetailShopRowInfo       = 0;
+const NSInteger itemDetailContentRowHead    = 0;
+
+@interface MallItemController ()<ItemToolBarDelegate, PointToolbarDelegate, ItemCoverImageCellDelegate, ItemInfoCellDelegate>
 
 @property (nonatomic, strong) UIButton *shareButton;
 @property (nonatomic, strong) UIButton *cartButton;
 
 @property (nonatomic, strong) ItemToolBarView *itemToolBarView;
+@property (nonatomic, strong) PointToolBarView *pointToolBarView;
 
 @property (nonatomic, strong) ItemInfoModel *itemInfoModel;
 @property (nonatomic, strong) ItemRecommendsInfoModel *recommendsInfoModel;
@@ -36,6 +68,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = ZLGray(245);
     
     self.title = @"商品详情";
     
@@ -54,7 +88,7 @@
     self.navigationBar.rightDesButton = cartButton;
     self.cartButton = cartButton;
     
-    self.contentTableView.height = SCREENHEIGHT - NAVBARHEIGHT;
+    self.contentTableView.height = SCREENHEIGHT - NAVBARHEIGHT - toolBarHeight;
     
     [self initData];
 }
@@ -67,11 +101,260 @@
 - (ItemToolBarView *)itemToolBarView {
     if (!_itemToolBarView) {
         _itemToolBarView = [[ItemToolBarView alloc] init];
-        _itemToolBarView.frame = CGRectMake(0, SCREENHEIGHT - 45, SCREENWIDTH, 45);
+        _itemToolBarView.frame = CGRectMake(0, SCREENHEIGHT - toolBarHeight, SCREENWIDTH, toolBarHeight);
         _itemToolBarView.delegate = self;
         _itemToolBarView.model = [ItemToolBarModel modelWithIsFav:NO status:StatusOnSell];
     }
     return _itemToolBarView;
+}
+
+- (PointToolBarView *)pointToolBarView {
+    if (!_pointToolBarView) {
+        _pointToolBarView = [[PointToolBarView alloc] init];
+        _pointToolBarView.frame = CGRectMake(0, SCREENHEIGHT - toolBarHeight, SCREENWIDTH, toolBarHeight);
+        _pointToolBarView.delegate = self;
+    }
+    return _pointToolBarView;
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 7;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    switch (section) {
+        case ItemDetailSectionItem:
+            return 6;
+            break;
+        case ItemDetailSectionSKU:
+            return 2;
+            break;
+        case ItemDetailSectionComment:
+            return 2 + self.commentsInfoModel.comments.count + 1;
+            break;
+        case ItemDetailSectionShop:
+            return self.shopInfoModel ? 2 : 0;
+            break;
+        case ItemDetailSectionImages: {
+            if (self.itemInfoModel) {
+                return self.itemInfoModel.detailContent.count + 1;
+            } else {
+                return 1;
+            }
+        }
+            break;
+        case ItemDetailSectionRecommend:
+            return 1 + ceil(self.recommendsInfoModel.list.count /2.);
+            break;
+        case ItemDetailSectionEmpty:
+            return 1;
+            break;
+        default:
+            break;
+    }
+    
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger section = indexPath.section;
+    NSInteger row = indexPath.row;
+    
+    switch (section) {
+        case ItemDetailSectionItem: {
+            switch (row) {
+                case ItemDetailRowImage: {
+                    ItemCoverImageCell *cell = [ItemCoverImageCell dequeueReusableCellForTableView:tableView];
+                    self.itemInfoModel.coverImage.src = @[self.itemInfoModel.coverImage.src[0], self.itemInfoModel.coverImage.src[0], self.itemInfoModel.coverImage.src[0]];
+                    cell.cellData = self.itemInfoModel.coverImage;
+                    cell.delegate = self;
+                    return cell;
+                }
+                    break;
+                case ItemDetailRowInfo: {
+                    ItemInfoCell *cell = [ItemInfoCell dequeueReusableCellForTableView:tableView];
+                    cell.cellData = self.itemInfoModel;
+                    cell.delegate = self;
+                    cell.showShare = NO;
+                    return cell;
+                }
+                    break;
+                case ItemDetailRowRule: {
+                    ItemRebateCell *cell = [ItemRebateCell dequeueReusableCellForTableView:tableView];
+                    cell.cellData = self.cashback;
+                    return cell;
+                }
+                    break;
+                case ItemDetailRowTip: {
+                    ItemTipsCell *cell = [ItemTipsCell dequeueReusableCellForTableView:tableView];
+                    cell.cellData = self.quotaDesc;
+                    return cell;
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+        case ItemDetailSectionSKU: {
+            if (itemDetailSKURowInfo == row) {
+                
+            }
+        }
+            break;
+        case ItemDetailSectionComment: {
+            if (itemDetailCommentRowHead == row) {
+                
+            }
+            else if (row <= self.commentsInfoModel.comments.count){
+                
+            }
+            else if(row <= self.commentsInfoModel.comments.count + 1){
+                
+            }
+        }
+            break;
+        case ItemDetailSectionShop: {
+            if (itemDetailShopRowInfo == row ) {
+                
+            }
+        }
+            break;
+        case ItemDetailSectionImages:
+            if (itemDetailContentRowHead == row ) {
+                
+            } else {
+                ItemDetailContentModel *itemContent = self.itemInfoModel.detailContent[row - 1];
+                if (itemContent) {
+                    if ( [@"image" isEqualToString:itemContent.type] ) {
+                        
+                    } else if ( [@"text" isEqualToString:itemContent.type] ) {
+                        
+                    }
+                    
+                }
+            }
+            break;
+        case ItemDetailSectionRecommend: {
+            if (row == 0) {
+            }else{
+            }
+        }
+            break;
+        case ItemDetailSectionEmpty:
+            break;
+        default:
+            break;
+    }
+    
+    BaseTableCell *cell = [BaseTableCell dequeueReusableCellForTableView:tableView];
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = 0;
+    NSInteger section = indexPath.section;
+    NSInteger row = indexPath.row;
+    switch (section) {
+        case ItemDetailSectionItem: {
+            switch (row) {
+                case ItemDetailRowImage:
+                    height = [[ItemCoverImageCell heightForCell:self.itemInfoModel.coverImage] floatValue];
+                    break;
+                case ItemDetailRowInfo:
+                    height = [[ItemInfoCell heightForCell:self.itemInfoModel] floatValue];
+                    break;
+                case ItemDetailRowRule:
+                    height = [[ItemRebateCell heightForCell:self.cashback] floatValue];
+                    break;
+                case ItemDetailRowTip:
+                    height = [[ItemTipsCell heightForCell:self.quotaDesc] floatValue];
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+        case ItemDetailSectionSKU: {
+            if (itemDetailSKURowInfo == row) {
+                
+            }
+        }
+            break;
+        case ItemDetailSectionComment: {
+            if (itemDetailCommentRowHead == row) {
+                
+            }
+            else if (row <= self.commentsInfoModel.comments.count){
+                
+            }
+            else if(row <= self.commentsInfoModel.comments.count + 1){
+                
+            }
+        }
+            break;
+        case ItemDetailSectionShop: {
+            if (itemDetailShopRowInfo == row ) {
+                
+            }
+        }
+            break;
+        case ItemDetailSectionImages:
+            if (itemDetailContentRowHead == row ) {
+                
+            } else {
+                ItemDetailContentModel *itemContent = self.itemInfoModel.detailContent[row - 1];
+                if (itemContent) {
+                    if ( [@"image" isEqualToString:itemContent.type] ) {
+                        
+                    } else if ( [@"text" isEqualToString:itemContent.type] ) {
+                        
+                    }
+                    
+                }
+            }
+            break;
+        case ItemDetailSectionRecommend: {
+            if (row == 0) {
+            }else{
+            }
+        }
+            break;
+        case ItemDetailSectionEmpty:
+            break;
+        default:
+            break;
+    }
+    
+    return height;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSInteger section = indexPath.section;
+//    NSInteger row = indexPath.row;
+//
+//    if (ITEM_DETAIL_SECTION_SKU == section) {
+//        if (ITEM_DETAIL_SKU_ROW_INFO == row) {
+//            [self addToCartButtonDidClick];
+//        }
+//    }else if (ITEM_DETAIL_SECTION_COMMENT == section) {
+//        if (ITEM_DETAIL_COMMENT_ROW_HEAD == row||(row == self.commentInfo.comments.count+1)) {
+//            [[TTNavigationService sharedService] openUrl:self.commentInfo.link];
+//        }
+//    }
+}
+
+#pragma mark - image pannel
+- (void)didTapCoverImageAtIndex:(NSInteger)index {
+    
+}
+
+#pragma mark - ItemInfoCellDelegate
+- (void)cell:(ItemInfoCell *)cell shareButtonTapped:(id)model {
+    [self handleShareButton];
 }
 
 #pragma mark - handle action
@@ -119,12 +402,10 @@
         }
         
         //        [self hideErrorTips];
-//        [self finishRefresh];
         [self didRefresh];
         
-        //        [self.view addSubview:self.toolbarView];
         if ([self.itemInfoModel.type isEqualToString:@"1"]) {
-//            [self.view addSubview:self.pointToolBarView];
+            [self.view addSubview:self.pointToolBarView];
         }else {
             [self.view addSubview:self.itemToolBarView];
             self.itemToolBarView.model = [ItemToolBarModel modelWithIsFav:self.itemInfoModel.isFav status:self.itemInfoModel.status];
