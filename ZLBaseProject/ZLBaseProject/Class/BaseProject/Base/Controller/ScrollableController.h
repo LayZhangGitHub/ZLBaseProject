@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, ScrollViewRefreshType) {
 @property (nonatomic, assign) BOOL      isBackToTop;
 @property (nonatomic, strong) UIButton  *backToTopButton;
 @property (nonatomic, assign) CGFloat   lastPosition;
+@property (nonatomic, strong) NSString  *wp;
 
 - (void)willRefresh;
 - (void)doRefresh;

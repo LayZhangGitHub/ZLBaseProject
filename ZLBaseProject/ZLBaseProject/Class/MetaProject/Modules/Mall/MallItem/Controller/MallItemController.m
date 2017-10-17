@@ -13,6 +13,14 @@
 #import "ItemInfoCell.h"
 #import "ItemRebateCell.h"
 #import "ItemTipsCell.h"
+#import "ItemSKUSelectCell.h"
+#import "ItemCommentHeadCell.h"
+#import "ItemCommentContentCell.h"
+#import "ItemCommentFootCell.h"
+#import "ItemShopInfoCell.h"
+#import "ItemContentHeadCell.h"
+#import "ItemContentImageCell.h"
+#import "ItemContentTextCell.h"
 
 #import "ItemToolBarView.h"
 #import "PointToolBarView.h"
@@ -167,7 +175,8 @@ const NSInteger itemDetailContentRowHead    = 0;
             switch (row) {
                 case ItemDetailRowImage: {
                     ItemCoverImageCell *cell = [ItemCoverImageCell dequeueReusableCellForTableView:tableView];
-                    self.itemInfoModel.coverImage.src = @[self.itemInfoModel.coverImage.src[0], self.itemInfoModel.coverImage.src[0], self.itemInfoModel.coverImage.src[0]];
+                    // debug
+//                    self.itemInfoModel.coverImage.src = @[self.itemInfoModel.coverImage.src[0], self.itemInfoModel.coverImage.src[0], self.itemInfoModel.coverImage.src[0]];
                     cell.cellData = self.itemInfoModel.coverImage;
                     cell.delegate = self;
                     return cell;
@@ -200,7 +209,10 @@ const NSInteger itemDetailContentRowHead    = 0;
             break;
         case ItemDetailSectionSKU: {
             if (itemDetailSKURowInfo == row) {
-                
+                ItemSKUSelectCell *cell = [ItemSKUSelectCell dequeueReusableCellForTableView:tableView];
+                cell.cellData = self.selectedSkus;
+                [cell reloadData];
+                return cell;
             }
         }
             break;
@@ -224,14 +236,19 @@ const NSInteger itemDetailContentRowHead    = 0;
             break;
         case ItemDetailSectionImages:
             if (itemDetailContentRowHead == row ) {
-                
+                ItemContentHeadCell *cell = [ItemContentHeadCell dequeueReusableCellForTableView:self.contentTableView];
+                return cell;
             } else {
                 ItemDetailContentModel *itemContent = self.itemInfoModel.detailContent[row - 1];
                 if (itemContent) {
-                    if ( [@"image" isEqualToString:itemContent.type] ) {
-                        
+                    if ([@"image" isEqualToString:itemContent.type]) {
+                        ItemContentImageCell *cell = [ItemContentImageCell dequeueReusableCellForTableView:tableView];
+                        cell.cellData = itemContent;
+                        return cell;
                     } else if ( [@"text" isEqualToString:itemContent.type] ) {
-                        
+                        ItemContentImageCell *cell = [ItemContentImageCell dequeueReusableCellForTableView:tableView];
+                        cell.cellData = itemContent.text;
+                        return cell;
                     }
                     
                 }
@@ -279,14 +296,20 @@ const NSInteger itemDetailContentRowHead    = 0;
         }
             break;
         case ItemDetailSectionSKU: {
-            if (itemDetailSKURowInfo == row) {
-                
+            
+            if (![self.itemInfoModel.status isEqualToString:StatusOnSell]) {
+                height = 0;
+            } else {
+                if (itemDetailSKURowInfo == row) {
+                    height = [[ItemSKUSelectCell heightForCell:@""] floatValue];
+                } else {
+                    height = 14;
+                }
             }
         }
             break;
         case ItemDetailSectionComment: {
             if (itemDetailCommentRowHead == row) {
-                
             }
             else if (row <= self.commentsInfoModel.comments.count){
                 
@@ -298,20 +321,20 @@ const NSInteger itemDetailContentRowHead    = 0;
             break;
         case ItemDetailSectionShop: {
             if (itemDetailShopRowInfo == row ) {
-                
+
             }
         }
             break;
         case ItemDetailSectionImages:
             if (itemDetailContentRowHead == row ) {
-                
+                height = [[ItemContentHeadCell heightForCell:nil] floatValue];
             } else {
                 ItemDetailContentModel *itemContent = self.itemInfoModel.detailContent[row - 1];
                 if (itemContent) {
                     if ( [@"image" isEqualToString:itemContent.type] ) {
-                        
+                        height = [[ItemContentImageCell heightForCell:itemContent] floatValue];
                     } else if ( [@"text" isEqualToString:itemContent.type] ) {
-                        
+                        height = [[ItemContentTextCell heightForCell:itemContent] floatValue];
                     }
                     
                 }

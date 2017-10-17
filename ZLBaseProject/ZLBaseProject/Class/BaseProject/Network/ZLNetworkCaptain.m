@@ -274,7 +274,8 @@
 - (void)requestFailure:(void (^)(StatusModel *status))failure data:(NSError *)error {
     StatusModel *status = [[StatusModel alloc] init];
     status.code = error.code;
-    status.msg = [NSString stringWithFormat:@"网络异常: %@", error.userInfo.description];
+    status.msg = @"网络异常";
+    ZLLog(@"net err message : %@", error.userInfo.description);
     failure(status);
 }
 

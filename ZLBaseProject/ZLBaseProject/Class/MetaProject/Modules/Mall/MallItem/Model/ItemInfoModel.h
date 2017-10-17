@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *desc;
 @property (nonatomic, assign) BOOL isFav;
-@property (nonatomic, strong) NSString *status;
+@property (nonatomic, strong) NSString *status; // 0 onsell , 1 sellout, 2 undercarriage
 @property (nonatomic, strong) NSString *price;
 @property (nonatomic, strong) NSString *oPrice;
 @property (nonatomic, strong) NSString *discountAmount;

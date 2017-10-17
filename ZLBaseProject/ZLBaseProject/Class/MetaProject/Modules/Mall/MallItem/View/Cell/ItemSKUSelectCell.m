@@ -1,14 +1,14 @@
 //
-//  ItemSUKSelectCell.m
+//  ItemSKUSelectCell.m
 //  ZLBaseProject
 //
 //  Created by LayZhang on 2017/10/16.
 //  Copyright © 2017年 Zhanglei. All rights reserved.
 //
 
-#import "ItemSUKSelectCell.h"
+#import "ItemSKUSelectCell.h"
 
-@interface ItemSUKSelectCell()
+@interface ItemSKUSelectCell()
 
 @property (nonatomic, strong) UILabel *selectedLabel;
 @property (nonatomic, strong) UILabel *selectedValueLabel;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation ItemSUKSelectCell
+@implementation ItemSKUSelectCell
 
 #pragma mark - override
 - (void)initCellComponent {
@@ -167,7 +167,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     _moreImageView.right = self.width - 12;
-    _moreImageView.centerY = self.width / 2;
+    _moreImageView.centerY = self.height / 2;
     
 }
 @end

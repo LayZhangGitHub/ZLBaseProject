@@ -16,6 +16,8 @@
 
 #import "MallItemController.h"
 
+#import "SiftCateController.h"
+
 @implementation MallModuleEntity
 
 + (id)shareEntity {
@@ -28,7 +30,7 @@
 }
 
 + (void)load {
-    NSArray *hosts = @[ConsigneeSelect, MallOrderList, MallCart, MyCollection, PointDetail, MallItem];
+    NSArray *hosts = @[ConsigneeSelect, MallOrderList, MallCart, MyCollection, PointDetail, MallItem, CateWall];
     for (NSString *host in hosts) {
         [[ZLNavigationService sharedService] registerModule:self
                                                  withScheme:AppScheme
@@ -86,6 +88,12 @@
             vc.itemId = urlParams[@"itemId"];
             [urlParams removeObjectForKey:@"itemId"];
             vc.extraParams = urlParams;
+            [navigationController pushViewController:vc animated:YES];
+        }
+        else if ([url.host isEqualToString:CateWall]) {
+            SiftCateController *vc = [[SiftCateController alloc] init];
+            vc.cateId = urlParams[@"cateId"];
+            [urlParams removeObjectForKey:@"cateId"];
             [navigationController pushViewController:vc animated:YES];
         }
     }

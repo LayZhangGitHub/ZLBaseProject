@@ -34,6 +34,7 @@
 #define PointDetail         @"pointDetail"
 
 #define MallItem            @"mallItem"
+#define CateWall            @"cateWall"
 
 // unknow
 #define TopUpHost           @"topUp"
