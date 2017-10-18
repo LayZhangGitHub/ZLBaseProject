@@ -230,7 +230,9 @@ const NSInteger itemDetailContentRowHead    = 0;
             break;
         case ItemDetailSectionShop: {
             if (itemDetailShopRowInfo == row ) {
-                
+                ItemShopInfoCell *cell = [ItemShopInfoCell dequeueReusableCellForTableView:self.contentTableView];
+                cell.cellData = self.shopInfoModel;
+                return cell;
             }
         }
             break;
@@ -321,7 +323,9 @@ const NSInteger itemDetailContentRowHead    = 0;
             break;
         case ItemDetailSectionShop: {
             if (itemDetailShopRowInfo == row ) {
-
+                height = [[ItemShopInfoCell heightForCell:self.shopInfoModel] floatValue];
+            } else{
+                height = 14;
             }
         }
             break;

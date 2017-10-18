@@ -1052,6 +1052,7 @@
 		481A74231F8F720E00EF3242 /* Mall */ = {
 			isa = PBXGroup;
 			children = (
+				4823F8231F97640600636C56 /* Shop */,
 				481A752A1F95CF5100EF3242 /* MallCategory */,
 				481A749B1F8F79DE00EF3242 /* MallItem */,
 				481A74921F8F762400EF3242 /* Point */,
@@ -1559,6 +1560,45 @@
 				481A754C1F95DE4100EF3242 /* UploadResultModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4823F8231F97640600636C56 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				4823F8241F97640600636C56 /* Controller */,
+				4823F8251F97640600636C56 /* Model */,
+				4823F8261F97640600636C56 /* Request */,
+				4823F8271F97640600636C56 /* View */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		4823F8241F97640600636C56 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4823F8251F97640600636C56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4823F8261F97640600636C56 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		4823F8271F97640600636C56 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		485D211A1F78D4B20033DD20 /* Layout */ = {
