@@ -14,6 +14,7 @@
 
 + (NSString *)cellIdentifier;
 + (NSNumber *)heightForCell:(id)cellData;
++ (NSNumber *)widthForCell:(id)cellData;
 + (instancetype)dequeueCellForCollection:(UICollectionView *)collectionView
                             forIndexPath:(NSIndexPath *)indexPath;
 - (void)reloadData;

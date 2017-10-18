@@ -131,7 +131,6 @@
     return itemAttrs;
 }
 
-
 - (void)updateHeaderAttributes:(UICollectionViewLayoutAttributes *)attributes
             lastCellAttributes:(UICollectionViewLayoutAttributes *)lastCellAttributes {
     CGRect currentBounds = self.collectionView.bounds;

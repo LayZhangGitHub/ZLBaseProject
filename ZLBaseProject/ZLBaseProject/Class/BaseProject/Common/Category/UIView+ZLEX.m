@@ -121,6 +121,9 @@
     }
 }
 
-
+- (UIView *)duplicateCopy {
+    NSData * tempArchive = [NSKeyedArchiver archivedDataWithRootObject:self];
+    return [NSKeyedUnarchiver unarchiveObjectWithData:tempArchive];
+}
 
 @end

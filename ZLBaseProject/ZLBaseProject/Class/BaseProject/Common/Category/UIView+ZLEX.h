@@ -12,6 +12,7 @@
 
 - (UIImage *)snapshotImage;
 - (void)removeAllSubviews;
+- (UIView *)duplicateCopy;
 
 @property (nonatomic) CGFloat left;        ///< Shortcut for frame.origin.x.
 @property (nonatomic) CGFloat top;         ///< Shortcut for frame.origin.y

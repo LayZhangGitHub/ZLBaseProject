@@ -16,7 +16,11 @@
 
 // 计算工具
 + (NSNumber *)heightForCell:(id)cellData {
-    return 0;
+    return @0;
+}
+
++ (NSNumber *)widthForCell:(id)cellData {
+    return @0;
 }
 
 + (instancetype)dequeueCellForCollection:(UICollectionView *)collectionView

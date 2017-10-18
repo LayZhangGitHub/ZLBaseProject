@@ -44,18 +44,16 @@
 }
 
 - (void)addRefreshAction {
-    BOOL isAddHeader = (self.scrollViewRefreshType & ScrollViewRefreshTypeHeader) == ScrollViewRefreshTypeHeader;
-    BOOL isAddFooter = (self.scrollViewRefreshType & ScrollViewRefreshTypeFooter) == ScrollViewRefreshTypeFooter;
     
     weakSelf(self);
-    if (isAddHeader) {
+    if (self.scrollViewRefreshType & ScrollViewRefreshTypeHeader) {
         self.contentTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             strongSelf(self);
             [self willRefresh];
         }];
     }
     
-    if (isAddFooter) {
+    if (self.scrollViewRefreshType & ScrollViewRefreshTypeFooter) {
         self.contentTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
             strongSelf(self);
             [self willLoadMore];

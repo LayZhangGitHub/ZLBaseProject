@@ -19,8 +19,6 @@
 
 @property (nonatomic, strong) UITextField *searchTextField;
 
-@property (nonatomic, strong) NSString  *wp; // 加载更多 标志
-
 @end
 
 @implementation PMProductListController

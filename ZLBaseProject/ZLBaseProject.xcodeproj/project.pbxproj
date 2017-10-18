@@ -154,6 +154,10 @@
 		481A75501F95DEC300EF3242 /* TMCateSiftResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A754F1F95DEC300EF3242 /* TMCateSiftResultModel.m */; };
 		481A75531F95EC6C00EF3242 /* TMCateModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A75521F95EC6C00EF3242 /* TMCateModuleView.m */; };
 		481A75561F95EE7D00EF3242 /* TMCateModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A75551F95EE7D00EF3242 /* TMCateModuleCell.m */; };
+		4823F8191F96FE9300636C56 /* OptionUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4823F8181F96FE9300636C56 /* OptionUDView.m */; };
+		4823F81C1F97079700636C56 /* OptionSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4823F81B1F97079700636C56 /* OptionSelectView.m */; };
+		4823F81F1F97224500636C56 /* TMOptionSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4823F81E1F97224500636C56 /* TMOptionSelectCell.m */; };
+		4823F8221F9730C600636C56 /* TMInstItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4823F8211F9730C600636C56 /* TMInstItemCell.m */; };
 		4845D2FF1F7A4C13004D884B /* BaseHeadInstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */; };
 		4845D3021F7A4C68004D884B /* DefaultInstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3011F7A4C68004D884B /* DefaultInstCell.m */; };
 		4845D3051F7A4F5C004D884B /* DefaultInstHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845D3041F7A4F5C004D884B /* DefaultInstHeadCell.m */; };
@@ -494,6 +498,14 @@
 		481A75521F95EC6C00EF3242 /* TMCateModuleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMCateModuleView.m; sourceTree = "<group>"; };
 		481A75541F95EE7D00EF3242 /* TMCateModuleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMCateModuleCell.h; sourceTree = "<group>"; };
 		481A75551F95EE7D00EF3242 /* TMCateModuleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMCateModuleCell.m; sourceTree = "<group>"; };
+		4823F8171F96FE9300636C56 /* OptionUDView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionUDView.h; sourceTree = "<group>"; };
+		4823F8181F96FE9300636C56 /* OptionUDView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionUDView.m; sourceTree = "<group>"; };
+		4823F81A1F97079700636C56 /* OptionSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionSelectView.h; sourceTree = "<group>"; };
+		4823F81B1F97079700636C56 /* OptionSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionSelectView.m; sourceTree = "<group>"; };
+		4823F81D1F97224500636C56 /* TMOptionSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMOptionSelectCell.h; sourceTree = "<group>"; };
+		4823F81E1F97224500636C56 /* TMOptionSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMOptionSelectCell.m; sourceTree = "<group>"; };
+		4823F8201F9730C600636C56 /* TMInstItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMInstItemCell.h; sourceTree = "<group>"; };
+		4823F8211F9730C600636C56 /* TMInstItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMInstItemCell.m; sourceTree = "<group>"; };
 		4845D2FD1F7A4C13004D884B /* BaseHeadInstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeadInstController.h; sourceTree = "<group>"; };
 		4845D2FE1F7A4C13004D884B /* BaseHeadInstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHeadInstController.m; sourceTree = "<group>"; };
 		4845D3001F7A4C68004D884B /* DefaultInstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultInstCell.h; sourceTree = "<group>"; };
@@ -1526,6 +1538,14 @@
 				481A75521F95EC6C00EF3242 /* TMCateModuleView.m */,
 				481A75541F95EE7D00EF3242 /* TMCateModuleCell.h */,
 				481A75551F95EE7D00EF3242 /* TMCateModuleCell.m */,
+				4823F81D1F97224500636C56 /* TMOptionSelectCell.h */,
+				4823F81E1F97224500636C56 /* TMOptionSelectCell.m */,
+				4823F8201F9730C600636C56 /* TMInstItemCell.h */,
+				4823F8211F9730C600636C56 /* TMInstItemCell.m */,
+				4823F8171F96FE9300636C56 /* OptionUDView.h */,
+				4823F8181F96FE9300636C56 /* OptionUDView.m */,
+				4823F81A1F97079700636C56 /* OptionSelectView.h */,
+				4823F81B1F97079700636C56 /* OptionSelectView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2040,6 +2060,7 @@
 				481A74741F8F720E00EF3242 /* TMMineInfoModel.m in Sources */,
 				48C152F91F739D6200C577AB /* ZLModuleEntity.m in Sources */,
 				481A74751F8F720E00EF3242 /* TMMineOrderModel.m in Sources */,
+				4823F8191F96FE9300636C56 /* OptionUDView.m in Sources */,
 				481A754D1F95DE4100EF3242 /* UploadResultModel.m in Sources */,
 				48C152F51F739D6200C577AB /* ZLTabbarController.m in Sources */,
 				481A74A51F908DEA00EF3242 /* ItemToolBarView.m in Sources */,
@@ -2124,9 +2145,11 @@
 				481A744F1F8F720E00EF3242 /* MHHeaderTitleModel.m in Sources */,
 				481A75291F95AA2700EF3242 /* ItemContentTextCell.m in Sources */,
 				481A74451F8F720E00EF3242 /* TMUserInfoModel.m in Sources */,
+				4823F81F1F97224500636C56 /* TMOptionSelectCell.m in Sources */,
 				481A735D1F8F558300EF3242 /* ZLPagerController.m in Sources */,
 				481A74D91F90AFDD00EF3242 /* DSRValueModel.m in Sources */,
 				481A75261F95AA0D00EF3242 /* ItemContentImageCell.m in Sources */,
+				4823F81C1F97079700636C56 /* OptionSelectView.m in Sources */,
 				481A74551F8F720E00EF3242 /* Instrument01View.m in Sources */,
 				481A745A1F8F720E00EF3242 /* MHModule03Cell.m in Sources */,
 				481A747D1F8F720E00EF3242 /* PMCatesModel.m in Sources */,
@@ -2161,6 +2184,7 @@
 				4806F8741F74E5B800A5B3CD /* SimpleCollectionController.m in Sources */,
 				481A75401F95DB4300EF3242 /* TMCateModuleModel.m in Sources */,
 				48C152A61F739CE900C577AB /* main.m in Sources */,
+				4823F8221F9730C600636C56 /* TMInstItemCell.m in Sources */,
 				481A746A1F8F720E00EF3242 /* MHModule19Cell.m in Sources */,
 				481A744D1F8F720E00EF3242 /* MHHeaderModel.m in Sources */,
 				48C152EE1F739D6200C577AB /* AppModuleEntity.m in Sources */,

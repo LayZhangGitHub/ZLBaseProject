@@ -11,4 +11,10 @@
 
 @interface BaseHeadInstController : BaseCollectionController <InstFlowLayoutDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 
+- (void)registCell;
+
+- (NSInteger)itemCount;// 非 head item count
+- (NSInteger)headerSectionCount;
+- (NSInteger)itemSectionCount;
+
 @end
