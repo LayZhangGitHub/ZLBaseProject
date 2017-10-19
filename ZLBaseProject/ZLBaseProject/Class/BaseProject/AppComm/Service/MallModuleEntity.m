@@ -13,6 +13,7 @@
 #import "CartController.h"
 #import "MyCollectionPagerController.h"
 #import "TMPointDetailController.h"
+#import "ShopInfoController.h"
 
 #import "MallItemController.h"
 
@@ -30,7 +31,7 @@
 }
 
 + (void)load {
-    NSArray *hosts = @[ConsigneeSelect, MallOrderList, MallCart, MyCollection, PointDetail, MallItem, CateWall];
+    NSArray *hosts = @[ConsigneeSelect, MallOrderList, MallCart, MyCollection, PointDetail, MallItem, CateWall, MallShop];
     for (NSString *host in hosts) {
         [[ZLNavigationService sharedService] registerModule:self
                                                  withScheme:AppScheme
@@ -94,6 +95,14 @@
             SiftCateController *vc = [[SiftCateController alloc] init];
             vc.cateId = urlParams[@"cateId"];
             [urlParams removeObjectForKey:@"cateId"];
+            vc.extraParams = urlParams;
+            [navigationController pushViewController:vc animated:YES];
+        }
+        else if ([url.host isEqualToString:MallShop]) {
+            ShopInfoController *vc = [[ShopInfoController alloc] init];
+            vc.shopId = urlParams[@"shopId"];
+            [urlParams removeObjectForKey:@"shopId"];
+            vc.extraParams = urlParams;
             [navigationController pushViewController:vc animated:YES];
         }
     }

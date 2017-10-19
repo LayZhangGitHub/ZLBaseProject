@@ -29,6 +29,11 @@
 @property (nonatomic, strong) UIView *rightDesButton;   // 第二个
 
 /**
+ middle view
+ */
+@property (nonatomic, strong) UIView *middleView; 
+
+/**
  主界面
  */
 @property(nonatomic, strong) UIView *containerView;

@@ -54,7 +54,7 @@
     [infoButton addTarget:self action:@selector(handleShowCartButton) forControlEvents:UIControlEventTouchUpInside];
     self.navigationBar.rightButton = infoButton;
     
-    [self.navigationBar addSubview:self.searchTextField];
+    self.navigationBar.middleView = self.searchTextField;
     
     self.contentCollectionView.height = SCREENHEIGHT - NAVBARHEIGHT - TABBARHEIGHT;
     self.contentCollectionView.alwaysBounceVertical = YES;
@@ -65,7 +65,8 @@
 #pragma mark - properties
 - (UITextField*)searchTextField {
     if (!_searchTextField) {
-        _searchTextField = [[UITextField alloc]initWithFrame:CGRectMake(12, STATUSBARHEIGHT + 7, SCREENWIDTH - 12 - 56, 30)];
+        _searchTextField = [[UITextField alloc] init];
+        _searchTextField.size = CGSizeMake(0, 30);
         _searchTextField.font = ZLNormalFont(14);
         _searchTextField.placeholder = @"搜索商品";
         _searchTextField.clearButtonMode = UITextFieldViewModeWhileEditing;

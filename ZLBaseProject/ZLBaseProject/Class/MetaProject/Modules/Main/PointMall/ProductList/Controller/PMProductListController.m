@@ -45,7 +45,7 @@
     self.contentCollectionView.height = SCREENHEIGHT - NAVBARHEIGHT - TABBARHEIGHT;
     
     [self showNavigationBar];
-    [self.navigationBar addSubview:self.searchTextField];
+    self.navigationBar.middleView = self.searchTextField;
     
     [self initData];
 }
@@ -161,7 +161,8 @@
 #pragma mark - properties
 - (UITextField*)searchTextField {
     if (!_searchTextField) {
-        _searchTextField = [[UITextField alloc]initWithFrame:CGRectMake(20, STATUSBARHEIGHT + 7, SCREENWIDTH - 40, 30)];
+        _searchTextField = [[UITextField alloc] init];
+        _searchTextField.size = CGSizeMake(0, 30);
         _searchTextField.font = ZLNormalFont(14);
         _searchTextField.placeholder = @"搜索商品";
         _searchTextField.clearButtonMode = UITextFieldViewModeWhileEditing;

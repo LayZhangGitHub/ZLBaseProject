@@ -35,6 +35,7 @@
 
 #define MallItem            @"mallItem"
 #define CateWall            @"cateWall"
+#define MallShop            @"mallShop"
 
 // unknow
 #define TopUpHost           @"topUp"

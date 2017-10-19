@@ -87,6 +87,26 @@
     _rightDesButton.right = _rightButton.left;
     _rightDesButton.centerY = _rightButton.centerY;
     _leftButton.center = CGPointMake(_leftButton.width/2 + 8, _containerView.height/2);
+    
+    _middleView.centerY = _containerView.height / 2;
+    CGFloat _middleLeft = 0;
+    CGFloat _middleRight = 0;
+    if (_leftButton) {
+        _middleView.left = _leftButton.right + 8;
+        _middleLeft = _leftButton.right + 8;;
+    } else {
+        _middleView.left = 20;
+        _middleLeft = 20;
+    }
+    
+    if (_rightDesButton) {
+        _middleRight = _rightDesButton.left - 8;
+    } else if(_rightButton) {
+        _middleRight = _rightButton.left - 8;
+    } else {
+        _middleRight = _containerView.width - 20;
+    }
+    _middleView.width = _middleRight - _middleLeft;
 }
 
 #pragma mark - public method
@@ -112,7 +132,6 @@
                                     forState:UIControlStateNormal];
         [((UIButton *)leftButton) setTintColor:ZLThemeCtrInstance.navigationButtonColor];
     }
-//    leftButton.center = CGPointMake(leftButton.width / 2, self.containerView.height / 2);
     [self.containerView addSubview:leftButton];
 }
 
@@ -149,6 +168,18 @@
     }
     
     [self.containerView addSubview:rightDesButton];
+    [self setNeedsLayout];
+}
+
+- (void)setMiddleView:(UIView *)middleView {
+    if (middleView == _middleView) {
+        return;
+    }
+    if (_middleView) {
+        [_middleView removeFromSuperview];
+    }
+    _middleView = middleView;
+    [self.containerView addSubview:middleView];
     [self setNeedsLayout];
 }
 
