@@ -13,7 +13,7 @@
 
 - (void)registCell;
 
-- (NSInteger)itemCount;// 非 head item count
+- (NSInteger)itemCountInSection:(NSInteger)section;// 非 head item count
 - (NSInteger)headerSectionCount;
 - (NSInteger)itemSectionCount;
 

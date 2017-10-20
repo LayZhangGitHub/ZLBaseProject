@@ -75,9 +75,6 @@
     shareButton.frame = CGRectMake(0, 0, 40, 20);
     [shareButton setImage:[UIImage imageNamed:@"mall_item_share"] forState:UIControlStateNormal];
     [shareButton addTarget:self action:@selector(handleShareButton) forControlEvents:UIControlEventTouchUpInside];
-//    shareButton.right = SCREENWIDTH - 12;
-//    shareButton.centerY = (STATUSBARHEIGHT + self.navigationBar.height)/2;
-//    [self.navigationBar addSubview:shareButton];
     self.navigationBar.rightButton = shareButton;
     shareButton.hidden = NO;
     self.shareButton = shareButton;
@@ -87,9 +84,6 @@
     [infoButton setImage:[UIImage imageNamed:@"btn_cart"] forState:UIControlStateNormal];
     [infoButton setImage:[UIImage imageNamed:@"btn_cart_unempty"] forState:UIControlStateSelected];
     [infoButton addTarget:self action:@selector(handleShowCartButton) forControlEvents:UIControlEventTouchUpInside];
-//    infoButton.right = SCREENWIDTH - 12;
-//    infoButton.centerY = (STATUSBARHEIGHT + self.navigationBar.height)/2;
-//    [self.navigationBar addSubview:infoButton];
     self.navigationBar.rightDesButton = infoButton;
     self.cartButton = infoButton;
     
@@ -162,7 +156,9 @@
     MHModuleModel *model = [self.items objectAtIndex:indexPath.section];
     
     if (model.type != 20) {
-        if (indexPath.item == 0 && (model.type == 15 || model.type == 1 || model.type == 5 || model.type == 4 || model.type == 9 || model.type == 12)) {
+        if (indexPath.item == 0 && (model.type == 15 || model.type == 1 || model.type == 5
+                                    || model.type == 4 || model.type == 9 || model.type == 12
+                                    || model.type == 3)) {
             NSString *classStr = [NSString stringWithFormat:@"MHModule%02dCell",model.type];
             Class class = NSClassFromString(classStr);
             BaseCollectionCell *cell =

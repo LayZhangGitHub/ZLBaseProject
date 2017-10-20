@@ -75,7 +75,7 @@
 }
 
 // 非 head item count
-- (NSInteger)itemCount {
+- (NSInteger)itemCountInSection:(NSInteger)section {
     return 0;
 }
 
@@ -100,7 +100,7 @@
     if ([self headerSectionCount] > section) {
         return 1;
     }
-    return [self itemCount];
+    return [self itemCountInSection:section];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

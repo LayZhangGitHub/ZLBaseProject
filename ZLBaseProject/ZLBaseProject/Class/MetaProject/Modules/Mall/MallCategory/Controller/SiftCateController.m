@@ -99,7 +99,7 @@
     return 1;
 }
 
-- (NSInteger)itemCount {
+- (NSInteger)itemCountInSection:(NSInteger)section {
     return self.items.count;
 }
 
@@ -174,7 +174,7 @@
             return 1; //1
         }
     }
-    return [self itemCount];
+    return [self itemCountInSection:section];
 }
 
 - (void)didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -184,7 +184,6 @@
 
 #pragma mark - optionselectview
 - (void)optionChooseIndex:(NSInteger)index keyName:(NSString *)name keyValue:(NSString *)keyValue {
-    ZLLog(@"select index is ............. %d", index);
     self.siftIndex = [NSString stringWithFormat:@"%ld", index];
     self.siftName = name;
     self.siftValue = keyValue;

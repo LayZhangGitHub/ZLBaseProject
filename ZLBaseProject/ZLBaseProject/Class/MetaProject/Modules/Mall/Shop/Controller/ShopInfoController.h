@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSString *shopId;
 
+@property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString *categoryId;
 @end

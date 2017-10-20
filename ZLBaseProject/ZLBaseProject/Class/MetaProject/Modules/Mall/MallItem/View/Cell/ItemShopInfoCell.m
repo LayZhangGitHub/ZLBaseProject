@@ -11,11 +11,13 @@
 
 #import "ItemShopInfoModel.h"
 
+#import "ItemMarkView.h"
+
 @interface ItemShopInfoCell()
 
 @property (nonatomic, strong) UIImageView *logoImageView;
 @property (nonatomic, strong) UILabel *shopNameLabel;
-//@property (nonatomic, strong) ITMarkView *markView;
+@property (nonatomic, strong) ItemMarkView *markView;
 
 @property (nonatomic, strong) UILabel *salesLabel;
 @property (nonatomic, strong) UILabel *salesValueLabel;
@@ -51,7 +53,7 @@
     
     [self addSubview:self.logoImageView];
     [self addSubview:self.shopNameLabel];
-//    [self addSubview:self.markView];
+    [self addSubview:self.markView];
     [self addSubview:self.salesLabel];
     [self addSubview:self.salesValueLabel];
     [self addSubview:self.favCountLabel];
@@ -92,7 +94,7 @@
         [self.shopNameLabel sizeToFit];
         self.shopNameLabel.left = 72;
         
-//        self.markView.mark = [shopInfo.dsr.qb.v floatValue];
+        self.markView.mark = [shopInfo.dsr.qb.v floatValue];
         
         self.salesValueLabel.text = shopInfo.sales;
         [self.salesValueLabel sizeToFit];
@@ -168,17 +170,19 @@
     return _shopNameLabel;
 }
 
-//- (ITMarkView*)markView
-//{
-//    if (!_markView) {
-//        ITMarkView *markView = [[ITMarkView alloc]initWithFrame:CGRectMake(72, 46, 0, 0)];
-//        markView.markWidth = 12;
-//        markView.showMark = NO;
-//        [markView sizeToFit];
-//        _markView = markView;
-//    }
-//    return _markView;
-//}
+- (ItemMarkView *)markView {
+    if (!_markView) {
+        ItemMarkView *markView = [[ItemMarkView alloc] init];
+        markView.left = 76;
+        markView.top = 46;
+        markView.markWidth = 12;
+        markView.showMark = NO;
+        markView.userInteractionEnabled = NO;
+        [markView sizeToFit];
+        _markView = markView;
+    }
+    return _markView;
+}
 
 - (UILabel*)salesValueLabel {
     if (!_salesValueLabel) {
